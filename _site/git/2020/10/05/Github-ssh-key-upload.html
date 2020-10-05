@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Github에 ssh-key 등록해 사용하기</title>
+  <meta name="description" content="Github에 ssh-key 등록해 사용하기">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Github에 ssh-key 등록해 사용하기" />
+  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="Github에 ssh-key 등록해 사용하기" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Github에 ssh-key 등록해 사용하기">
+  <meta name="twitter:description" content="Github에 ssh-key 등록해 사용하기">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Github에 ssh-key 등록해 사용하기</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">October 5, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/git">Git</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="github에-ssh-key-등록해-사용하기">Github에 ssh-key 등록해 사용하기</h1>
+
+<p>그 동안 git을 push, pull할 떄 vscode의 git authentication 설정으로 로그인 없이 사용했었는데, 이번에 깃헙 계정을 새로 만들면서 git config –global의 이름과 이메일을 변경해도 이전 계정으로 접근이 시도되며 403 error를 뱉는 일을 겪었다.
+검색하면 나오는 결과라고는 windows 제어판에서 자격증명을 지우라는 것 뿐이었고… 나는 우분투였다ㅠㅠㅠ 암호 및 키에 등록되어있는 git 계정을 삭제했지만 역시 해결되지 않았고 결국 해결하지 못한 채 ssh-key를 등록해 사용하는 방향으로 틀었다.</p>
+
+<p>ssh-key를 사용해 로그인없이 github을 사용하는 것이 이번이 처음은 아니다. 전에 django서버를 aws ec2 서버로 돌릴 때 사용했었는데, 몇 달이 지난 지금 벌써 기억이 가물가물해 다시 구글링해 적용하게 되었다.</p>
+
+<p>이번 포스팅은 이 내용을 나중에 최소한의 시간으로 다시 찾고자 남기는 기록이다.</p>
+
+<ul>
+  <li>SSH (Secure Shell Protocol)
+    <ul>
+      <li>암호화된 원격 접속 프로토콜</li>
+      <li>컴퓨터가 공용 네트워크를 통해 통신할 때 보안적으로 안전하게 통신하기 위해 사용하는 접속 프로토콜이다</li>
+    </ul>
+  </li>
+  <li>SSH Key
+    <ul>
+      <li>SSH로 서버에 접속 시 서버에 비밀번호 대신 key를 제출하는 방식이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="1-ssh-key-파일-확인">1. SSH Key 파일 확인</h3>
+<ul>
+  <li>일반적으로 SSH Key는 ~/.ssh 경로에 존재한다.</li>
+  <li>기존 생성해 놓은 키가 있다면 .pub 파일등과 같은 키 파일이 있을 것이다.</li>
+  <li>혹시 디렉토리가 없다면 다음의 명령어로 생성하자.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> ~/.ssh
+<span class="nv">$ </span><span class="nb">chmod </span>700 ~/.ssh
+<span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="2-ssh-key-생성하기">2. SSH Key 생성하기</h3>
+<ul>
+  <li>ssh-keygen을 사용해 key를 생성한다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ssh-keygen <span class="nt">-t</span> rsa <span class="nt">-b</span> 4096 <span class="nt">-C</span> <span class="s2">"yourEmail@example.com"</span>
+</code></pre></div>    </div>
+    <p>cf ) -t rsa는 rsa라는 암호화 방식으로 키를 생성한다는 의미다.
+SSH 키는 크기가 2048비트 또는 4096비트인 RSA 키여야 한다. 이 경우에는 4096으로 지정하였다.</p>
+  </li>
+  <li>다음은 경로지정이다. 필요한 경우에만 절대 경로로 입력해주자.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>Generating public/private rsa key pair.
+<span class="nv">$ </span>Enter file <span class="k">in </span>which to save the key <span class="o">(</span>/home/user/.ssh/id_rsa<span class="o">)</span>:
+</code></pre></div>    </div>
+  </li>
+  <li>암호(Passphrase)설정도 필요하면 입력해주자.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:
+<span class="nv">$ </span>Enter same passphrase again:
+</code></pre></div>    </div>
+    <p>암호를 설정했다면 ssh-agent에 키를 등록해두면 매번 키를 입력하지 않아도 되므로 편하다.</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">eval</span> <span class="sb">`</span>ssh-agent <span class="nt">-s</span><span class="sb">`</span> <span class="c"># 백그라운드 실행</span>
+<span class="nv">$ </span>ssh-add ~/.ssh/id_rsa <span class="c"># 키 등록</span>
+</code></pre></div>    </div>
+  </li>
+  <li>생성된 결과물은 다음과 같다.
+    <ul>
+      <li>
+        <p>id_rsa<br />
+private key. 본인의 컴퓨터에 저장되며, 이 key를 통해 암호화된 메시지를 복호화할 수 있다.</p>
+      </li>
+      <li>
+        <p>id_rsa.pub<br />
+public key. 공개되어도 비교적 안전한 Key이다. Public Key를 통해 메시지를 전송하기 전 암호화를 하게된다.
+public key로는 복호화는 불가능하고, 접속하려는 remote machine의 authorized_keys에 입력하여 사용한다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-github에-공개키-등록하기">3. Github에 공개키 등록하기</h3>
+<ul>
+  <li>특정 프로젝트 혹은 계정의 설정에서 등록하면 된다. 여기서는 계정의 SSH Key로 등록했다.</li>
+  <li>Title: 사용자 지정 키 이름
+Key: 공개 키 내용</li>
+  <li>키 내용 확인방법
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat</span> ~/.ssh/id_rsa.pub 
+<span class="nv">$ </span>xclip <span class="nt">-selection</span> clipboard &lt; ~/.ssh/id_rsa.pub <span class="c"># Mac OS면 pbcopy를 쓰자</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="4-github-설정-use-ssh로-변경">4. Github 설정 use SSH로 변경</h3>
+<ul>
+  <li>제일 중요하다(…)</li>
+  <li>https로 클론하고 왜 안되는지 고민하는 일이 없도록 하자</li>
+  <li>하지만 이미 클론한 상태라면? 다시 클론해야 되나…?ㅠㅠㅠ
+  아니다! remote를 변경해서 해결해주자 :).
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git remote remove origin
+<span class="nv">$ </span>git remote add origin git@github.com:[계정명]/[저장소명].git
+<span class="nv">$ </span>git remote show <span class="c"># origin이 잘 등록되었는지 확인</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="5-끝">5. 끝!</h3>
+<ul>
+  <li>고생했다. 이제 git push하고 쉬자!</li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/git">git</a>,&nbsp;<a href="/tag/ssh-key">ssh-key</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/10/05/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">201005_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

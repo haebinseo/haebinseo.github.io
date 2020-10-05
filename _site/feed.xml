@@ -5,9 +5,25 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2020 22:36:49 +0900</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2020 22:36:49 +0900</lastBuildDate>
+    <pubDate>Tue, 06 Oct 2020 01:04:59 +0900</pubDate>
+    <lastBuildDate>Tue, 06 Oct 2020 01:04:59 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Github에 ssh-key 등록해 사용하기</title>
+        <description>&lt;h1 id=&quot;github에-ssh-key-등록해-사용하기&quot;&gt;Github에 ssh-key 등록해 사용하기&lt;/h1&gt; &lt;p&gt;그 동안 git을 push, pull할 떄 vscode의 git authentication 설정으로 로그인 없이 사용했었는데, 이번에 깃헙 계정을 새로 만들면서 git config –global의 이름과 이메일을 변경해도 이전...</description>
+        <pubDate>Mon, 05 Oct 2020 23:44:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html</guid>
+        
+        <category>git</category>
+        
+        <category>ssh-key</category>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>201005_TIL</title>
