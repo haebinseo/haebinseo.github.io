@@ -40,7 +40,7 @@ jekyll-archives:
   enabled:
     - categories
     - tags
-  layout: 'archive'
+  layout: archive
   permalinks:
     category: '/category/:name/'
     tag: '/tag/:name/'
@@ -53,11 +53,10 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
+  # - cat: TIL
+  #   desc: Today I Learned
   # - cat: jekyll
   #   desc: "Posts describing Jekyll setup techniques."
-
-  - cat: TIL
-    desc: "Today I Learned."
 
 # Social icons and sharing options
 #

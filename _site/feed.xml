@@ -5,37 +5,35 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Oct 2020 04:38:44 +0900</pubDate>
-    <lastBuildDate>Mon, 05 Oct 2020 04:38:44 +0900</lastBuildDate>
+    <pubDate>Mon, 05 Oct 2020 22:06:44 +0900</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2020 22:06:44 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>201005_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한일&quot;&gt;오늘 한일&lt;/h1&gt;
-</description>
+        <description>&lt;h1 id=&quot;오늘-한일&quot;&gt;오늘 한일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;jekyll을 사용한 깃허브 블로그 생성! 이전에 생활코딩 git 책을 공부하며 끝에서 부록으로 다뤘던 내용이어서 금방 끝날 줄 알았다. 그런데 이게 웬일.. 처음 써보는 루비 환경이다보니 설치부터...</description>
         <pubDate>Mon, 05 Oct 2020 04:12:00 +0900</pubDate>
         <link>http://localhost:4000/til/2020/10/05/TIL.html</link>
         <guid isPermaLink="true">http://localhost:4000/til/2020/10/05/TIL.html</guid>
         
-        <category>TIL</category>
+        <category>til</category>
         
         
-        <category>TIL</category>
+        <category>til</category>
         
       </item>
     
       <item>
         <title>201005_TIL 시작</title>
-        <description>&lt;p&gt;매일 한 일과 느낀 점을 간단하게 정리해 남기고자 한다.&lt;/p&gt;
-</description>
+        <description>&lt;h1 id=&quot;til-today-i-learned-시작&quot;&gt;TIL (Today I learned) 시작&lt;/h1&gt; &lt;p&gt;하루하루 무언가 열심히 한다고 생각하지만 돌이켜보면 그 때 뭐했는지, 공부한 내용이 어디있는지 기억나지 않는 날이 많다고 느꼈다. 그러던 중 초보몽키님의 TIL 회고를 읽으며 매일...</description>
         <pubDate>Mon, 05 Oct 2020 04:12:00 +0900</pubDate>
         <link>http://localhost:4000/til/2020/10/05/TIL-%EC%8B%9C%EC%9E%91.html</link>
         <guid isPermaLink="true">http://localhost:4000/til/2020/10/05/TIL-%EC%8B%9C%EC%9E%91.html</guid>
         
-        <category>TIL</category>
+        <category>til</category>
         
         
-        <category>TIL</category>
+        <category>til</category>
         
       </item>
     
