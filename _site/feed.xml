@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Oct 2020 01:04:59 +0900</pubDate>
-    <lastBuildDate>Tue, 06 Oct 2020 01:04:59 +0900</lastBuildDate>
+    <pubDate>Tue, 06 Oct 2020 23:57:10 +0900</pubDate>
+    <lastBuildDate>Tue, 06 Oct 2020 23:57:10 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>201006_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 프로필 페이지의 탭들을 작성했다. 프로필 페이지들을 작성하다 보니 기존에 작성했던 파일들과 상당수 겹치는 부분이 보인다. 추후에 리펙토링이 필요해 보인다.&lt;/li&gt; &lt;li&gt;addEventListener로 핸들러를 붙이는 과정에서...</description>
+        <pubDate>Tue, 06 Oct 2020 23:56:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/06/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/06/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>Github에 ssh-key 등록해 사용하기</title>
