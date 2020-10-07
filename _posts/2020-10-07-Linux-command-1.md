@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "자주 사용하는 Linux command 정리 1"
+title: "주로 사용하는 Linux command 정리 1"
 date: "2020-10-07 04:06:00"
 author: Haebin Seo
 categories: linux
 tags: linux-command
 ---
-# 자주 사용하는 Linux command 정리 1
+# 주로 사용하는 Linux command 정리 1
 
 노트북에 Ubuntu를 설치해 사용한지 반년이 다 되어가지만 가끔 사용하는 명령어들은 아직도 구글링해가며 사용하곤 한다. 기억이 나긴하지만 확신을 못해서 찾아보고 사용하게 되는 것 같다.
-그래서 이번 기회에 자주 사용하는 명령어 위주로 간단히 정리하려고 한다.
+그래서 이번 기회에 주로 사용하는 명령어 위주로 간단히 정리하려고 한다.
 
 #### 1. cd
   - Change directory
