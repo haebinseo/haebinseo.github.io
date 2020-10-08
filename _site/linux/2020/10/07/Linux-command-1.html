@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>주로 사용하는 Linux command 정리 1</title>
+  <meta name="description" content="주로 사용하는 Linux command 정리 1">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="주로 사용하는 Linux command 정리 1" />
+  <meta property="og:url" content="http://haebinseo.github.io//linux/2020/10/07/Linux-command-1.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="주로 사용하는 Linux command 정리 1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="주로 사용하는 Linux command 정리 1">
+  <meta name="twitter:description" content="주로 사용하는 Linux command 정리 1">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//linux/2020/10/07/Linux-command-1.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//linux/2020/10/07/Linux-command-1.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">주로 사용하는 Linux command 정리 1</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">October 7, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/linux">Linux</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="주로-사용하는-linux-command-정리-1">주로 사용하는 Linux command 정리 1</h1>
+
+<p>노트북에 Ubuntu를 설치해 사용한지 반년이 다 되어가지만 가끔 사용하는 명령어들은 아직도 구글링해가며 사용하곤 한다. 기억이 나긴하지만 확신을 못해서 찾아보고 사용하게 되는 것 같다.
+그래서 이번 기회에 주로 사용하는 명령어 위주로 간단히 정리하려고 한다.</p>
+
+<h4 id="1-cd">1. cd</h4>
+<ul>
+  <li>Change directory</li>
+  <li>매우 자주 사용하므로 간단한 예시만을 남긴다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">cd</span> .. <span class="c"># 상위 폴더로 이동</span>
+  <span class="nv">$ </span><span class="nb">cd</span> - <span class="c"># 이전 작업 폴더로 이동</span>
+  <span class="nv">$ </span><span class="nb">cd</span> / <span class="c"># root 경로로 이동</span>
+  <span class="nv">$ </span><span class="nb">cd</span> ~ <span class="c"># Home 경로로 이동</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="2-pwd">2. pwd</h4>
+<ul>
+  <li>Print working directory</li>
+  <li>현재 작업 중인 디렉토리의 절대 경로
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">pwd</span>
+  /home/havebeen/repos/
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="3-ls">3. ls</h4>
+<ul>
+  <li>List</li>
+  <li>디렉토리 내용 출력
+  ```shell
+  $ ls # 현재 디렉토리 내용 출력
+  $ ls -a # –all / 모든 내용
+  $ ls -l # long / 자세한 내용(권한, 포함된 파일 수, 소유자, 그룹, 크기, 수정일자, 파일이름)
+  $ ls -S # Size / 파일 크기순 정렬
+  $ ls -r # –reverse / 거꾸로 출력(default - alphabetical)
+  $ ls -R # –recursive / 하위 디렉토리 내용까지
+  $ ls -h # –human-readable / 파일크기를 K, M, G 단위로 보기 좋게 출력</li>
+</ul>
+
+<p># ls -l은 default로 mtime(수정 시간)을 출력한다.
+  $ ls -lu # atime(접근 시간) 출력
+  $ ls -lc # ctime(변경 시간) 출력</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#### 4. stat
+  - Status
+  - 파일 상태 정보 출력
+  ```shell
+  $ stat package.json
+    File: package.json
+    Size: 1397      	Blocks: 8          IO Block: 4096   일반 파일
+  Device: 10305h/66309d	Inode: 1184675     Links: 1
+  Access: (0644/-rw-r--r--)  Uid: ( 1000/havebeen)   Gid: ( 1000/havebeen)
+  Access: 2020-10-06 19:49:58.475783679 +0900
+  Modify: 2020-09-26 23:03:03.593015061 +0900
+  Change: 2020-09-26 23:03:03.593015061 +0900
+   Birth: -
+</code></pre></div></div>
+
+<h4 id="5-man">5. man</h4>
+<ul>
+  <li>Manual</li>
+  <li>명령어, 프로그램의 사용법 출력</li>
+  <li>man 사용법
+|            key            |        의미        |
+| :———————–: | :—————-: |
+|             q             |   quit / 나가기    |
+|             h             | help / 사용법 확인 |
+|        ←, →, ↑, ↓         |   한줄씩 넘기기    |
+| Page Up / Down, Space bar | 한페이지씩 넘기기  |
+|    / + 검색어 + enter     |        검색        |
+|             n             |     다음 위치      |
+|             N             |     이전 문자      |
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>man <span class="nb">rm</span> <span class="c"># rm명령어의 메뉴얼 출력</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="6-mkdir--rmdir">6. mkdir / rmdir</h4>
+<ul>
+  <li>Make directories / Remove empty directories
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">mkdir </span>dir1 <span class="c"># 현재 디렉토리에 dir1 디렉토리 생성</span>
+  <span class="nv">$ </span><span class="nb">mkdir </span>dir1 dir2 <span class="c"># 한 번에 여러 디렉토리 생성</span>
+  <span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> dir1/dir2 <span class="c"># --parents / 경로 중에 존재하지 않는 디렉토리까지 생성</span>
+  <span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-m</span> 700 dir1 <span class="c"># --mode=700 / 디렉토리를 생성하며 권한도 지정</span>
+  <span class="nt">--------------------------------------------------------</span>
+  <span class="nv">$ </span><span class="nb">rmdir </span>dir1 <span class="c"># 현재 디렉토리에 dir1 디렉토리 삭제</span>
+  <span class="nv">$ </span><span class="nb">rmdir </span>dir1 dir2 <span class="c"># 한 번에 여러 디렉토리 삭제</span>
+  <span class="nv">$ </span><span class="nb">rmdir</span> <span class="nt">-p</span> dir1/dir2 <span class="c"># --parents / 경로 중의 디렉토리들도 같이 삭제</span>
+<span class="c"># 만약 다른 디렉토리나 파일이 존재하면 해당 상위 디렉토리는 제외</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="7-cp">7. cp</h4>
+<ul>
+  <li>Copy
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">cp </span>file1 file2 <span class="c"># file1을 복사하여 file2로 저장</span>
+  <span class="nv">$ </span><span class="nb">cp </span>file1 dir1/ <span class="c"># file1을 복사하여 dir1 안에 저장</span>
+  <span class="nv">$ </span><span class="nb">cp </span>file1 file2 dir1/ <span class="c"># 한 번에 여러 파일을 복사하여 dir1에 저장</span>
+  <span class="nv">$ </span><span class="nb">cp</span> <span class="nt">-r</span> dir1/ dir2/ <span class="c"># --recursive / 디렉토리 dir1을 전체 복사하여 dir2로 저장</span>
+  <span class="nv">$ </span><span class="nb">cp</span> <span class="nt">-r</span> dir1/ backup<span class="si">$(</span><span class="nb">date</span> <span class="s1">'+_%Y%m%d'</span><span class="si">)</span> <span class="c"># date 명령어와 조합하여 쉽게 백업</span>
+<span class="c"># ex) backup_20201007</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="8-mv">8. mv</h4>
+<ul>
+  <li>Move
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">mv </span>file1 file2 <span class="c"># file1을 file2로 이름 변경</span>
+  <span class="nv">$ </span><span class="nb">mv </span>file1 dir1/ <span class="c"># file1을 dir1로 이동</span>
+  <span class="nv">$ </span><span class="nb">mv </span>file1 file2 dir1/ <span class="c"># 한 번에 여러 파일을 dir1로 이동</span>
+  <span class="nv">$ </span><span class="nb">mv </span>dir1/ dir2/ <span class="c"># 디렉토리 dir1을 dir2로 이름 변경</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="9-rm">9. rm</h4>
+<ul>
+  <li>Remove
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">rm </span>file1 <span class="c"># file1 삭제</span>
+  <span class="nv">$ </span><span class="nb">rm</span> <span class="k">*</span>.txt <span class="c"># '.txt'로 끝나는 파일을 모두 삭제</span>
+  <span class="nv">$ </span><span class="nb">rm</span> <span class="k">*</span> <span class="c"># 현재 디렉토리의 모든 파일 삭제</span>
+  <span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-r</span> dir1/ <span class="c"># --recursive / 디렉토리 dir1 삭제</span>
+  <span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> dir1/ <span class="c"># --recursive --force / 디렉토리 dir1 강제 삭제</span>
+  <span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-ri</span> dir1/ <span class="c"># --recursive --interactive / 디렉토리의 내용물을 삭제할 때마다 사용자에게 질문</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/linux-command">linux-command</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/10/06/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201006_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/git/2020/10/07/git-command-1.html">
+					<span class="page-number">주로 사용하는 git command 정리 1</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

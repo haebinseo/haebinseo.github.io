@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Github에 ssh-key 등록해 사용하기</title>
-  <meta name="description" content="Github에 ssh-key 등록해 사용하기">
+  <title>주로 사용하는 git command 정리 1</title>
+  <meta name="description" content="주로 사용하는 Git command 정리 1">
   
   <meta name="author" content="Haebin Seo">
   <meta name="copyright" content="&copy; Haebin Seo 2020">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Github에 ssh-key 등록해 사용하기" />
-  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+  <meta property="og:description" content="주로 사용하는 Git command 정리 1" />
+  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
   <meta property="og:site_name" content="HaebinLog" />
-  <meta property="og:title" content="Github에 ssh-key 등록해 사용하기" />
+  <meta property="og:title" content="주로 사용하는 git command 정리 1" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Github에 ssh-key 등록해 사용하기">
-  <meta name="twitter:description" content="Github에 ssh-key 등록해 사용하기">
+  <meta name="twitter:title" content="주로 사용하는 git command 정리 1">
+  <meta name="twitter:description" content="주로 사용하는 Git command 정리 1">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html">
+  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -139,7 +139,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">Github에 ssh-key 등록해 사용하기</h1>
+      <h1 class="title">주로 사용하는 git command 정리 1</h1>
       <p class="info">by <strong>Haebin Seo</strong></p>
     </header>
   </div>
@@ -154,7 +154,7 @@
  
 
 <section class="post-meta">
-  <div class="post-date">October 5, 2020</div>
+  <div class="post-date">October 7, 2020</div>
   <div class="post-categories">
   in 
     
@@ -165,114 +165,95 @@
 </section>
 
 <article class="post-content">
-  <h1 id="github에-ssh-key-등록해-사용하기">Github에 ssh-key 등록해 사용하기</h1>
+  <h1 id="주로-사용하는-git-command-정리-1">주로 사용하는 Git command 정리 1</h1>
 
-<p>그 동안 git을 push, pull할 떄 vscode의 git authentication 설정으로 로그인 없이 사용했었는데, 이번에 깃헙 계정을 새로 만들면서 git config –global의 이름과 이메일을 변경해도 이전 계정으로 접근이 시도되며 403 error를 뱉는 일을 겪었다.
-검색하면 나오는 결과라고는 windows 제어판에서 자격증명을 지우라는 것 뿐이었고… 나는 우분투였다ㅠㅠㅠ 암호 및 키에 등록되어있는 git 계정을 삭제했지만 역시 해결되지 않았고 결국 해결하지 못한 채 ssh-key를 등록해 사용하는 방향으로 틀었다.</p>
+<p>모든 작업의 시작과 끝은 git init, push로 끝날 만큼 git command를 많이 사용하지만 자주 사용하는 몇몇 명령어를 제외하고는 매번 10분 이상 구글링해 사용하는 편이다.
+그래서 리눅스 커맨드를 정리하는 김에 주로 사용하거나 찾아본 적 있는 git 명령어들을 기록하고자 한다.</p>
 
-<p>ssh-key를 사용해 로그인없이 github을 사용하는 것이 이번이 처음은 아니다. 전에 django서버를 aws ec2 서버로 돌릴 때 사용했었는데, 몇 달이 지난 지금 벌써 기억이 가물가물해 다시 구글링해 적용하게 되었다.</p>
-
-<p>이번 포스팅은 이 내용을 나중에 최소한의 시간으로 다시 찾고자 남기는 기록이다.</p>
-
+<h4 id="1-git-config">1. git config</h4>
 <ul>
-  <li>SSH (Secure Shell Protocol)
-    <ul>
-      <li>암호화된 원격 접속 프로토콜</li>
-      <li>컴퓨터가 공용 네트워크를 통해 통신할 때 보안적으로 안전하게 통신하기 위해 사용하는 접속 프로토콜이다</li>
-    </ul>
-  </li>
-  <li>SSH Key
-    <ul>
-      <li>SSH로 서버에 접속 시 서버에 비밀번호 대신 key를 제출하는 방식이다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="1-ssh-key-파일-확인">1. SSH Key 파일 확인</h3>
-<ul>
-  <li>일반적으로 SSH Key는 ~/.ssh 경로에 존재한다.</li>
-  <li>기존 생성해 놓은 키가 있다면 .pub 파일등과 같은 키 파일이 있을 것이다.</li>
-  <li>혹시 디렉토리가 없다면 다음의 명령어로 생성하자.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> ~/.ssh
-<span class="nv">$ </span><span class="nb">chmod </span>700 ~/.ssh
-<span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+  <li>git 환경 설정</li>
+  <li>git은 버전을 저장할 떄 사용자 정보도 함께 저장하는데, 그 사용자를 등록할 수 있는 명령어이다.</li>
+  <li>github에 올렸을 때 commit의 작성자와 branch가 원격 저장소의 소유자, default branch와 일치하지 않으면 contribution으로 인정하지 않으므로, github 페이지의 이쁜 잔디밭을 원한다면 꼭 설정도록 하자.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.name <span class="s2">"haebinseo"</span> <span class="c"># [현재 컴퓨터의 모든 저장소에서] 사용자 이름 등록</span>
+  <span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.email <span class="s2">"haebin.dev@gmail.com"</span> <span class="c"># 사용자 이메일 등록</span>
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h3 id="2-ssh-key-생성하기">2. SSH Key 생성하기</h3>
+<h4 id="2-git-init">2. git init</h4>
 <ul>
-  <li>ssh-keygen을 사용해 key를 생성한다.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ssh-keygen <span class="nt">-t</span> rsa <span class="nt">-b</span> 4096 <span class="nt">-C</span> <span class="s2">"yourEmail@example.com"</span>
-</code></pre></div>    </div>
-    <p>cf ) -t rsa는 rsa라는 암호화 방식으로 키를 생성한다는 의미다.
-SSH 키는 크기가 2048비트 또는 4096비트인 RSA 키여야 한다. 이 경우에는 4096으로 지정하였다.</p>
-  </li>
-  <li>다음은 경로지정이다. 필요한 경우에만 절대 경로로 입력해주자.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>Generating public/private rsa key pair.
-<span class="nv">$ </span>Enter file <span class="k">in </span>which to save the key <span class="o">(</span>/home/user/.ssh/id_rsa<span class="o">)</span>:
-</code></pre></div>    </div>
-  </li>
-  <li>암호(Passphrase)설정도 필요하면 입력해주자.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:
-<span class="nv">$ </span>Enter same passphrase again:
-</code></pre></div>    </div>
-    <p>암호를 설정했다면 ssh-agent에 키를 등록해두면 매번 키를 입력하지 않아도 되므로 편하다.</p>
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">eval</span> <span class="sb">`</span>ssh-agent <span class="nt">-s</span><span class="sb">`</span> <span class="c"># 백그라운드 실행</span>
-<span class="nv">$ </span>ssh-add ~/.ssh/id_rsa <span class="c"># 키 등록</span>
-</code></pre></div>    </div>
-  </li>
-  <li>생성된 결과물은 다음과 같다.
-    <ul>
-      <li>
-        <p>id_rsa<br />
-private key. 본인의 컴퓨터에 저장되며, 이 key를 통해 암호화된 메시지를 복호화할 수 있다.</p>
-      </li>
-      <li>
-        <p>id_rsa.pub<br />
-public key. 공개되어도 비교적 안전한 Key이다. Public Key를 통해 메시지를 전송하기 전 암호화를 하게된다.
-public key로는 복호화는 불가능하고, 접속하려는 remote machine의 authorized_keys에 입력하여 사용한다.</p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="3-github에-공개키-등록하기">3. Github에 공개키 등록하기</h3>
-<ul>
-  <li>특정 프로젝트 혹은 계정의 설정에서 등록하면 된다. 여기서는 계정의 SSH Key로 등록했다.</li>
-  <li>Title: 사용자 지정 키 이름
-Key: 공개 키 내용</li>
-  <li>키 내용 확인방법
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat</span> ~/.ssh/id_rsa.pub 
-<span class="nv">$ </span>xclip <span class="nt">-selection</span> clipboard &lt; ~/.ssh/id_rsa.pub <span class="c"># Mac OS면 pbcopy를 쓰자</span>
+  <li>initialize</li>
+  <li>현재 위치에 지역 저장소 생성
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git init
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h3 id="4-github-설정-use-ssh로-변경">4. Github 설정 use SSH로 변경</h3>
+<h4 id="3-git-status">3. git status</h4>
 <ul>
-  <li>제일 중요하다(…)</li>
-  <li>https로 클론하고 왜 안되는지 고민하는 일이 없도록 하자</li>
-  <li>하지만 이미 클론한 상태라면? 다시 클론해야 되나…?ㅠㅠㅠ
-  아니다! remote를 변경해서 해결해주자 :).
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git remote remove origin
-<span class="nv">$ </span>git remote add origin git@github.com:[계정명]/[저장소명].git
-<span class="nv">$ </span>git remote show <span class="c"># origin이 잘 등록되었는지 확인</span>
+  <li>git 상태를 확인
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git status
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h3 id="5-끝">5. 끝!</h3>
+<h4 id="4-git-log">4. git log</h4>
 <ul>
-  <li>고생했다. 이제 git push하고 쉬자!</li>
+  <li>commit 정보를 확인
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git init
+  <span class="nv">$ </span>git init -<span class="o">(</span>n<span class="o">)</span> <span class="c"># 최근 n개의 commit 정보 출력</span>
+  <span class="nv">$ </span>git init <span class="nt">--stat</span> <span class="c"># commit 정보와 status를 함께 출력</span>
+  <span class="nv">$ </span>git init <span class="nt">--branches</span> <span class="c"># 모든 브랜치들의 commit 정보를 출력</span>
+  <span class="nv">$ </span>git init <span class="nt">--graph</span> <span class="c"># commit 정보를 그래프로 출력</span>
+  <span class="nv">$ </span>git init <span class="nt">--oneline</span> <span class="c"># 각 commit을 한 줄로 출력</span>
+  <span class="nv">$ </span>git init <span class="nt">-p</span> <span class="c"># 각 commit 정보와 diff 결과 출력</span>
+  <span class="nv">$ </span>git log <span class="nt">--pretty</span><span class="o">=</span>format:<span class="s2">"%h - %an, %ar : %s"</span> <span class="c"># format 옵션으로 결과 출력 지정</span>
+  <span class="c"># ca82a6d - Scott Chacon, 11 months ago : changed the version number</span>
+  <span class="c"># 085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code</span>
+  <span class="c"># a11bef0 - Scott Chacon, 11 months ago : first commit</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
+
+<h4 id="5-git-add">5. git add</h4>
+<ul>
+  <li>파일을 작업트리에서 스테이지로 올린다 (.git/index)
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git add file1 <span class="c"># file1을 스테이지로 올림</span>
+  <span class="nv">$ </span>git add <span class="nb">.</span> <span class="c"># 작업트리에서 수정한 모든 파일을 스테이지로 올림</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="6-git-commit">6. git commit</h4>
+<ul>
+  <li>스테이지에 대기하던 파일들을 저장소에 저장하며 새로운 버전을 생성한다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git commit <span class="c"># 기본 에디터가 열리며 commit 메시지를 작성. 이후 commit이 생성</span>
+  <span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"{commit message}"</span> <span class="c"># 한 줄의 커밋 메시지를 바로 작성하며 commit 생성</span>
+  <span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s2">"{commit message}"</span> <span class="c"># tracked file들의 변경사항을 스테이지에 올리며 동시에 commit. </span>
+  <span class="nv">$ </span>git commit <span class="nt">--amend</span> <span class="c"># 에디터에서 마지막 commit message 수정. 이전 commit에 현재 변경 내용을 추가</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="6-git-checkout">6. git checkout</h4>
+<ul>
+  <li>Switch branches or restore working tree files
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git checkout <span class="c"># 기본 에디터가 열리며 commit 메시지를 작성. 이후 commit이 생성</span>
+  <span class="nv">$ </span>git checkout <span class="nt">-m</span> <span class="s2">"{commit message}"</span> <span class="c"># 한 줄의 커밋 메시지를 바로 작성하며 commit 생성</span>
+  <span class="nv">$ </span>git checkout <span class="nt">-am</span> <span class="s2">"{commit message}"</span> <span class="c"># tracked file들의 변경사항을 스테이지에 올리며 동시에 commit. </span>
+  <span class="nv">$ </span>git checkout <span class="nt">--amend</span> <span class="c"># 에디터에서 마지막 commit message 수정. 이전 commit에 현재 변경 내용을 추가</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
 
 </article>
 
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/git">git</a>,&nbsp;<a href="/tag/ssh-key">ssh-key</a>
+  <strong>Tags:</strong> <a href="/tag/git-command">git-command</a>
 </section>
 
 
@@ -298,19 +279,19 @@ Key: 공개 키 내용</li>
 	<section class="post-navigation">
 		<span class="prev-post">
 			
-				<a href="/til/2020/10/05/TIL.html">
+				<a href="/linux/2020/10/07/Linux-command-1.html">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 					</span>
-					<span class="page-number">20201005_TIL</span>
+					<span class="page-number">주로 사용하는 Linux command 정리 1</span>
 				</a>
 			
 		</span>
 		<span class="next-post">
 			
-				<a href="/til/2020/10/06/TIL.html">
-					<span class="page-number">20201006_TIL</span>
+				<a href="/til/2020/10/07/TIL.html">
+					<span class="page-number">20201007_TIL</span>
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
