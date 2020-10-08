@@ -42,7 +42,7 @@
   
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="주로 사용하는 Git command 정리 1" />
-  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
+  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/09/git-command-1.html">
   <meta property="og:site_name" content="HaebinLog" />
   <meta property="og:title" content="주로 사용하는 git command 정리 1" />
   <meta property="og:type" content="website" />
@@ -58,14 +58,14 @@
   <meta name="twitter:title" content="주로 사용하는 git command 정리 1">
   <meta name="twitter:description" content="주로 사용하는 Git command 정리 1">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
+  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/09/git-command-1.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/07/git-command-1.html">
+  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/09/git-command-1.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -126,6 +126,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -154,7 +156,7 @@
  
 
 <section class="post-meta">
-  <div class="post-date">October 7, 2020</div>
+  <div class="post-date">October 9, 2020</div>
   <div class="post-categories">
   in 
     
@@ -167,16 +169,15 @@
 <article class="post-content">
   <h1 id="주로-사용하는-git-command-정리-1">주로 사용하는 Git command 정리 1</h1>
 
-<p>모든 작업의 시작과 끝은 git init, push로 끝날 만큼 git command를 많이 사용하지만 자주 사용하는 몇몇 명령어를 제외하고는 매번 10분 이상 구글링해 사용하는 편이다.
-그래서 리눅스 커맨드를 정리하는 김에 주로 사용하거나 찾아본 적 있는 git 명령어들을 기록하고자 한다.</p>
+<p>모든 작업은 git pull, push로 끝날 만큼 git command를 많이 사용하지만, 자주 사용하는 몇몇 명령어를 제외하고는 매번 10분 이상 구글링해 사용하곤 한다. 그래서 리눅스 커맨드를 정리하는 김에 주로 사용하거나 찾아본 적 있는 git 명령어들을 기록하게 되었다.</p>
 
 <h4 id="1-git-config">1. git config</h4>
 <ul>
   <li>git 환경 설정</li>
   <li>git은 버전을 저장할 떄 사용자 정보도 함께 저장하는데, 그 사용자를 등록할 수 있는 명령어이다.</li>
   <li>github에 올렸을 때 commit의 작성자와 branch가 원격 저장소의 소유자, default branch와 일치하지 않으면 contribution으로 인정하지 않으므로, github 페이지의 이쁜 잔디밭을 원한다면 꼭 설정도록 하자.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.name <span class="s2">"haebinseo"</span> <span class="c"># [현재 컴퓨터의 모든 저장소에서] 사용자 이름 등록</span>
-  <span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.email <span class="s2">"haebin.dev@gmail.com"</span> <span class="c"># 사용자 이메일 등록</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.name <span class="s2">"haebinseo"</span> <span class="c"># [현재 컴퓨터의 모든 저장소에서] 사용자 이름 등록</span>
+<span class="nv">$ </span>git config <span class="o">[</span><span class="nt">--global</span><span class="o">]</span> user.email <span class="s2">"haebin.dev@gmail.com"</span> <span class="c"># 사용자 이메일 등록</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -185,7 +186,7 @@
 <ul>
   <li>initialize</li>
   <li>현재 위치에 지역 저장소 생성
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git init
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git init
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -193,7 +194,7 @@
 <h4 id="3-git-status">3. git status</h4>
 <ul>
   <li>git 상태를 확인
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git status
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git status
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -201,17 +202,19 @@
 <h4 id="4-git-log">4. git log</h4>
 <ul>
   <li>commit 정보를 확인
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git init
-  <span class="nv">$ </span>git init -<span class="o">(</span>n<span class="o">)</span> <span class="c"># 최근 n개의 commit 정보 출력</span>
-  <span class="nv">$ </span>git init <span class="nt">--stat</span> <span class="c"># commit 정보와 status를 함께 출력</span>
-  <span class="nv">$ </span>git init <span class="nt">--branches</span> <span class="c"># 모든 브랜치들의 commit 정보를 출력</span>
-  <span class="nv">$ </span>git init <span class="nt">--graph</span> <span class="c"># commit 정보를 그래프로 출력</span>
-  <span class="nv">$ </span>git init <span class="nt">--oneline</span> <span class="c"># 각 commit을 한 줄로 출력</span>
-  <span class="nv">$ </span>git init <span class="nt">-p</span> <span class="c"># 각 commit 정보와 diff 결과 출력</span>
-  <span class="nv">$ </span>git log <span class="nt">--pretty</span><span class="o">=</span>format:<span class="s2">"%h - %an, %ar : %s"</span> <span class="c"># format 옵션으로 결과 출력 지정</span>
-  <span class="c"># ca82a6d - Scott Chacon, 11 months ago : changed the version number</span>
-  <span class="c"># 085bb3b - Scott Chacon, 11 months ago : removed unnecessary test code</span>
-  <span class="c"># a11bef0 - Scott Chacon, 11 months ago : first commit</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log
+<span class="nv">$ </span>git log -<span class="o">(</span>n<span class="o">)</span> <span class="c"># 최근 n개의 commit 정보 출력</span>
+<span class="nv">$ </span>git log <span class="nt">--stat</span> <span class="c"># commit 정보와 status를 함께 출력</span>
+<span class="nv">$ </span>git log <span class="nt">--branches</span> <span class="c"># 모든 브랜치들의 commit 정보를 출력</span>
+<span class="nv">$ </span>git log <span class="nt">--graph</span> <span class="c"># commit 정보를 그래프로 출력</span>
+<span class="nv">$ </span>git log <span class="nt">--oneline</span> <span class="c"># 각 commit을 한 줄로 출력</span>
+<span class="nv">$ </span>git log <span class="nt">-p</span> <span class="c"># 각 commit 정보와 diff 결과 출력</span>
+<span class="nv">$ </span>git log <span class="nt">--abbrev-commit</span> <span class="c"># 짧고 중복되지 않는 해시 값으로 revision number 출력</span>
+
+<span class="nv">$ </span>git log <span class="nt">--pretty</span><span class="o">=</span>format:<span class="s2">"%h - %an, %ar : %s"</span> <span class="c"># format 옵션으로 결과 출력 지정</span>
+ca82a6d - Scott Chacon, 11 months ago : changed the version number
+085bb3b - Scott Chacon, 11 months ago : removed unnecessary <span class="nb">test </span>code
+a11bef0 - Scott Chacon, 11 months ago : first commit
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -219,8 +222,8 @@
 <h4 id="5-git-add">5. git add</h4>
 <ul>
   <li>파일을 작업트리에서 스테이지로 올린다 (.git/index)
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git add file1 <span class="c"># file1을 스테이지로 올림</span>
-  <span class="nv">$ </span>git add <span class="nb">.</span> <span class="c"># 작업트리에서 수정한 모든 파일을 스테이지로 올림</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add file1 <span class="c"># file1을 스테이지로 올림</span>
+<span class="nv">$ </span>git add <span class="nb">.</span> <span class="c"># 작업트리에서 수정한 모든 파일을 스테이지로 올림</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -228,25 +231,50 @@
 <h4 id="6-git-commit">6. git commit</h4>
 <ul>
   <li>스테이지에 대기하던 파일들을 저장소에 저장하며 새로운 버전을 생성한다.
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git commit <span class="c"># 기본 에디터가 열리며 commit 메시지를 작성. 이후 commit이 생성</span>
-  <span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"{commit message}"</span> <span class="c"># 한 줄의 커밋 메시지를 바로 작성하며 commit 생성</span>
-  <span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s2">"{commit message}"</span> <span class="c"># tracked file들의 변경사항을 스테이지에 올리며 동시에 commit. </span>
-  <span class="nv">$ </span>git commit <span class="nt">--amend</span> <span class="c"># 에디터에서 마지막 commit message 수정. 이전 commit에 현재 변경 내용을 추가</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="c"># 기본 에디터가 열리며 commit 메시지를 작성. 이후 commit이 생성</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"{commit message}"</span> <span class="c"># 한 줄의 커밋 메시지를 바로 작성하며 commit 생성</span>
+<span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s2">"{commit message}"</span> <span class="c"># tracked file들의 변경사항을 스테이지에 올리며 동시에 commit. </span>
+<span class="nv">$ </span>git commit <span class="nt">--amend</span> <span class="c"># 마지막 commit message 수정. 이전 commit에 현재 스테이지에 올라온 내용을 추가</span>
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h4 id="6-git-checkout">6. git checkout</h4>
+<h4 id="7-git-checkout">7. git checkout</h4>
 <ul>
-  <li>Switch branches or restore working tree files
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>git checkout <span class="c"># 기본 에디터가 열리며 commit 메시지를 작성. 이후 commit이 생성</span>
-  <span class="nv">$ </span>git checkout <span class="nt">-m</span> <span class="s2">"{commit message}"</span> <span class="c"># 한 줄의 커밋 메시지를 바로 작성하며 commit 생성</span>
-  <span class="nv">$ </span>git checkout <span class="nt">-am</span> <span class="s2">"{commit message}"</span> <span class="c"># tracked file들의 변경사항을 스테이지에 올리며 동시에 commit. </span>
-  <span class="nv">$ </span>git checkout <span class="nt">--amend</span> <span class="c"># 에디터에서 마지막 commit message 수정. 이전 commit에 현재 변경 내용을 추가</span>
+  <li>브랜치 전환 혹은 작업트리의 파일 복구
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">--</span> file1 <span class="c"># modified 상태의 파일을 다시 unmodified 상태로 되돌림. </span>
+<span class="nv">$ </span>git checkout <span class="o">{</span>revision number<span class="o">}</span> <span class="c"># 해당 commit으로 HEAD 이동 (detached HEAD)</span>
+<span class="nv">$ </span>git checkout <span class="o">{</span>branch name<span class="o">}</span> <span class="c"># 해당 branch로 HEAD 이동</span>
+<span class="nv">$ </span>git checkout <span class="nt">-b</span> <span class="o">{</span>branch name<span class="o">}</span> <span class="c"># branch를 생성하고 이동</span>
 </code></pre></div>    </div>
   </li>
 </ul>
 
+<h4 id="8-git-reset">8. git reset</h4>
+<ul>
+  <li>현재 HEAD를 특정 상태로 재설정</li>
+  <li>reset의 단계
+    <ol>
+      <li>HEAD 이동 (–soft 옵션은 여기까지 동작)</li>
+      <li>Index 업데이트 (–mixed 옵션은 여기까지 동작 / default)</li>
+      <li>Working tree 업데이트 (–hard 옵션은 여기까지 동작)</li>
+    </ol>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset <span class="o">{</span>revision number<span class="o">}</span> <span class="c"># 해당 commit으로 HEAD 이동, HEAD 내용으로 Index 업데이트</span>
+<span class="nv">$ </span>git reset <span class="o">{</span>revision number<span class="o">}</span> file1 <span class="c"># HEAD 이동 생략, 해당 commit의 file1로 Index의 file1 업데이트</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="9-git-revert">9. git revert</h4>
+<ul>
+  <li>특정 commit의 작업을 반대로 함(revert)</li>
+  <li>reset과는 다르게 기존의 commit을 그대로 두고 새로운 commit을 작성한다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git revert <span class="o">{</span>revision number<span class="o">}</span> <span class="c"># 해당 commit의 작업 내역 revert</span>
+<span class="nv">$ </span>git revert 2664ce8..15413dc <span class="c"># 15413dc부터 2664ce8 바로 이전 commit까지 revert</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
 </article>
 
@@ -279,24 +307,16 @@
 	<section class="post-navigation">
 		<span class="prev-post">
 			
-				<a href="/linux/2020/10/07/Linux-command-1.html">
+				<a href="/git/2020/10/09/git-summary-1.html">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 					</span>
-					<span class="page-number">주로 사용하는 Linux command 정리 1</span>
+					<span class="page-number">git 개념 정리 1</span>
 				</a>
 			
 		</span>
 		<span class="next-post">
-			
-				<a href="/til/2020/10/07/TIL.html">
-					<span class="page-number">20201007_TIL</span>
-					<span class="fa-stack fa-lg">
-						<i class="fa fa-square fa-stack-2x"></i>
-						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
 			
 		</span>
 	</section>
@@ -330,6 +350,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

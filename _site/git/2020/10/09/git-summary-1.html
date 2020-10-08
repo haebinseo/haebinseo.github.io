@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>git 개념 정리 1</title>
+  <meta name="description" content="Git  Git은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다.          Committed : 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.      Modified : 수정한 파일을 아직 Staging Area...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Git  Git은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다.          Committed : 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.      Modified : 수정한 파일을 아직 Staging Area..." />
+  <meta property="og:url" content="http://haebinseo.github.io//git/2020/10/09/git-summary-1.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="git 개념 정리 1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="git 개념 정리 1">
+  <meta name="twitter:description" content="Git  Git은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다.          Committed : 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.      Modified : 수정한 파일을 아직 Staging Area...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//git/2020/10/09/git-summary-1.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//git/2020/10/09/git-summary-1.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">git 개념 정리 1</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">October 9, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/git">Git</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h4 id="git">Git</h4>
+<ul>
+  <li>Git은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다.
+    <ul>
+      <li>Committed : 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.</li>
+      <li>Modified : 수정한 파일을 아직 Staging Area에 추가하지 않았음을 의미한다.</li>
+      <li>Staged : 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태를 의미한다.</li>
+    </ul>
+  </li>
+  <li>이 세 가지 상태는 Git 프로젝트의 세 가지 단계와 연결돼 있다.
+<img src="/assets/git/areas.png" alt="areas" />
+    <ul>
+      <li><strong>Git directory</strong>는 Git이 프로젝트의 메타데이터와 객체 데이터베이스를 저장하는 곳을 말한다. 이 Git directory가 Git의 핵심이다. 다른 컴퓨터에 있는 저장소를 Clone 할 때 Git directory가 만들어진다.</li>
+      <li><strong>Working tree</strong>는 프로젝트의 특정 버전을 Checkout 한 것이다. Git directory는 지금 작업하는 디스크에 있고 그 directory 안에 압축된 데이터베이스에서 파일을 가져와서 working tree를 만든다.</li>
+      <li><strong>Staging Area</strong>는 Git directory에 있다. 단순한 파일이고 곧 커밋할 파일에 대한 정보를 저장한다. Git에서는 기술용어로는 “Index” 라고 하지만, “Staging Area” 라는 용어를 써도 상관 없다.</li>
+      <li>Staging Area와 Git directory는 눈에 보이지 않는다. Staging Area 내용는 .git/index에, Git directory 내용은 .git/HEAD 파일에 저장된다.</li>
+    </ul>
+  </li>
+  <li>작업트리의 파일은 크게 <strong>tracked</strong> 상태와 <strong>untracked</strong> 상태로 나뉜다.
+    <ul>
+      <li>한번이라도 commit한 파일은 수정 여부를 계속 추적한다.
+<img src="/assets/git/lifecycle.png" alt="lifeCycle" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="revision">Revision</h4>
+<ul>
+  <li>특정 git object, 즉 commit을 가리킬 수 있는 표현식을 의미한다.</li>
+  <li>ex) <code class="highlighter-rouge">HEAD~2</code>, <code class="highlighter-rouge">master</code>, <code class="highlighter-rouge">a8dd808db6d87a1d809b1a223e08ab69602b2d3a</code>, <code class="highlighter-rouge">HEAD:test.txt</code></li>
+  <li>Git은 40글자의 해시 값의 앞 몇 글자만으로도 어떤 커밋인지 충분히 식별할 수 있다. 저장소 안에서 해시 값이 중복되지 않으면 해시 값의 앞 4자만으로도 나타낼 수 있다. <code class="highlighter-rouge">git log</code>에 <code class="highlighter-rouge">--abbrev-commit</code> 옵션을 추가하면 짧고 중복되지 않는 해시 값을 보여준다. 기본으로 7자를 보여주고 해시 값이 중복되는 경우 더 긴 해시 값을 보여준다.</li>
+  <li>
+    <p>RefLog
+reflog의 일은 모두 로컬의 일이므로 내 Reflog가 동료의 저장소에는 있을 수 없다. 즉, 5분 전에 Clone 한 저장소에 사용하면 아무 결과도 나오지 않는다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">rule</th>
+          <th style="text-align: center">의미</th>
+          <th style="text-align: center">예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;@{n}</td>
+          <td style="text-align: center">&lt;refname&gt;가 n번 전에 가리켰던 것</td>
+          <td style="text-align: center">HEAD@{5}, main@{2}</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;@{date}</td>
+          <td style="text-align: center">&lt;refname&gt;가 {date}에 가리켰던 것</td>
+          <td style="text-align: center">HEAD@{yesterday}</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>계통 관계
+HEAD^ 는 바로 “HEAD의 부모” 를 의미하므로 HEAD 바로 이전 커밋을 보여준다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: center">rule</th>
+          <th style="text-align: center">의미</th>
+          <th style="text-align: center">예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;^</td>
+          <td style="text-align: center">&lt;refname&gt;의 부모</td>
+          <td style="text-align: center">HEAD^</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;^n</td>
+          <td style="text-align: center">&lt;refname&gt;의 n번째 부모<br />(merge commit에서만 가능)</td>
+          <td style="text-align: center">HEAD^2</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;~</td>
+          <td style="text-align: center">&lt;refname&gt;의 부모</td>
+          <td style="text-align: center">HEAD~</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">&lt;refname&gt;~n</td>
+          <td style="text-align: center">&lt;refname&gt;의 n번째 조상</td>
+          <td style="text-align: center">HEAD~2 (== HEAD^^)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Double Dot
+    <ul>
+      <li>어떤 커밋들이 한쪽에는 관련됐고 다른 쪽에는 관련되지 않았는지 Git에게 물어보는 것이다.</li>
+      <li>다음과 같은 commit history가 있다고 가정하자
+<img src="/assets/git/double-dot.png" alt="double-dot" />
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log master..experiment <span class="c"># master에는 없지만, experiment에는 있는 커밋</span>
+D
+C
+
+<span class="nv">$ </span>git log experiment..master <span class="c"># experiment 에는 없고 master 에만 있는 커밋</span>
+F
+E
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>Triple Dot
+    <ul>
+      <li>양쪽에 있는 두 Refs 사이에서 공통으로 가지는 것을 제외하고 서로 다른 커밋만 보여준다.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log master...experiment
+F
+E
+D
+C
+
+<span class="nv">$ </span>git log master...experiment <span class="nt">--left-right</span> <span class="c"># 각 커밋이 어느 브랜치에 속하는지 보여줌</span>
+&lt; F
+&lt; E
+<span class="o">&gt;</span> D
+<span class="o">&gt;</span> C
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="head">HEAD</h4>
+<ul>
+  <li>보통 branch는 특정 commit의 revision number를 가리키고 HEAD가 이 branch를 가리킨다.</li>
+  <li>이렇게 HEAD -&gt; branch -&gt; commit 순으로 commit을 가리키는 상태(state)를 <strong><em>Attached HEAD</em></strong>, 브랜치를 통하지 않고 HEAD가 커밋을 직접 가리키는 상태는 <strong><em>Detached HEAD</em></strong>라고 한다.</li>
+  <li>Attached HEAD state에서는 새로운 commit을 작성했을 때, HEAD가 자동으로 최근 commit을 따라간다. 하지만 Detached HEAD state에서는 따라가지 않으므로, 이후 다른 branch나 commit으로 chackout했을 때 이 commit을 찾기가 매우 힘들어진다.</li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/git-study">git-study</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/10/08/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201008_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/git/2020/10/09/git-command-1.html">
+					<span class="page-number">주로 사용하는 git command 정리 1</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
