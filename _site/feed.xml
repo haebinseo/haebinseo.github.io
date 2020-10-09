@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Oct 2020 05:09:52 +0900</pubDate>
-    <lastBuildDate>Fri, 09 Oct 2020 05:09:52 +0900</lastBuildDate>
+    <pubDate>Sat, 10 Oct 2020 00:06:50 +0900</pubDate>
+    <lastBuildDate>Sat, 10 Oct 2020 00:06:50 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201009_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;주로 사용하는 git command를 정리하며 포스트를 작성했다. 구글링하는데 시간을 조금이라도 더 줄일 수 있었으면 한다.&lt;/li&gt; &lt;li&gt;은희랑 301일 기념으로 아웃백에서 저녁을 먹고 오니 하루가 끝나있었다…. 내일은...</description>
+        <pubDate>Fri, 09 Oct 2020 23:59:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/09/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/09/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>주로 사용하는 git command 정리 1</title>
@@ -39,7 +53,7 @@
     
       <item>
         <title>20201008_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;주로 사용하는 git command를 정리하며 포스트를 작성했다. 구글링하는데 시간을 조금이라도 더 줄일 수 있었으면 한다.&lt;/li&gt; &lt;li&gt;구글 캘린더에 이번 10월 계획을 세웠다. 원래는 FullCalendar를 사용해서 구글...</description>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;구글 캘린더에 이번 10월 계획을 세웠다. 원래는 FullCalendar를 사용해서 구글 캘린더 API와 연동해 게시글을 작성하려고 했는데, 매번 블로그에서 Oauth로 구글 서버에 로그인하는 것도 거추장스럽고 무엇보다...</description>
         <pubDate>Thu, 08 Oct 2020 22:52:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/10/08/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/08/TIL.html</guid>
