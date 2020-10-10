@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Oct 2020 00:06:50 +0900</pubDate>
-    <lastBuildDate>Sat, 10 Oct 2020 00:06:50 +0900</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2020 00:56:00 +0900</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2020 00:56:00 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201010_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;facebookClone_Node 프로젝트의 profile 페이지 친구 탭 UI를 작성했다. 이제 사진 탭 UI만 작성하면 profile 페이지의 대략적인 UI는 완성된다.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 10 Oct 2020 23:59:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/10/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/10/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201009_TIL</title>
@@ -129,20 +147,6 @@
         <pubDate>Mon, 05 Oct 2020 04:12:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/10/05/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/05/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201005_TIL 시작</title>
-        <description>&lt;h1 id=&quot;til-today-i-learned-시작&quot;&gt;TIL (Today I learned) 시작&lt;/h1&gt; &lt;p&gt;하루하루 무언가 열심히 한다고 생각하지만 돌이켜보면 그 때 뭐했는지, 공부한 내용이 어디있는지 기억나지 않는 날이 많다고 느꼈다. 그러던 중 초보몽키님의 TIL 회고를 읽으며 매일...</description>
-        <pubDate>Mon, 05 Oct 2020 04:12:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/05/TIL-%EC%8B%9C%EC%9E%91.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/05/TIL-%EC%8B%9C%EC%9E%91.html</guid>
         
         <category>til</category>
         
