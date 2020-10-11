@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2020 00:56:00 +0900</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2020 00:56:00 +0900</lastBuildDate>
+    <pubDate>Mon, 12 Oct 2020 00:14:59 +0900</pubDate>
+    <lastBuildDate>Mon, 12 Oct 2020 00:14:59 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201011_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 profile 페이지 사진 탭 UI를 작성하고, 기존의 데이터베이스의 Post 모델의 이미지 속성을 Photo 모델로 분리했다. 이제 테스트용 데이터를 다시 쌓고 작동여부를 체크하면 프로필...</description>
+        <pubDate>Sun, 11 Oct 2020 23:59:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/11/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/11/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201010_TIL</title>
@@ -138,20 +152,6 @@
         
         
         <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>20201005_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한일&quot;&gt;오늘 한일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;jekyll을 사용한 깃허브 블로그 생성! 이전에 생활코딩 git 책을 공부하며 끝에서 부록으로 다뤘던 내용이어서 금방 끝날 줄 알았다. 그런데 이게 웬일.. 처음 써보는 루비 환경이다보니 설치부터...</description>
-        <pubDate>Mon, 05 Oct 2020 04:12:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/05/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/05/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     

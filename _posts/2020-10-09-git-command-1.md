@@ -84,7 +84,7 @@ $ git config [--global] user.email "haebin.dev@gmail.com" # 사용자 이메일 
   
   ```shell
   $ git reset {revision number} # 해당 commit으로 HEAD 이동, HEAD 내용으로 Index 업데이트
-  $ git reset {revision number} file1 # HEAD 이동 생략, 해당 commit의 file1로 Index의 file1 업데이트
+  $ git reset {revision number} file1 # HEAD 이동 생략, 해당 commit의 file1으로 Index의 file1 업데이트
   ```
 
 #### 9. git revert
