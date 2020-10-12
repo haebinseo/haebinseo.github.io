@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Oct 2020 00:14:59 +0900</pubDate>
-    <lastBuildDate>Mon, 12 Oct 2020 00:14:59 +0900</lastBuildDate>
+    <pubDate>Tue, 13 Oct 2020 02:38:43 +0900</pubDate>
+    <lastBuildDate>Tue, 13 Oct 2020 02:38:43 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201012_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 재구성된 데이터베이스의 데이터 하에서 기존에 기능들이 에러를 일으키지 않는지 확인했다. 또한 기존의 이미지 업로드를 photo 라우터를 따로 두어 처리하도록 변경했다. 현재 main에서 이미지를...</description>
+        <pubDate>Mon, 12 Oct 2020 23:59:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/12/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/12/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201011_TIL</title>
@@ -52,6 +66,20 @@
         
         
         <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>주로 사용하는 git command 정리 2</title>
+        <description>&lt;h1 id=&quot;주로-사용하는-git-command-정리-2&quot;&gt;주로 사용하는 Git command 정리 2&lt;/h1&gt; &lt;h4 id=&quot;1-git-rebase&quot;&gt;1. git rebase&lt;/h4&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; HEAD~3 &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;--continue&lt;/span&gt;...</description>
+        <pubDate>Fri, 09 Oct 2020 05:07:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//git/2020/10/09/git-command-2.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//git/2020/10/09/git-command-2.html</guid>
+        
+        <category>git-command</category>
+        
+        
+        <category>git</category>
         
       </item>
     
@@ -122,36 +150,6 @@
         
         
         <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>20201006_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 프로필 페이지의 탭들을 작성했다. 프로필 페이지들을 작성하다 보니 기존에 작성했던 파일들과 상당수 겹치는 부분이 보인다. 추후에 리펙토링이 필요해 보인다.&lt;/li&gt; &lt;li&gt;addEventListener로 핸들러를 붙이는 과정에서...</description>
-        <pubDate>Tue, 06 Oct 2020 23:56:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/06/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/06/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>Github에 ssh-key 등록해 사용하기</title>
-        <description>&lt;h1 id=&quot;github에-ssh-key-등록해-사용하기&quot;&gt;Github에 ssh-key 등록해 사용하기&lt;/h1&gt; &lt;p&gt;그 동안 git을 push, pull할 떄 vscode의 git authentication 설정으로 로그인 없이 사용했었는데, 이번에 깃헙 계정을 새로 만들면서 git config –global의 이름과 이메일을 변경해도 이전...</description>
-        <pubDate>Mon, 05 Oct 2020 23:44:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//git/2020/10/05/Github-ssh-key-upload.html</guid>
-        
-        <category>git</category>
-        
-        <category>ssh-key</category>
-        
-        
-        <category>git</category>
         
       </item>
     
