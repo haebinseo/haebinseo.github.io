@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Oct 2020 03:47:09 +0900</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2020 03:47:09 +0900</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2020 03:40:02 +0900</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2020 03:40:02 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201014_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트 작성 중 재활용을 위해 pug 파일 내에서 다른 pug 파일을 include했는데 변수 중복 선언 에러가 발생했었다. &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Uncaught&lt;/span&gt; &lt;span...</description>
+        <pubDate>Wed, 14 Oct 2020 23:59:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/14/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/14/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>pug</category>
+        
+        <category>json</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201013_TIL</title>
@@ -136,20 +154,6 @@
         
         
         <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>주로 사용하는 Linux command 정리 1</title>
-        <description>&lt;h1 id=&quot;주로-사용하는-linux-command-정리-1&quot;&gt;주로 사용하는 Linux command 정리 1&lt;/h1&gt; &lt;p&gt;노트북에 Ubuntu를 설치해 사용한지 반년이 다 되어가지만 가끔 사용하는 명령어들은 아직도 구글링해가며 사용하곤 한다. 기억이 나긴하지만 확신을 못해서 찾아보고 사용하게 되는 것 같다....</description>
-        <pubDate>Wed, 07 Oct 2020 04:06:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//linux/2020/10/07/Linux-command-1.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//linux/2020/10/07/Linux-command-1.html</guid>
-        
-        <category>linux-command</category>
-        
-        
-        <category>linux</category>
         
       </item>
     
