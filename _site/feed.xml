@@ -5,9 +5,41 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Oct 2020 23:50:28 +0900</pubDate>
-    <lastBuildDate>Fri, 16 Oct 2020 23:50:28 +0900</lastBuildDate>
+    <pubDate>Sat, 17 Oct 2020 23:34:43 +0900</pubDate>
+    <lastBuildDate>Sat, 17 Oct 2020 23:34:43 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201017_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_node 프로필 사진 탭의 css 및 js 작성 중. 옵션 탭 translate 관련 작성 후에는 main 창의 연락처 탭 translate도 확인할 것!&lt;/li&gt; &lt;li&gt;스프링 부트 책을...</description>
+        <pubDate>Sat, 17 Oct 2020 23:34:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/17/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/17/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201016_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;facebookClone_node 타임라인의 포스트 이미지 관련 css 및 js 작성. 클릭시 전체화면 크기로 보여주는 화면 UI와 css 및 js 작성 필요&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 16 Oct 2020 23:51:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/16/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/16/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201015_TIL</title>
@@ -128,34 +160,6 @@
         
         
         <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>git 개념 정리 1</title>
-        <description>&lt;h4 id=&quot;git&quot;&gt;Git&lt;/h4&gt; &lt;ul&gt; &lt;li&gt;Git은 파일을 Committed, Modified, Staged 이렇게 세 가지 상태로 관리한다. &lt;ul&gt; &lt;li&gt;Committed : 데이터가 로컬 데이터베이스에 안전하게 저장됐다는 것을 의미한다.&lt;/li&gt; &lt;li&gt;Modified : 수정한 파일을 아직 Staging Area에...</description>
-        <pubDate>Fri, 09 Oct 2020 03:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//git/2020/10/09/git-summary-1.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//git/2020/10/09/git-summary-1.html</guid>
-        
-        <category>git-study</category>
-        
-        
-        <category>git</category>
-        
-      </item>
-    
-      <item>
-        <title>20201008_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;구글 캘린더에 이번 10월 계획을 세웠다. 원래는 FullCalendar를 사용해서 구글 캘린더 API와 연동해 게시글을 작성하려고 했는데, 매번 블로그에서 Oauth로 구글 서버에 로그인하는 것도 거추장스럽고 무엇보다...</description>
-        <pubDate>Thu, 08 Oct 2020 22:52:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/08/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/08/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     
