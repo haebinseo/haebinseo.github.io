@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>git</title>
-  <meta name="description" content="Haebin's Blog posting whatever studied and learned">
+  <title>20201018_TIL</title>
+  <meta name="description" content="오늘 한 일  facebookClone_node 프로젝트를 하면서 이벤트 핸들러에서 e.target와 this가 일치하지 않는 경우가 많아(event bubbling) this를 자주 사용했었다. 그러다 보니 익명 함수를 자주 선언하게 되고, 그러다 보면 PROBLEMS 창에 ES...">
   
   <meta name="author" content="Haebin Seo">
   <meta name="copyright" content="&copy; Haebin Seo 2020">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Haebin's Blog posting whatever studied and learned" />
-  <meta property="og:url" content="http://haebinseo.github.io//category/git/">
+  <meta property="og:description" content="오늘 한 일  facebookClone_node 프로젝트를 하면서 이벤트 핸들러에서 e.target와 this가 일치하지 않는 경우가 많아(event bubbling) this를 자주 사용했었다. 그러다 보니 익명 함수를 자주 선언하게 되고, 그러다 보면 PROBLEMS 창에 ES..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/web-api/2020/10/18/TIL.html">
   <meta property="og:site_name" content="HaebinLog" />
-  <meta property="og:title" content="git" />
+  <meta property="og:title" content="20201018_TIL" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="git">
-  <meta name="twitter:description" content="Haebin's Blog posting whatever studied and learned">
+  <meta name="twitter:title" content="20201018_TIL">
+  <meta name="twitter:description" content="오늘 한 일  facebookClone_node 프로젝트를 하면서 이벤트 핸들러에서 e.target와 this가 일치하지 않는 경우가 많아(event bubbling) this를 자주 사용했었다. 그러다 보니 익명 함수를 자주 선언하게 되고, 그러다 보면 PROBLEMS 창에 ES...">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//category/git/">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/web-api/2020/10/18/TIL.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//category/git/">
+  <link rel="canonical" href="http://haebinseo.github.io//til/web-api/2020/10/18/TIL.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -154,34 +154,114 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Git"</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201018_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">October 18, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/web-api">Web-api</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>
+    <p>facebookClone_node 프로젝트를 하면서 이벤트 핸들러에서 e.target와 this가 일치하지 않는 경우가 많아(event bubbling) this를 자주 사용했었다. 그러다 보니 익명 함수를 자주 선언하게 되고, 그러다 보면 PROBLEMS 창에 ESLINT의 주의 창이 한가득… 그러다가 Event.currentTarget을 알게되었다.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget"><strong>Event.currentTarget</strong></a>
+Event Interface의 read-only property인 Event.currentTarget은 DOM 객체를 순회하는 이벤트의 현재 타겟을 가리킨다(식별). <u>이벤트가 직접적으로 발생한 element</u>를 가리키는 Event.target과는 달리, Event.currentTarget은 <u>현재 이벤트 핸들러가 부착된 element</u>를 가리킨다.
+따라서 이벤트 핸들러를 부착했으나 해당 이벤트가 자손/조상 element에서 발생해 전파되었을 때, event.target은 자손/조상 element를 가리키지만 event.currentTarget은 현재 이벤트를 처리하고 있는 element를 가리키게 된다.</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;button&gt;</span>눌러보세요<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/javascript"</span><span class="nt">&gt;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">DIV</span><span class="dl">"</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">BUTTON</span><span class="dl">"</span><span class="p">);</span>
+    <span class="c1">// button 클릭 시 true, true</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+</article>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/git/2020/10/09/git-command-1.html">주로 사용하는 git command 정리 1</a></strong><span class="post-date"> - October 9, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/git/2020/10/09/git-summary-1.html">git 개념 정리 1</a></strong><span class="post-date"> - October 9, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/git/2020/10/05/Github-ssh-key-upload.html">Github에 ssh-key 등록해 사용하기</a></strong><span class="post-date"> - October 5, 2020</span></li>
-      
-    </ul>
-  </article>
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/web">web</a>,&nbsp;<a href="/tag/event">event</a>,&nbsp;<a href="/tag/currenttarget">currenttarget</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/10/17/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201017_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 
