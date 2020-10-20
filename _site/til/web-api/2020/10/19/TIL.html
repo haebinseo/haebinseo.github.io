@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>20201015_TIL</title>
-  <meta name="description" content="오늘 한 일  object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에...">
+  <title>20201019_TIL</title>
+  <meta name="description" content="오늘 한 일  웹페이지를 보면 특정 탭을 열었을 때 탭 영역 밖을 클릭하면 해당 탭이 자동으로 닫히곤 한다. 워낙 많은 곳에서 구현이 되어있다보니 닫기 버튼 대신 바깥 영역을 눌러서 닫는게 자연스럽게 느껴지기도 한다.마침 facebookClone 프로젝트를 진행하고 있으니 여기서도...">
   
   <meta name="author" content="Haebin Seo">
   <meta name="copyright" content="&copy; Haebin Seo 2020">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="오늘 한 일  object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에..." />
-  <meta property="og:url" content="http://haebinseo.github.io//til/2020/10/15/TIL.html">
+  <meta property="og:description" content="오늘 한 일  웹페이지를 보면 특정 탭을 열었을 때 탭 영역 밖을 클릭하면 해당 탭이 자동으로 닫히곤 한다. 워낙 많은 곳에서 구현이 되어있다보니 닫기 버튼 대신 바깥 영역을 눌러서 닫는게 자연스럽게 느껴지기도 한다.마침 facebookClone 프로젝트를 진행하고 있으니 여기서도..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/web-api/2020/10/19/TIL.html">
   <meta property="og:site_name" content="HaebinLog" />
-  <meta property="og:title" content="20201015_TIL" />
+  <meta property="og:title" content="20201019_TIL" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="20201015_TIL">
-  <meta name="twitter:description" content="오늘 한 일  object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에...">
+  <meta name="twitter:title" content="20201019_TIL">
+  <meta name="twitter:description" content="오늘 한 일  웹페이지를 보면 특정 탭을 열었을 때 탭 영역 밖을 클릭하면 해당 탭이 자동으로 닫히곤 한다. 워낙 많은 곳에서 구현이 되어있다보니 닫기 버튼 대신 바깥 영역을 눌러서 닫는게 자연스럽게 느껴지기도 한다.마침 facebookClone 프로젝트를 진행하고 있으니 여기서도...">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//til/2020/10/15/TIL.html">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/web-api/2020/10/19/TIL.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//til/2020/10/15/TIL.html">
+  <link rel="canonical" href="http://haebinseo.github.io//til/web-api/2020/10/19/TIL.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -161,7 +161,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">20201015_TIL</h1>
+      <h1 class="title">20201019_TIL</h1>
       <p class="info">by <strong>Haebin Seo</strong></p>
     </header>
   </div>
@@ -176,11 +176,15 @@
  
 
 <section class="post-meta">
-  <div class="post-date">October 15, 2020</div>
+  <div class="post-date">October 19, 2020</div>
   <div class="post-categories">
   in 
     
-    <a href="/category/til">Til</a>
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/web-api">Web-api</a>
     
   
   </div>
@@ -189,7 +193,8 @@
 <article class="post-content">
   <h1 id="오늘-한-일">오늘 한 일</h1>
 <ul>
-  <li>object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에서 dataValues의 값을 참조하기 때문에 dataValues가 아닌 부모 객체에 직접 할당된 값이 결과물에 없었던 것이었다. 이 문제는 해당 부모 객체와 dataValues 키의 객체 모두에 할당해 해결했다.</li>
+  <li>웹페이지를 보면 특정 탭을 열었을 때 탭 영역 밖을 클릭하면 해당 탭이 자동으로 닫히곤 한다. 워낙 많은 곳에서 구현이 되어있다보니 닫기 버튼 대신 바깥 영역을 눌러서 닫는게 자연스럽게 느껴지기도 한다.
+마침 facebookClone 프로젝트를 진행하고 있으니 여기서도 구현해보기로 했다. body에 클릭 이벤트가 전파되었을 때, 해당 이벤트 타겟에서부터 body까지 parentNode를 거슬러 올라갔을 때 탭이 없으면 탭을 닫아주는 식으로 구현했다. 구현하고 보니 생각보다 쉬웠지만 사용성이 확실히 좋아진 것 같아 만족스러웠다.</li>
 </ul>
 
 </article>
@@ -197,7 +202,7 @@
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/tostring">tostring</a>
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/web">web</a>,&nbsp;<a href="/tag/event">event</a>,&nbsp;<a href="/tag/currenttarget">currenttarget</a>
 </section>
 
 
@@ -223,19 +228,19 @@
 	<section class="post-navigation">
 		<span class="prev-post">
 			
-				<a href="/til/2020/10/14/TIL.html">
+				<a href="/til/web-api/2020/10/18/TIL.html">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 					</span>
-					<span class="page-number">20201014_TIL</span>
+					<span class="page-number">20201018_TIL</span>
 				</a>
 			
 		</span>
 		<span class="next-post">
 			
-				<a href="/til/2020/10/16/TIL.html">
-					<span class="page-number">20201016_TIL</span>
+				<a href="/til/2020/10/20/TIL.html">
+					<span class="page-number">20201020_TIL</span>
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>

@@ -146,6 +146,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -167,6 +169,50 @@
 
 <div class="wrapper">
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/15/TIL.html">20201015_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일 object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에서 dataValues의 값을 참조하기 때문에 dataValues가 아닌 부모 객체에 직접 할당된 값이 결과물에 없었던 것이었다. 이 문제는 해당 부모 객체와 dataValues 키의 객체 모두에...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 15, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/14/TIL.html">20201014_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일 facebookClone_Node 프로젝트 작성 중 재활용을 위해 pug 파일 내에서 다른 pug 파일을 include했는데 변수 중복 선언 에러가 발생했었다. Uncaught SyntaxError: Identifier 'profileBtns' has already been declared 원인은 호출되는 pug 파일 내부에서 block append로 css, js 파일을 추가 했던 것이었다. 때문에 각 css, js파일이 이중으로 선언되어 문제가 생겼던...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 14, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -243,60 +289,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/10/TIL.html">20201010_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일
-
-  facebookClone_Node 프로젝트의 profile 페이지 친구 탭 UI를 작성했다. 이제 사진 탭 UI만 작성하면 profile 페이지의 대략적인 UI는 완성된다.
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 10, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/09/TIL.html">20201009_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일
-
-
-  주로 사용하는 git command를 정리하며 포스트를 작성했다. 구글링하는데 시간을 조금이라도 더 줄일 수 있었으면 한다.
-  은희랑 301일 기념으로 아웃백에서 저녁을 먹고 오니 하루가 끝나있었다…. 내일은 하루 종일 집중해서 공부해야겠다…ㅠㅠ
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 9, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -312,7 +304,7 @@
       </a>
 			
 		
-		<span class="page-number">Page 2 of 4</span>
+		<span class="page-number">Page 2 of 5</span>
 		
 		<a class="newer-posts" href="/page/3/">
       <span class="fa-stack fa-lg">
@@ -350,6 +342,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	
