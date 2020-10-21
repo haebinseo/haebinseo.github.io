@@ -5,21 +5,49 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Oct 2020 23:41:58 +0900</pubDate>
-    <lastBuildDate>Tue, 20 Oct 2020 23:41:58 +0900</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2020 02:20:30 +0900</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2020 02:20:30 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201021_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;이번에 구입한 DO it 자바 책의 강의가 인프런에 무료로 공개되어있어서 공부하기 시작했다. 책의 숙련자용 15일 일정표에 따라서 완강하는 것이 목표이다. 앞부분 내용은 기초여서 중간중간 넘기면서...</description>
+        <pubDate>Wed, 21 Oct 2020 23:58:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/10/21/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/10/21/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201020_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Do it Java 책을 공부하기 시작했다. 환경부터 설정하는데 리눅스에서 설치하려하니 정말 대환장 파티였다. 평소에 apt을 주로 사용해서 프로그램들을 설치했는데 tar.gz 배포판으로 설치하려니 어디에 설치해야될지도 막막했다....</description>
         <pubDate>Tue, 20 Oct 2020 23:41:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/20/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/20/TIL.html</guid>
+        <link>http://haebinseo.github.io//til/linux/zsh/2020/10/20/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/linux/zsh/2020/10/20/TIL.html</guid>
         
         <category>til</category>
         
+        <category>tar</category>
+        
+        <category>환경변수</category>
+        
+        <category>zsh</category>
+        
         
         <category>til</category>
+        
+        <category>linux</category>
+        
+        <category>zsh</category>
         
       </item>
     
@@ -153,20 +181,6 @@
         <pubDate>Mon, 12 Oct 2020 23:59:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/10/12/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/12/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201011_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 profile 페이지 사진 탭 UI를 작성하고, 기존의 데이터베이스의 Post 모델의 이미지 속성을 Photo 모델로 분리했다. 이제 테스트용 데이터를 다시 쌓고 작동여부를 체크하면 프로필...</description>
-        <pubDate>Sun, 11 Oct 2020 23:59:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/11/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/11/TIL.html</guid>
         
         <category>til</category>
         

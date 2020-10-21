@@ -42,7 +42,7 @@
   
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="오늘 한 일  Do it Java 책을 공부하기 시작했다. 환경부터 설정하는데 리눅스에서 설치하려하니 정말 대환장 파티였다. 평소에 apt을 주로 사용해서 프로그램들을 설치했는데 tar.gz 배포판으로 설치하려니 어디에 설치해야될지도 막막했다. 그 와중에 oracle의 java 유..." />
-  <meta property="og:url" content="http://haebinseo.github.io//til/2020/10/20/TIL.html">
+  <meta property="og:url" content="http://haebinseo.github.io//til/linux/zsh/2020/10/20/TIL.html">
   <meta property="og:site_name" content="HaebinLog" />
   <meta property="og:title" content="20201020_TIL" />
   <meta property="og:type" content="website" />
@@ -58,14 +58,14 @@
   <meta name="twitter:title" content="20201020_TIL">
   <meta name="twitter:description" content="오늘 한 일  Do it Java 책을 공부하기 시작했다. 환경부터 설정하는데 리눅스에서 설치하려하니 정말 대환장 파티였다. 평소에 apt을 주로 사용해서 프로그램들을 설치했는데 tar.gz 배포판으로 설치하려니 어디에 설치해야될지도 막막했다. 그 와중에 oracle의 java 유...">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//til/2020/10/20/TIL.html">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/linux/zsh/2020/10/20/TIL.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//til/2020/10/20/TIL.html">
+  <link rel="canonical" href="http://haebinseo.github.io//til/linux/zsh/2020/10/20/TIL.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -148,6 +148,18 @@
 
 	
 
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 
       </ul>
     </nav>
@@ -180,7 +192,15 @@
   <div class="post-categories">
   in 
     
-    <a href="/category/til">Til</a>
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/linux">Linux</a>, 
+    
+  
+    
+    <a href="/category/zsh">Zsh</a>
     
   
   </div>
@@ -191,9 +211,74 @@
 <ul>
   <li>Do it Java 책을 공부하기 시작했다. 환경부터 설정하는데 리눅스에서 설치하려하니 정말 대환장 파티였다. 평소에 apt을 주로 사용해서 프로그램들을 설치했는데 tar.gz 배포판으로 설치하려니 어디에 설치해야될지도 막막했다. 그 와중에 oracle의 java 유료화로 인해 jdk 8이후로는 jvm이 포함되어있지 않아 jdk 따로 jre 따로 설치해야 했다.
     <ul>
-      <li>결국 검색에 검색 끝에 압축해제 후 /usr/local/java 경로에 옮긴 뒤 환경 변수로 JAVA_HOME과 JRE_HOME을 설정해주는 것으로 마무리 했다.</li>
-      <li>eclipse는 설치 후 /opt/eclipse 경로에 옮겨주었다. 이 후 /usr/bin/eclipse에 ECLIPSE_HOME 환경변수를 추가해 터미널에서 eclipse 명령어로 실행할 수 있게 했고, /usr/share/applications에 desktop 파일을 작성해 바로가기도 추가했다.</li>
+      <li>결국 검색에 검색 끝에 압축해제 후 /usr/local/java 경로에 옮긴 뒤 환경 변수로 JAVA_HOME과 JRE_HOME을 설정해주는 것으로 마무리 했다.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvzf</span> jdk-11.0.8.tar.gz <span class="c"># 압축 해제</span>
+<span class="nb">sudo mv</span> ~/jdk-11.0.8 /usr/local/java
+<span class="nb">export </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/local/java/jdk-11.0.8 <span class="o">&gt;&gt;</span> ~/.zshenv
+<span class="c"># jre도 같은 방식으로 설치</span>
+</code></pre></div>        </div>
+      </li>
+      <li>eclipse는 설치 후 /opt/eclipse 경로에 옮겨주었다.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvzf</span> eclipse-inst-linux64.tar.gz
+./eclipse_inst <span class="c"># eclipse 설치 파일 실행</span>
+<span class="nb">sudo mv</span> ~/eclipse /opt <span class="c"># 서드파티 어플리케이션 설치 경로로 프로그램 이동</span>
+</code></pre></div>        </div>
+        <p>이 후 /usr/bin/eclipse에 ECLIPSE_HOME 환경변수를 추가해 터미널에서 eclipse 명령어로 실행할 수 있게 했고, /usr/share/applications에 desktop 파일을 작성해 바로가기도 추가했다.
+/usr/bin/eclipse</p>
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">export </span><span class="nv">ECLIPSE_HOME</span><span class="o">=</span>/opt/elipse/java-2020-09/eclipse
+<span class="nv">$ECLIPSE_HOME</span>/eclipse <span class="nv">$*</span>
+
+<span class="c"># 이후 권한 수정 (sudo chmod 755 /usr/bin/eclipse)</span>
+</code></pre></div>        </div>
+        <p>/usr/share/applications/eclipse.desktop</p>
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Desktop Entry]
+
+<span class="nv">Encoding</span><span class="o">=</span>UTF-8
+<span class="nv">Name</span><span class="o">=</span>Eclipse
+<span class="nv">Comment</span><span class="o">=</span>Eclipse Java IDE
+<span class="nv">Exec</span><span class="o">=</span>eclipse
+<span class="nv">Icon</span><span class="o">=</span>/opt/eclipse/java-2020-09/eclipse/icon.xpm
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">false
+</span><span class="nv">Type</span><span class="o">=</span>Application
+<span class="nv">Categories</span><span class="o">=</span>Development
+<span class="nv">StartupNotif</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>        </div>
+      </li>
       <li>이번 기회에 tar.gz 파일들을 어떻게 설치해야되는지 확실히 알게되었다. 비록 시간은 많이 썼지만 앞으로 그만큼 설치하는데 드는 시간을 절약할 수 있다고 생각하기로 했다.</li>
+    </ul>
+  </li>
+  <li>보통 linux에서 환경변수는 /etc/profile 혹은 .profile에 추가하면 사용자 로그인시 bash 쉘이 해당 파일을 읽으면서 사용할 수 있게 된다. 하지만 zsh은 profile을 사용하지 않고 zprofile을 사용한다는 글을 많이 보았는데, 이번 java, eclipse 설치를 하면서 .zprofile에 환경변수를 추가했음에도 <code class="highlighter-rouge">echo $JAVA_HOME</code>으로 테스트 했을 때 환경변수를 읽어오지 못했다.
+인고의 시간 끝에 한 사이트에서 문제의 원인이 담겨있는 shell의 작동 순서 그림을 찾을 수 있었다.
+<img src="/assets/zsh/shell-startup-actual.png" alt="shell-startup-actual" />
+.zshrc에서 아래의 코드로 확인했을 때 일반적으로 터미널을 켜면 non-login interactive shell이 켜지는 것을 확인할 수 있었다.
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[[</span> <span class="nt">-o</span> login <span class="o">]]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"I'm a login shell"</span>
+<span class="k">fi
+
+if</span> <span class="o">[[</span> <span class="nt">-o</span> interactive <span class="o">]]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"I'm interactive"</span>
+<span class="k">fi</span>
+<span class="c"># I'm interactive</span>
+  
+<span class="nv">$ </span>zsh <span class="nt">-l</span>
+<span class="c"># "I'm a login shell"</span>
+<span class="c"># I'm interactive</span>
+</code></pre></div>    </div>
+    <p><code class="highlighter-rouge">Ctnl+Alt+T</code>로 터미널을 열었을 때 .zprofile을 건너뛰고 .zshrc를 읽기 때문에 추가했던 환경변수를 찾지 못했던 것이었다. 따라서 login/non-login에 상관없이 항상 읽는 .zshenv에 환경변수를 추가해 문제를 해결할 수 있었다.</p>
+  </li>
+  <li>/etc/profile vs ~/.profile
+    <ul>
+      <li>/etc/profile은 모든 사용자 환경에서 사용하는 환경 설정을 담고 있고 ~/.profile은 현재 사용자의 개인 환경 설정을 담고 있다. 따라서 /etc/profile -&gt; .profile 순으로 읽혀진다.</li>
+      <li>이는 /etc/bash.bashrc ~/.bashrc에서도 동일하게 적용되는 룰이다.</li>
+    </ul>
+  </li>
+  <li>참조
+    <ul>
+      <li>ubuntu 어플리케이션 수동설치(tar.gz): <a href="https://hyoje420.tistory.com/28">https://hyoje420.tistory.com/28</a></li>
+      <li>login / interactive test: <a href="https://unix.stackexchange.com/questions/110737/how-would-i-detect-a-non-login-shell-in-zsh">https://unix.stackexchange.com/questions/110737/how-would-i-detect-a-non-login-shell-in-zsh</a></li>
+      <li>shell 작동 순서 이미지: <a href="https://blog.flowblok.id.au/static/images/shell-startup-actual.png">https://blog.flowblok.id.au/static/images/shell-startup-actual.png</a></li>
+      <li>/etc/profile vs ~/.profile : <a href="https://ttend.tistory.com/768">https://ttend.tistory.com/768</a></li>
     </ul>
   </li>
 </ul>
@@ -203,7 +288,7 @@
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/til">til</a>
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/tar">tar</a>,&nbsp;<a href="/tag/환경변수">환경변수</a>,&nbsp;<a href="/tag/zsh">zsh</a>
 </section>
 
 
@@ -240,6 +325,14 @@
 		</span>
 		<span class="next-post">
 			
+				<a href="/til/java/2020/10/21/TIL.html">
+					<span class="page-number">20201021_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
 		</span>
 	</section>
 
@@ -272,6 +365,18 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 
 	
