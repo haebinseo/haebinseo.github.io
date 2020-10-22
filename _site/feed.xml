@@ -5,14 +5,32 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2020 02:20:30 +0900</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2020 02:20:30 +0900</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2020 23:56:33 +0900</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2020 23:56:33 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201022_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Java 공부 &lt;ul&gt; &lt;li&gt;class &lt;ul&gt; &lt;li&gt;class는 대부분 문자로 시작한다&lt;/li&gt; &lt;li&gt;하나의 Java 파일에 하나의 class를 두는게 원칙이나 여러개의 class가 같이 있는 경우 public class는 단 하나여야...</description>
+        <pubDate>Thu, 22 Oct 2020 23:56:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/10/22/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/10/22/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201021_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;이번에 구입한 DO it 자바 책의 강의가 인프런에 무료로 공개되어있어서 공부하기 시작했다. 책의 숙련자용 15일 일정표에 따라서 완강하는 것이 목표이다. 앞부분 내용은 기초여서 중간중간 넘기면서...</description>
-        <pubDate>Wed, 21 Oct 2020 23:58:00 +0900</pubDate>
+        <pubDate>Wed, 21 Oct 2020 23:29:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/10/21/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/10/21/TIL.html</guid>
         
@@ -167,20 +185,6 @@
         <pubDate>Tue, 13 Oct 2020 23:59:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/10/13/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/13/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201012_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone_Node 프로젝트의 재구성된 데이터베이스의 데이터 하에서 기존에 기능들이 에러를 일으키지 않는지 확인했다. 또한 기존의 이미지 업로드를 photo 라우터를 따로 두어 처리하도록 변경했다. 현재 main에서 이미지를...</description>
-        <pubDate>Mon, 12 Oct 2020 23:59:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/12/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/12/TIL.html</guid>
         
         <category>til</category>
         

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201022_TIL</title>
+  <meta name="description" content="오늘 한 일  Java 공부          class                  class는 대부분 문자로 시작한다          하나의 Java 파일에 하나의 class를 두는게 원칙이나 여러개의 class가 같이 있는 경우 public class는 단 하나여야 한다. 또...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  Java 공부          class                  class는 대부분 문자로 시작한다          하나의 Java 파일에 하나의 class를 두는게 원칙이나 여러개의 class가 같이 있는 경우 public class는 단 하나여야 한다. 또..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/10/22/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201022_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201022_TIL">
+  <meta name="twitter:description" content="오늘 한 일  Java 공부          class                  class는 대부분 문자로 시작한다          하나의 Java 파일에 하나의 class를 두는게 원칙이나 여러개의 class가 같이 있는 경우 public class는 단 하나여야 한다. 또...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/10/22/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/10/22/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201022_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">October 22, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>Java 공부
+    <ul>
+      <li>class
+        <ul>
+          <li>class는 대부분 문자로 시작한다</li>
+          <li>하나의 Java 파일에 하나의 class를 두는게 원칙이나 여러개의 class가 같이 있는 경우 public class는 단 하나여야 한다. 또한 이 public class와 java 파일의 이름은 동일해야 한다.</li>
+          <li>java의 모든 코드는 class 내부에 위치해야 한다.</li>
+          <li>class 내의 main 함수는 class의 메서드가 아니다. 그저 시작점으로 호출되는 부분이다.</li>
+        </ul>
+      </li>
+      <li>package는 소스 코드를 계층 구조로 관리하도록 구성하는 것이다.</li>
+      <li>메서드
+객체의 기능을 제공하기 위해 class 내부에 구현되는 함수이다.</li>
+      <li>instance
+        <div id="noBorder"></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">class</th>
+              <th style="text-align: center">—— 생성(인스턴스화) ——&gt;</th>
+              <th style="text-align: center">instance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center">(static code)</td>
+              <td style="text-align: center"> </td>
+              <td style="text-align: center">(dynamic memory)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <style>
+  #noBorder+table th, #noBorder+table td {
+    border: none;
+    padding: 0;
+  }
+</style>
+
+        <ul>
+          <li>객체(object): 구체적, 추상적 데이터 단위. 생성된 인스턴스.</li>
+        </ul>
+      </li>
+      <li>instance &amp; heap memory
+        <ul>
+          <li>하나의 클래스 코드로부터 여러개의 인스턴스가 생성된다. 각 인스턴스는 heap memory에 생성되는데, 각각의 인스턴스는 다른 메모리에 다른 값을 가진다. 각 인스턴스 영역에는 멤버 변수가 저장된다. 메서드는 heap에 저장되지 않는다.</li>
+          <li>Student 클래스에서 생성한 두 객체를 각각 참조 변수 studentLee와 studentSong에 할당했을 때, stack과 heap은 다음과 같은 상태일 것이다.
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">studentID</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="n">studentName</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">grade</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Student</span> <span class="n">studentLee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+    <span class="nc">Student</span> <span class="n">studentSong</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+            <p><img src="/assets/java/instanceAndHeap.png" alt="instanceAndHeap" /></p>
+          </li>
+        </ul>
+      </li>
+      <li>stack &amp; heap
+        <ul>
+          <li>stack
+            <ul>
+              <li>Heap 영역에 생성된 Object 타입의 데이터의 <u>참조값</u>(메모리 주소)이 할당된다.</li>
+              <li>원시(primitive) 타입의 데이터가 <u>실제 값</u>과 함께 할당된다. ex) byte, short, int, float, …</li>
+              <li>지역변수들은 scope 에 따른 visibility 를 가진다.</li>
+              <li>각 Thread 는 자신만의 stack 을 가진다. 즉, 스레드 하나가 새롭게 생성되는 순간 해당 스레드를 위한 stack 도 함께 생성되며, 각 스레드에서 다른 스레드의 stack 영역에는 접근할 수 없다.</li>
+            </ul>
+          </li>
+          <li>heap
+            <ul>
+              <li>주로 긴 생명주기를 가지는 데이터들이 저장된다. (대부분의 오브젝트는 크기가 크고, 서로 다른 코드블럭에서 공유되는 경우가 많다) 
+애플리케이션의 모든 메모리 중 stack 에 있는 데이터를 제외한 부분이라고 보면 된다.
+모든 Object 타입(Integer, String, ArrayList, …)은 heap 영역에 생성된다.</li>
+              <li>Heap 영역에 있는 오브젝트들을 가리키는 레퍼런스 변수가 stack 에 올라가게 된다.</li>
+              <li>몇개의 스레드가 존재하든 상관없이 단 하나의 heap 영역만 존재한다.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>constructor(생성자)
+        <ul>
+          <li>default 생성자는 기존에 생성자가 존재하지 않을 시에만 컴파일러가 생성해준다. 따라서 하나 이상의 생성자를 작성해 사용하는 경우, 기존의 default 생성자가 필요하다면 직접 작성해야 한다.</li>
+          <li>생성자는 메서드가 아니다. <u>상속되지 않으며</u>, 리턴값은 없다.</li>
+          <li>여러 개의 생성자가 하나의 클래스에 있을 수 있다.(생성자 오버로드)</li>
+        </ul>
+      </li>
+      <li>
+        <p>참조 자료형(reference data type)
+클래스 형으로 선언하는 자료형</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">변수의 자료형</th>
+              <th style="text-align: center">예시</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center">기본 자료형</td>
+              <td style="text-align: center">int, long, float, double, …</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">참조 자료형</td>
+              <td style="text-align: center">String, Date, Student, …</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>information hiding(정보 은닉)</li>
+      <li>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align: center">접근 제어자</th>
+              <th style="text-align: center">접근 가능 범위</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center">public</td>
+              <td style="text-align: center">모든 곳에서 접근 가능</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">default</td>
+              <td style="text-align: center">같은 package 내에서 접근 가능</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">protected</td>
+              <td style="text-align: center">상속 관계에서 접근 가능</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">private</td>
+              <td style="text-align: center">해당 클래스 내에서만 접근 가능</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>참조
+        <ul>
+          <li>stack &amp; heap: <a href="https://yaboong.github.io/java/2018/05/26/java-memory-management/">https://yaboong.github.io/java/2018/05/26/java-memory-management/</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/10/21/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201021_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
