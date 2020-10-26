@@ -5,9 +5,41 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Oct 2020 03:07:42 +0900</pubDate>
-    <lastBuildDate>Sun, 25 Oct 2020 03:07:42 +0900</lastBuildDate>
+    <pubDate>Mon, 26 Oct 2020 23:41:02 +0900</pubDate>
+    <lastBuildDate>Mon, 26 Oct 2020 23:41:02 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201026_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;어제에 이어 facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중 friend 라우터 부분에서 friend delete과 friend request delete 부분을 수정할 필요가 있음&lt;/li&gt; &lt;/ul&gt;...</description>
+        <pubDate>Mon, 26 Oct 2020 23:39:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/26/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/26/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201025_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 25 Oct 2020 23:48:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/10/25/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/25/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201024_TIL</title>
@@ -157,40 +189,6 @@
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/17/TIL.html</guid>
         
         <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201016_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;facebookClone_node 타임라인의 포스트 이미지 관련 css 및 js 작성. 클릭시 전체화면 크기로 보여주는 화면 UI와 css 및 js 작성 필요&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 16 Oct 2020 23:51:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/16/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/16/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201015_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에서 dataValues의...</description>
-        <pubDate>Thu, 15 Oct 2020 23:51:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/15/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/15/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>tostring</category>
         
         
         <category>til</category>
