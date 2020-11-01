@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>til</title>
-  <meta name="description" content="Haebin's Blog posting whatever studied and learned">
+  <title>20201101_TIL</title>
+  <meta name="description" content="오늘 한 일  facebookClone 프로젝트를 리팩토링 중이다. 현재의 코드는 한 파일안에 많은 코드가 작성되어 있어 스크롤이 길어지고, 처리하는 작업의 규모가 커서 가독성이 떨어진다고 생각되어 시작하게 되었다.이전 깔끔한 파이썬 탄탄한 백엔드 책으로 서버를 공부할 때, Pre...">
   
   <meta name="author" content="Haebin Seo">
   <meta name="copyright" content="&copy; Haebin Seo 2020">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="Haebin's Blog posting whatever studied and learned" />
-  <meta property="og:url" content="http://haebinseo.github.io//category/til/">
+  <meta property="og:description" content="오늘 한 일  facebookClone 프로젝트를 리팩토링 중이다. 현재의 코드는 한 파일안에 많은 코드가 작성되어 있어 스크롤이 길어지고, 처리하는 작업의 규모가 커서 가독성이 떨어진다고 생각되어 시작하게 되었다.이전 깔끔한 파이썬 탄탄한 백엔드 책으로 서버를 공부할 때, Pre..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/2020/11/01/TIL.html">
   <meta property="og:site_name" content="HaebinLog" />
-  <meta property="og:title" content="til" />
+  <meta property="og:title" content="20201101_TIL" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="til">
-  <meta name="twitter:description" content="Haebin's Blog posting whatever studied and learned">
+  <meta name="twitter:title" content="20201101_TIL">
+  <meta name="twitter:description" content="오늘 한 일  facebookClone 프로젝트를 리팩토링 중이다. 현재의 코드는 한 파일안에 많은 코드가 작성되어 있어 스크롤이 길어지고, 처리하는 작업의 규모가 커서 가독성이 떨어진다고 생각되어 시작하게 되었다.이전 깔끔한 파이썬 탄탄한 백엔드 책으로 서버를 공부할 때, Pre...">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//category/til/">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/2020/11/01/TIL.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//category/til/">
+  <link rel="canonical" href="http://haebinseo.github.io//til/2020/11/01/TIL.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -174,86 +174,95 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Til"</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201101_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 1, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>facebookClone 프로젝트를 리팩토링 중이다. 현재의 코드는 한 파일안에 많은 코드가 작성되어 있어 스크롤이 길어지고, 처리하는 작업의 규모가 커서 가독성이 떨어진다고 생각되어 시작하게 되었다.
+이전 <em>깔끔한 파이썬 탄탄한 백엔드</em> 책으로 서버를 공부할 때, <code class="highlighter-rouge">Presentations Layer</code>, <code class="highlighter-rouge">Business Layer</code>, <code class="highlighter-rouge">Persistence Layer</code>로 나누어 구성하는 레이어드 패턴으로 작성했던 것을 참고하며 진행하고 있다. 기존에 auth, like, comment 등 세세하게 나누어서 라우팅 처리했던 방식에서, index, user, post, photo, search와 같이 큰 범주에서 연관있는 작업들을 묶고(Presentations Layer), 각 범주의 세부 작업들은 역할에 따라 Business Layer와 Persistence Layer로 분리해 독립된 모듈을 작성했다.
+레이어드 아키텍쳐는 단방향 의존성과 역할 분담이라는 특징을 가져, 코드의 확장성과 가독성의 향상을 기대할 수 있다. 목표는 이번 주 안에 리팩토링 및 프로토타입 작성을 끝내는 것이다.</li>
+</ul>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/til/2020/11/01/TIL.html">20201101_TIL</a></strong><span class="post-date"> - November 1, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/31/TIL.html">20201031_TIL</a></strong><span class="post-date"> - October 31, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/30/TIL.html">20201030_TIL</a></strong><span class="post-date"> - October 30, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/29/TIL.html">20201029_TIL</a></strong><span class="post-date"> - October 29, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/28/TIL.html">20201028_TIL</a></strong><span class="post-date"> - October 28, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/27/TIL.html">20201027_TIL</a></strong><span class="post-date"> - October 27, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/26/TIL.html">20201026_TIL</a></strong><span class="post-date"> - October 26, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/25/TIL.html">20201025_TIL</a></strong><span class="post-date"> - October 25, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/java/2020/10/24/TIL.html">20201024_TIL</a></strong><span class="post-date"> - October 24, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/java/2020/10/23/TIL.html">20201023_TIL</a></strong><span class="post-date"> - October 23, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/java/2020/10/22/TIL.html">20201022_TIL</a></strong><span class="post-date"> - October 22, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/java/2020/10/21/TIL.html">20201021_TIL</a></strong><span class="post-date"> - October 21, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/linux/zsh/2020/10/20/TIL.html">20201020_TIL</a></strong><span class="post-date"> - October 20, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/web-api/2020/10/19/TIL.html">20201019_TIL</a></strong><span class="post-date"> - October 19, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/web-api/2020/10/18/TIL.html">20201018_TIL</a></strong><span class="post-date"> - October 18, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/17/TIL.html">20201017_TIL</a></strong><span class="post-date"> - October 17, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/16/TIL.html">20201016_TIL</a></strong><span class="post-date"> - October 16, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/15/TIL.html">20201015_TIL</a></strong><span class="post-date"> - October 15, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/14/TIL.html">20201014_TIL</a></strong><span class="post-date"> - October 14, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/13/TIL.html">20201013_TIL</a></strong><span class="post-date"> - October 13, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/12/TIL.html">20201012_TIL</a></strong><span class="post-date"> - October 12, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/11/TIL.html">20201011_TIL</a></strong><span class="post-date"> - October 11, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/10/TIL.html">20201010_TIL</a></strong><span class="post-date"> - October 10, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/09/TIL.html">20201009_TIL</a></strong><span class="post-date"> - October 9, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/08/TIL.html">20201008_TIL</a></strong><span class="post-date"> - October 8, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/07/TIL.html">20201007_TIL</a></strong><span class="post-date"> - October 7, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/06/TIL.html">20201006_TIL</a></strong><span class="post-date"> - October 6, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/05/TIL.html">20201005_TIL</a></strong><span class="post-date"> - October 5, 2020</span></li>
-      
-      <li><strong><a class="post-link" href="/til/2020/10/05/TIL-%EC%8B%9C%EC%9E%91.html">20201005_TIL 시작</a></strong><span class="post-date"> - October 5, 2020</span></li>
-      
-    </ul>
-  </article>
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/10/31/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201031_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 
