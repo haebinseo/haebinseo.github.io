@@ -5,9 +5,51 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Nov 2020 23:59:01 +0900</pubDate>
-    <lastBuildDate>Sun, 01 Nov 2020 23:59:01 +0900</lastBuildDate>
+    <pubDate>Wed, 04 Nov 2020 23:50:16 +0900</pubDate>
+    <lastBuildDate>Wed, 04 Nov 2020 23:50:16 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201104_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;우아한테크코스 지원서를 밤새 어찌저찌 채워서 제출했다. 나름 제한된 시간 내에 최선을 다해 쓰긴 했지만 만족할만큼 퇴고를 거치지 못해 아쉬움이 남았다. 되면 좋겠지만 떨어지더라도 너무 크게...</description>
+        <pubDate>Wed, 04 Nov 2020 22:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/04/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/04/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201103_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;생각보다 우아한테크코스 지원서 항목이 많았다. 1000자 항목 3개에 500자 항목 하나인데, 각 항목이 평소 자소서 문항들과 조금씩 다르다 보니 처음부터 작성해야 했다. 그래서 그런지 하루종일...</description>
+        <pubDate>Tue, 03 Nov 2020 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/03/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/03/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201102_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;간만에 정엽이 형과 주원이랑 점심을 함께 했다. 역시 같은 컴공생들이다 보니 대화 주제도 익숙하고 편해서 좋았다. 주원이가 곧 우아한 형제들에서 주관하는 우아한테크코스를 알려줬다. 우아한테크코스는 10개월간...</description>
+        <pubDate>Mon, 02 Nov 2020 23:25:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/02/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/02/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201101_TIL</title>
@@ -106,60 +148,6 @@
         
         
         <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201025_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 25 Oct 2020 23:48:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/25/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/25/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201024_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Java 공부 &lt;ul&gt; &lt;li&gt;배열 &lt;ul&gt; &lt;li&gt;fixed length&lt;/li&gt; &lt;li&gt;선언 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 둘 다 가능&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span...</description>
-        <pubDate>Sat, 24 Oct 2020 23:38:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/10/24/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/10/24/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201023_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Java 공부 &lt;ul&gt; &lt;li&gt;this &lt;ul&gt; &lt;li&gt;자신의 메모리(생성된 인스턴스 스스로)를 가리킴 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span...</description>
-        <pubDate>Fri, 23 Oct 2020 23:56:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/10/23/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/10/23/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
         
       </item>
     
