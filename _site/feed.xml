@@ -5,14 +5,46 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Nov 2020 23:50:16 +0900</pubDate>
-    <lastBuildDate>Wed, 04 Nov 2020 23:50:16 +0900</lastBuildDate>
+    <pubDate>Fri, 06 Nov 2020 03:23:45 +0900</pubDate>
+    <lastBuildDate>Fri, 06 Nov 2020 03:23:45 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>코딩테스트 개념 정리 - Hash</title>
+        <description>&lt;h1 id=&quot;코딩테스트-개념-정리---hash&quot;&gt;코딩테스트 개념 정리 - Hash&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;출제 빈도&lt;/code&gt; - &lt;strong&gt;높음&lt;/strong&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;평균 점수&lt;/code&gt; - 보통&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Key-value쌍으로 데이터를 저장하는 자료구조 &lt;img src=&quot;/assets/codingTest/hash.png&quot; alt=&quot;hash&quot; style=&quot;width:480px;&quot; /&gt;...</description>
+        <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//codingtest/2020/11/05/coding-test-hash.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//codingtest/2020/11/05/coding-test-hash.html</guid>
+        
+        <category>codingtest</category>
+        
+        <category>summary</category>
+        
+        <category>hash</category>
+        
+        
+        <category>codingtest</category>
+        
+      </item>
+    
+      <item>
+        <title>20201105_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;우아한테크코스 코테 준비를 위해 공부를 시작했다. 우아한테크코스는 완성된 개발자가 아니라 300줄 이상의 논리적인 코드 작성이 가능한 사람을 뽑기 때문에 너무 어려운 문제는 나오지 않을...</description>
+        <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/05/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/05/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201104_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;우아한테크코스 지원서를 밤새 어찌저찌 채워서 제출했다. 나름 제한된 시간 내에 최선을 다해 쓰긴 했지만 만족할만큼 퇴고를 거치지 못해 아쉬움이 남았다. 되면 좋겠지만 떨어지더라도 너무 크게...</description>
-        <pubDate>Wed, 04 Nov 2020 22:50:00 +0900</pubDate>
+        <pubDate>Wed, 04 Nov 2020 23:50:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/11/04/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/04/TIL.html</guid>
         
@@ -113,36 +145,6 @@
         <pubDate>Wed, 28 Oct 2020 23:47:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/10/28/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/28/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201027_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone 작성 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;event.currentTarget.parentNode.~~~&lt;/code&gt;로 진행되는 코드에서 null 값의 parentNode를 참조할 수 없다는 에러가 발생하는 문제가 있었다. 확인을 위해 event를 console.log()로 찍어봐도 event.currentTarget의 값은 null이었는데,...</description>
-        <pubDate>Tue, 27 Oct 2020 23:39:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/27/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/27/TIL.html</guid>
-        
-        <category>til,</category>
-        
-        <category>currenttarget</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201026_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;어제에 이어 facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중 friend 라우터 부분에서 friend delete과 friend request delete 부분을 수정할 필요가 있음&lt;/li&gt; &lt;/ul&gt;...</description>
-        <pubDate>Mon, 26 Oct 2020 23:39:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/26/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/26/TIL.html</guid>
         
         <category>til</category>
         
