@@ -3,18 +3,52 @@
   <channel>
     <title>HaebinLog</title>
     <description>Haebin's Blog posting whatever studied and learned</description>
-    <link>http://haebinseo.github.io//</link>
-    <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Nov 2020 03:23:45 +0900</pubDate>
-    <lastBuildDate>Fri, 06 Nov 2020 03:23:45 +0900</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 06 Nov 2020 17:27:42 +0900</pubDate>
+    <lastBuildDate>Fri, 06 Nov 2020 17:27:42 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>스택/큐 문제 풀이</title>
+        <description>&lt;p&gt;문제 바로가기&lt;br /&gt; &lt;a href=&quot;#기능개발&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;기능개발&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#다리를-지나는-트럭&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;다리를 지나는 트럭&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#프린터&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;프린터&lt;/code&gt;&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;기능개발&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42586?language=javascript&quot;&gt;기능개발&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;level 2&lt;/code&gt;&lt;/p&gt; &lt;h5 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h5&gt; &lt;p&gt;프로그래머스 팀에서는 기능 개선 작업을 수행 중입니다....</description>
+        <pubDate>Fri, 06 Nov 2020 15:50:00 +0900</pubDate>
+        <link>http://localhost:4000/codingtest/2020/11/06/stack-queue-problem-solving.html</link>
+        <guid isPermaLink="true">http://localhost:4000/codingtest/2020/11/06/stack-queue-problem-solving.html</guid>
+        
+        <category>codingtest</category>
+        
+        <category>stack</category>
+        
+        <category>queue</category>
+        
+        
+        <category>codingtest</category>
+        
+      </item>
+    
+      <item>
+        <title>hash 문제 풀이</title>
+        <description>&lt;p&gt;문제 바로가기&lt;br /&gt; &lt;a href=&quot;#완주하지-못한-선수&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;완주하지 못한 선수&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#위장&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;위장&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#베스트앨범&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;베스트앨범&lt;/code&gt;&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;완주하지-못한-선수&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42576?language=javascript&quot;&gt;완주하지 못한 선수&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;level 1&lt;/code&gt;&lt;/p&gt; &lt;h5 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h5&gt; &lt;p&gt;수많은 마라톤 선수들이 마라톤에 참여하였습니다....</description>
+        <pubDate>Fri, 06 Nov 2020 15:50:00 +0900</pubDate>
+        <link>http://localhost:4000/codingtest/2020/11/06/hash-problem-solving.html</link>
+        <guid isPermaLink="true">http://localhost:4000/codingtest/2020/11/06/hash-problem-solving.html</guid>
+        
+        <category>codingtest</category>
+        
+        <category>hash</category>
+        
+        
+        <category>codingtest</category>
+        
+      </item>
     
       <item>
         <title>코딩테스트 개념 정리 - Hash</title>
         <description>&lt;h1 id=&quot;코딩테스트-개념-정리---hash&quot;&gt;코딩테스트 개념 정리 - Hash&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;출제 빈도&lt;/code&gt; - &lt;strong&gt;높음&lt;/strong&gt; / &lt;code class=&quot;highlighter-rouge&quot;&gt;평균 점수&lt;/code&gt; - 보통&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Key-value쌍으로 데이터를 저장하는 자료구조 &lt;img src=&quot;/assets/codingTest/hash.png&quot; alt=&quot;hash&quot; style=&quot;width:480px;&quot; /&gt;...</description>
         <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//codingtest/2020/11/05/coding-test-hash.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//codingtest/2020/11/05/coding-test-hash.html</guid>
+        <link>http://localhost:4000/codingtest/2020/11/05/coding-test-hash.html</link>
+        <guid isPermaLink="true">http://localhost:4000/codingtest/2020/11/05/coding-test-hash.html</guid>
         
         <category>codingtest</category>
         
@@ -31,8 +65,8 @@
         <title>20201105_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;우아한테크코스 코테 준비를 위해 공부를 시작했다. 우아한테크코스는 완성된 개발자가 아니라 300줄 이상의 논리적인 코드 작성이 가능한 사람을 뽑기 때문에 너무 어려운 문제는 나오지 않을...</description>
         <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/05/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/05/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/11/05/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/11/05/TIL.html</guid>
         
         <category>til</category>
         
@@ -45,8 +79,8 @@
         <title>20201104_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;우아한테크코스 지원서를 밤새 어찌저찌 채워서 제출했다. 나름 제한된 시간 내에 최선을 다해 쓰긴 했지만 만족할만큼 퇴고를 거치지 못해 아쉬움이 남았다. 되면 좋겠지만 떨어지더라도 너무 크게...</description>
         <pubDate>Wed, 04 Nov 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/04/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/04/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/11/04/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/11/04/TIL.html</guid>
         
         <category>til</category>
         
@@ -59,8 +93,8 @@
         <title>20201103_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;생각보다 우아한테크코스 지원서 항목이 많았다. 1000자 항목 3개에 500자 항목 하나인데, 각 항목이 평소 자소서 문항들과 조금씩 다르다 보니 처음부터 작성해야 했다. 그래서 그런지 하루종일...</description>
         <pubDate>Tue, 03 Nov 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/03/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/03/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/11/03/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/11/03/TIL.html</guid>
         
         <category>til</category>
         
@@ -73,8 +107,8 @@
         <title>20201102_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;간만에 정엽이 형과 주원이랑 점심을 함께 했다. 역시 같은 컴공생들이다 보니 대화 주제도 익숙하고 편해서 좋았다. 주원이가 곧 우아한 형제들에서 주관하는 우아한테크코스를 알려줬다. 우아한테크코스는 10개월간...</description>
         <pubDate>Mon, 02 Nov 2020 23:25:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/02/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/02/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/11/02/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/11/02/TIL.html</guid>
         
         <category>til</category>
         
@@ -87,8 +121,8 @@
         <title>20201101_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;facebookClone 프로젝트를 리팩토링 중이다. 현재의 코드는 한 파일안에 많은 코드가 작성되어 있어 스크롤이 길어지고, 처리하는 작업의 규모가 커서 가독성이 떨어진다고 생각되어 시작하게 되었다. 이전 &lt;em&gt;깔끔한...</description>
         <pubDate>Sun, 01 Nov 2020 23:59:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/01/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/01/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/11/01/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/11/01/TIL.html</guid>
         
         <category>til</category>
         
@@ -101,8 +135,8 @@
         <title>20201031_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;programmers의 겨울방학 스타트업 지원에 참가했다. 바로 며칠 전에 배너로 확인하고 준비한터라 코딩테스트 준비가 미흡한 줄은 알고 있었지만, 한 문제도 제대로 못 풀줄은 몰랐다. 큰 충격이었다…...</description>
         <pubDate>Sat, 31 Oct 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/31/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/31/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/10/31/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/10/31/TIL.html</guid>
         
         <category>til</category>
         
@@ -115,36 +149,8 @@
         <title>20201030_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;programmers 겨울방학 스타트업 지원에 지원했다. 바로 내일인데다가 코테 공부에서 손 놓은지 꽤 되기는 했지만, 그래도 전에 공부해놓은 게 있으니 한 번씩 읽어보면서 복습하면 되지 않을까...</description>
         <pubDate>Fri, 30 Oct 2020 23:49:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/30/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/30/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201029_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;아… 오늘 뭐했지. 근래에 너무 하루를 충동적으로 보내는 것 같다. 일상에 중심을 잡을 만한 강제력있는 무언가가 없어서 그런가… 본가에 가서 독서실 생활을 해보는 것도 나쁘지...</description>
-        <pubDate>Thu, 29 Oct 2020 23:40:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/29/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/29/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201028_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;programmers 배너에 겨울방학 스타트업 채용 공고가 올라왔다. 많이 남지는 않았지만 지금 하던 프로젝트를 어느 정도 갈무리 하면 지원서에 적어서 낼 수 있을 것 같다. 앞으로...</description>
-        <pubDate>Wed, 28 Oct 2020 23:47:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/10/28/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/10/28/TIL.html</guid>
+        <link>http://localhost:4000/til/2020/10/30/TIL.html</link>
+        <guid isPermaLink="true">http://localhost:4000/til/2020/10/30/TIL.html</guid>
         
         <category>til</category>
         

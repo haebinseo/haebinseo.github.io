@@ -42,11 +42,11 @@
   
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="Haebin's Blog posting whatever studied and learned" />
-  <meta property="og:url" content="http://haebinseo.github.io//page/6/index.html">
+  <meta property="og:url" content="http://localhost:4000/page/6/index.html">
   <meta property="og:site_name" content="HaebinLog" />
   <meta property="og:title" content="HaebinLog - page 6" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="615" />
@@ -57,16 +57,16 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="HaebinLog - page 6">
   <meta name="twitter:description" content="Haebin's Blog posting whatever studied and learned">
-  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//page/6/index.html">
+  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
+  <meta name="twitter:url" content="http://localhost:4000/page/6/index.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//page/6/">
-	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/page/6/">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -179,6 +179,10 @@
 
 	
 
+	
+
+	
+
 
       </ul>
     </nav>
@@ -200,6 +204,54 @@
 
 <div class="wrapper">
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/14/TIL.html">20201014_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일 facebookClone_Node 프로젝트 작성 중 재활용을 위해 pug 파일 내에서 다른 pug 파일을 include했는데 변수 중복 선언 에러가 발생했었다. Uncaught SyntaxError: Identifier 'profileBtns' has already been declared 원인은 호출되는 pug 파일 내부에서 block append로 css, js 파일을 추가 했던 것이었다. 때문에 각 css, js파일이 이중으로 선언되어 문제가 생겼던...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 14, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/13/TIL.html">20201013_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일
+
+  facebookClone_Node 프로젝트의 이미지 배치를 재구성했다. 정사각형 형태의 div 생성이 제일 까다로운 부분이었는데 지금은 조금 익숙해졌다. 현재 이미지에 옵션 버튼만 생성해주면 완성이다. 또한 타임라인과 head부분과 같이 다른 페이지에서도 재사용되는 부분들을 새로운 파일로 분리해 호출하는 방식으로 재구현 중이다.
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 13, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -276,56 +328,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/09/TIL.html">20201009_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일
-
-
-  주로 사용하는 git command를 정리하며 포스트를 작성했다. 구글링하는데 시간을 조금이라도 더 줄일 수 있었으면 한다.
-  은희랑 301일 기념으로 아웃백에서 저녁을 먹고 오니 하루가 끝나있었다…. 내일은 하루 종일 집중해서 공부해야겠다…ㅠㅠ
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 9, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/git/2020/10/09/git-command-1.html">주로 사용하는 git command 정리 1</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>주로 사용하는 Git command 정리 1 모든 작업은 git pull, push로 끝날 만큼 git command를 많이 사용하지만, 자주 사용하는 몇몇 명령어를 제외하고는 매번 10분 이상 구글링해 사용하곤 한다. 그래서 리눅스 커맨드를 정리하는 김에 주로 사용하거나 찾아본 적 있는 git 명령어들을 기록하게 되었다. 1. git config git 환경 설정 git은 버전을...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 9, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/git">Git</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -379,6 +381,10 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
 	
 
 	

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>hash 문제 풀이</title>
+  <meta name="description" content="문제 바로가기완주하지 못한 선수 위장 베스트앨범">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="문제 바로가기완주하지 못한 선수 위장 베스트앨범" />
+  <meta property="og:url" content="http://localhost:4000/codingtest/2020/11/06/hash-problem-solving.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="hash 문제 풀이" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="hash 문제 풀이">
+  <meta name="twitter:description" content="문제 바로가기완주하지 못한 선수 위장 베스트앨범">
+  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
+  <meta name="twitter:url" content="http://localhost:4000/codingtest/2020/11/06/hash-problem-solving.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/codingtest/2020/11/06/hash-problem-solving.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+    <!-- ./_includes/mathjax_support -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">hash 문제 풀이</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 6, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/codingtest">Codingtest</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>문제 바로가기<br />
+<a href="#완주하지-못한-선수"><code class="highlighter-rouge">완주하지 못한 선수</code></a> <a href="#위장"><code class="highlighter-rouge">위장</code></a> <a href="#베스트앨범"><code class="highlighter-rouge">베스트앨범</code></a></p>
+
+<h3 id="완주하지-못한-선수"><a href="https://programmers.co.kr/learn/courses/30/lessons/42576?language=javascript">완주하지 못한 선수</a></h3>
+<p><code class="highlighter-rouge">level 1</code></p>
+<h5 id="문제-설명">문제 설명</h5>
+<p>수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.</p>
+
+<p>마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.</p>
+
+<h5 id="제한사항">제한사항</h5>
+<ul>
+  <li>completion의 길이는 participant의 길이보다 1 작습니다.</li>
+  <li>마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li>
+  <li>참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li>
+  <li>참가자 중에는 동명이인이 있을 수 있습니다.</li>
+</ul>
+
+<details>
+<summary>입출력 예 보이기 / 숨기기</summary>
+<div>
+
+    <h5 id="section">입출력 예</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>participant</th>
+          <th>completion</th>
+          <th>return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[“leo”, “kiki”, “eden”]</td>
+          <td>[“eden”, “kiki”]</td>
+          <td>“leo”</td>
+        </tr>
+        <tr>
+          <td>[“marina”, “josipa”, “nikola”, “vinko”, “filipa”]</td>
+          <td>[“josipa”, “filipa”, “marina”, “nikola”]</td>
+          <td>“vinko”</td>
+        </tr>
+        <tr>
+          <td>[“mislav”, “stanko”, “mislav”, “ana”]</td>
+          <td>[“stanko”, “ana”, “mislav”]</td>
+          <td>“mislav”</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 id="section-1">입출력 예 설명</h6>
+    <p>예제 #1
+leo는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.</p>
+
+    <p>예제 #2
+vinko는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.</p>
+
+    <p>예제 #3
+mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.</p>
+  </div>
+</details>
+<p><br /></p>
+
+<h5 id="문제-풀이">문제 풀이</h5>
+<p><a href="#완주하지-못한-선수-javascript"><code class="highlighter-rouge">JavaScript</code></a></p>
+
+<h5 id="완주하지-못한-선수-javascript">JavaScript</h5>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">participant</span><span class="p">,</span> <span class="nx">completion</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 완주자의 이름과 해당 이름의 완주자의 수를 key-value 쌍으로 하는 해시 테이블 생성  </span>
+  <span class="kd">const</span> <span class="nx">countMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">completion</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">countMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">completion</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">countMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">completion</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// 해당 이름의 완주자의 수를 1씩 감소하며 완주자 명단에 없는 참가자 탐색.</span>
+  <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">participant</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">p</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">!</span><span class="nx">countMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="p">?</span> <span class="kc">true</span> <span class="p">:</span> <span class="nx">countMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">countMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">})</span>
+  
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="위장"><a href="https://programmers.co.kr/learn/courses/30/lessons/42578?language=javascript">위장</a></h3>
+<p><code class="highlighter-rouge">level 2</code></p>
+<h5 id="문제-설명-1">문제 설명</h5>
+<p>스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.</p>
+
+<p>예를 들어 스파이가 가진 옷이 아래와 같고 오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면 다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">종류</th>
+      <th style="text-align: center">이름</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">얼굴</td>
+      <td style="text-align: center">동그란 안경, 검정 선글라스</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">상의</td>
+      <td style="text-align: center">파란색 티셔츠</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">하의</td>
+      <td style="text-align: center">청바지</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">겉옷</td>
+      <td style="text-align: center">긴 코트</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>스파이가 가진 의상들이 담긴 2차원 배열 clothes가 주어질 때 서로 다른 옷의 조합의 수를 return 하도록 solution 함수를 작성해주세요.</p>
+
+<h5 id="제한사항-1">제한사항</h5>
+<ul>
+  <li>clothes의 각 행은 [의상의 이름, 의상의 종류]로 이루어져 있습니다.</li>
+  <li>스파이가 가진 의상의 수는 1개 이상 30개 이하입니다.</li>
+  <li>같은 이름을 가진 의상은 존재하지 않습니다.</li>
+  <li>clothes의 모든 원소는 문자열로 이루어져 있습니다.</li>
+  <li>모든 문자열의 길이는 1 이상 20 이하인 자연수이고 알파벳 소문자 또는 ‘_’ 로만 이루어져 있습니다.</li>
+  <li>스파이는 하루에 최소 한 개의 의상은 입습니다.</li>
+</ul>
+
+<details>
+<summary>입출력 예 보이기 / 숨기기</summary>
+<div>
+
+    <h5 id="section-2">입출력 예</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>clothes</th>
+          <th>return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[[“yellow_hat”, “headgear”], [“blue_sunglasses”, “eyewear”], [“green_turban”, “headgear”]]</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>[[“crow_mask”, “face”], [“blue_sunglasses”, “face”], [“smoky_makeup”, “face”]]</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 id="section-3">입출력 예 설명</h6>
+    <p>예제 #1
+headgear에 해당하는 의상이 yellow_hat, green_turban이고 eyewear에 해당하는 의상이 blue_sunglasses이므로 아래와 같이 5개의 조합이 가능합니다.</p>
+    <ol>
+      <li>yellow_hat</li>
+      <li>blue_sunglasses</li>
+      <li>green_turban</li>
+      <li>yellow_hat + blue_sunglasses</li>
+      <li>green_turban + blue_sunglasses</li>
+    </ol>
+
+    <p>예제 #2
+face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로 아래와 같이 3개의 조합이 가능합니다.</p>
+    <ol>
+      <li>crow_mask</li>
+      <li>blue_sunglasses</li>
+      <li>smoky_makeup</li>
+    </ol>
+  </div>
+</details>
+<p><br /></p>
+
+<h5 id="문제-풀이-1">문제 풀이</h5>
+<p><a href="#위장-javascript"><code class="highlighter-rouge">JavaScript</code></a></p>
+
+<h5 id="위장-javascript">JavaScript</h5>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">clothes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">clothMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">clothes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">clothMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">clothes</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="p">(</span><span class="nx">clothMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">clothes</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">||</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">count</span> <span class="k">of</span> <span class="nx">clothMap</span><span class="p">.</span><span class="nx">values</span><span class="p">())</span> <span class="nx">answer</span> <span class="o">*=</span> <span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">answer</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="베스트앨범"><a href="https://programmers.co.kr/learn/courses/30/lessons/42579?language=javascript">베스트앨범</a></h3>
+<p><code class="highlighter-rouge">level 3</code></p>
+<h5 id="문제-설명-2">문제 설명</h5>
+<p>스트리밍 사이트에서 장르 별로 가장 많이 재생된 노래를 두 개씩 모아 베스트 앨범을 출시하려 합니다. 노래는 고유 번호로 구분하며, 노래를 수록하는 기준은 다음과 같습니다.</p>
+
+<ol>
+  <li>속한 노래가 많이 재생된 장르를 먼저 수록합니다.</li>
+  <li>장르 내에서 많이 재생된 노래를 먼저 수록합니다.</li>
+  <li>장르 내에서 재생 횟수가 같은 노래 중에서는 고유 번호가 낮은 노래를 먼저 수록합니다.</li>
+</ol>
+
+<p>노래의 장르를 나타내는 문자열 배열 genres와 노래별 재생 횟수를 나타내는 정수 배열 plays가 주어질 때, 베스트 앨범에 들어갈 노래의 고유 번호를 순서대로 return 하도록 solution 함수를 완성하세요.</p>
+
+<h5 id="제한사항-2">제한사항</h5>
+<ul>
+  <li>genres[i]는 고유번호가 i인 노래의 장르입니다.</li>
+  <li>plays[i]는 고유번호가 i인 노래가 재생된 횟수입니다.</li>
+  <li>genres와 plays의 길이는 같으며, 이는 1 이상 10,000 이하입니다.</li>
+  <li>장르 종류는 100개 미만입니다.</li>
+  <li>장르에 속한 곡이 하나라면, 하나의 곡만 선택합니다.</li>
+  <li>모든 장르는 재생된 횟수가 다릅니다.</li>
+</ul>
+
+<details>
+<summary>입출력 예 보이기 / 숨기기</summary>
+<div>
+
+    <h5 id="section-4">입출력 예</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>clothes</th>
+          <th>plays</th>
+          <th>return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[“classic”, “pop”, “classic”, “classic”, “pop”]</td>
+          <td>[500, 600, 150, 800, 2500]</td>
+          <td>[4, 1, 3, 0]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 id="section-5">입출력 예 설명</h6>
+    <p>classic 장르는 1,450회 재생되었으며, classic 노래는 다음과 같습니다.</p>
+    <ul>
+      <li>고유 번호 3: 800회 재생</li>
+      <li>고유 번호 0: 500회 재생</li>
+      <li>고유 번호 2: 150회 재생</li>
+    </ul>
+
+    <p>pop 장르는 3,100회 재생되었으며, pop 노래는 다음과 같습니다.</p>
+    <ul>
+      <li>고유 번호 4: 2,500회 재생</li>
+      <li>고유 번호 1: 600회 재생</li>
+    </ul>
+
+    <p>따라서 pop 장르의 [4, 1]번 노래를 먼저, classic 장르의 [3, 0]번 노래를 그다음에 수록합니다.</p>
+  </div>
+</details>
+<p><br /></p>
+
+<h5 id="문제-풀이-2">문제 풀이</h5>
+<p>앨범들을 한차례 정렬한 후 가장 위의 두 곡, 혹은 한 곡을 뽑는다. 시간 복잡도는 정렬로 인한 $O(n\log{n})$으로 예상된다.</p>
+
+<p><a href="#베스트앨범-javascript"><code class="highlighter-rouge">JavaScript</code></a></p>
+
+<h5 id="베스트앨범-javascript">JavaScript</h5>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">genres</span><span class="p">,</span> <span class="nx">plays</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kd">const</span> <span class="nx">musicMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">countMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">genres</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">mapGenre</span> <span class="o">=</span> <span class="nx">musicMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">genres</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">mapGenre</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">mapGenre</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+          <span class="nx">countMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">genres</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">countMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">genres</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">+</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+      <span class="p">}</span>
+      <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">musicMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">genres</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">().</span><span class="kd">set</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>
+          <span class="nx">countMap</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">genres</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">plays</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="c1">// sort genres by total plays</span>
+  <span class="kd">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">countMap</span><span class="p">.</span><span class="nx">entries</span><span class="p">());</span>
+  <span class="nx">count</span><span class="p">.</span><span class="nx">sort</span><span class="p">(([</span><span class="nx">genre1</span><span class="p">,</span> <span class="nx">play1</span><span class="p">],</span> <span class="p">[</span><span class="nx">genre2</span><span class="p">,</span> <span class="nx">play2</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">+</span><span class="p">(</span><span class="nx">play1</span> <span class="o">&lt;</span> <span class="nx">play2</span><span class="p">)</span> <span class="o">||</span> <span class="o">+</span><span class="p">(</span><span class="nx">play1</span> <span class="o">===</span> <span class="nx">play2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>        
+  <span class="p">});</span>
+  
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">count</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">musicMap</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">count</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+      <span class="kd">const</span> <span class="nx">maxUpto2</span> <span class="o">=</span> <span class="p">[];</span>
+      <span class="nx">map</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">value</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="c1">// if equal, existing one has a lower unique number.</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpto2</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">unshift</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
+                  <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+              <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpto2</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="nx">maxUpto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="p">};</span>
+              <span class="p">}</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">if</span> <span class="p">(</span><span class="nx">maxUpto2</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">value</span> <span class="o">&lt;</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">unshift</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
+              <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                  <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
+              <span class="p">}</span> 
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
+          <span class="p">}</span>
+      <span class="p">});</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">maxUpto2</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">maxUpto2</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">key</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h5 id="문제-출처">문제 출처</h5>
+<p>프로그래머스 코딩 테스트 연습: <a href="https://programmers.co.kr/learn/challenges">https://programmers.co.kr/learn/challenges</a></p>
+
+<style>
+  table {
+    table-layout: auto;
+    width: fit-content;
+  }
+  table th, table td {
+    padding: 8px 12px;
+  }
+</style>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/codingtest">codingtest</a>,&nbsp;<a href="/tag/hash">hash</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/codingtest/2020/11/05/coding-test-hash.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">코딩테스트 개념 정리 - Hash</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/codingtest/2020/11/06/stack-queue-problem-solving.html">
+					<span class="page-number">스택/큐 문제 풀이</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
