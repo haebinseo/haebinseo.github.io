@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>힙 문제 풀이</title>
+  <meta name="description" content="문제 바로가기디스크 컨트롤러 이중우선순위큐">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="문제 바로가기디스크 컨트롤러 이중우선순위큐" />
+  <meta property="og:url" content="http://haebinseo.github.io//coding-test/2020/11/06/heap-problem-solving.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="힙 문제 풀이" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="힙 문제 풀이">
+  <meta name="twitter:description" content="문제 바로가기디스크 컨트롤러 이중우선순위큐">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//coding-test/2020/11/06/heap-problem-solving.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//coding-test/2020/11/06/heap-problem-solving.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">힙 문제 풀이</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 6, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/coding-test">Coding-test</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>문제 바로가기<br />
+<a href="#디스크-컨트롤러"><code class="highlighter-rouge">디스크 컨트롤러</code></a> <a href="#이중우선순위큐"><code class="highlighter-rouge">이중우선순위큐</code></a></p>
+
+<h3 id="디스크-컨트롤러"><a href="https://programmers.co.kr/learn/courses/30/lessons/42627?language=javascript">디스크 컨트롤러</a></h3>
+<p><code class="highlighter-rouge">level 3</code></p>
+<h5 id="문제-설명">문제 설명</h5>
+<p>하드디스크는 한 번에 하나의 작업만 수행할 수 있습니다. 디스크 컨트롤러를 구현하는 방법은 여러 가지가 있습니다. 가장 일반적인 방법은 요청이 들어온 순서대로 처리하는 것입니다.</p>
+
+<p>예를들어</p>
+<pre><code class="language-txt">0ms 시점에 3ms가 소요되는 A작업 요청
+1ms 시점에 9ms가 소요되는 B작업 요청
+2ms 시점에 6ms가 소요되는 C작업 요청
+</code></pre>
+<p>와 같은 요청이 들어왔습니다. 이를 그림으로 표현하면 아래와 같습니다.
+<img src="https://grepp-programmers.s3.amazonaws.com/files/production/b68eb5cec6/38dc6a53-2d21-4c72-90ac-f059729c51d5.png" alt="" />
+한 번에 하나의 요청만을 수행할 수 있기 때문에 각각의 작업을 요청받은 순서대로 처리하면 다음과 같이 처리 됩니다.
+<img src="https://grepp-programmers.s3.amazonaws.com/files/production/5e677b4646/90b91fde-cac4-42c1-98b8-8f8431c52dcf.png" alt="" /></p>
+<pre><code class="language-txt">A: 3ms 시점에 작업 완료 (요청에서 종료까지 : 3ms)
+B: 1ms부터 대기하다가, 3ms 시점에 작업을 시작해서 12ms 시점에 작업 완료(요청에서 종료까지 : 11ms)
+C: 2ms부터 대기하다가, 12ms 시점에 작업을 시작해서 18ms 시점에 작업 완료(요청에서 종료까지 : 16ms)
+</code></pre>
+<p>이 때 각 작업의 요청부터 종료까지 걸린 시간의 평균은 10ms(= (3 + 11 + 16) / 3)가 됩니다.</p>
+
+<p>하지만 A → C → B 순서대로 처리하면
+<img src="https://grepp-programmers.s3.amazonaws.com/files/production/9eb7c5a6f1/a6cff04d-86bb-4b5b-98bf-6359158940ac.png" alt="" /></p>
+<pre><code class="language-txt">A: 3ms 시점에 작업 완료(요청에서 종료까지 : 3ms)
+C: 2ms부터 대기하다가, 3ms 시점에 작업을 시작해서 9ms 시점에 작업 완료(요청에서 종료까지 : 7ms)
+B: 1ms부터 대기하다가, 9ms 시점에 작업을 시작해서 18ms 시점에 작업 완료(요청에서 종료까지 : 17ms)
+</code></pre>
+<p>이렇게 A → C → B의 순서로 처리하면 각 작업의 요청부터 종료까지 걸린 시간의 평균은 9ms(= (3 + 7 + 17) / 3)가 됩니다.</p>
+
+<p>각 작업에 대해 [작업이 요청되는 시점, 작업의 소요시간]을 담은 2차원 배열 jobs가 매개변수로 주어질 때, 작업의 요청부터 종료까지 걸린 시간의 평균을 가장 줄이는 방법으로 처리하면 평균이 얼마가 되는지 return 하도록 solution 함수를 작성해주세요. (단, 소수점 이하의 수는 버립니다)</p>
+
+<h5 id="제한사항">제한사항</h5>
+<ul>
+  <li>jobs의 길이는 1 이상 500 이하입니다.</li>
+  <li>jobs의 각 행은 하나의 작업에 대한 [작업이 요청되는 시점, 작업의 소요시간] 입니다.</li>
+  <li>각 작업에 대해 작업이 요청되는 시간은 0 이상 1,000 이하입니다.</li>
+  <li>각 작업에 대해 작업의 소요시간은 1 이상 1,000 이하입니다.</li>
+  <li>하드디스크가 작업을 수행하고 있지 않을 때에는 먼저 요청이 들어온 작업부터 처리합니다.</li>
+</ul>
+
+<details>
+<summary>입출력 예 보이기 / 숨기기</summary>
+<div>
+    <h5 id="section">입출력 예</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>jobs</th>
+          <th>return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[[0, 3], [1, 9], [2, 6]]</td>
+          <td>9</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 id="section-1">입출력 예 설명</h6>
+    <p>문제에 주어진 예와 같습니다.</p>
+
+    <p>0ms 시점에 3ms 걸리는 작업 요청이 들어옵니다.
+1ms 시점에 9ms 걸리는 작업 요청이 들어옵니다.
+2ms 시점에 6ms 걸리는 작업 요청이 들어옵니다.</p>
+  </div>
+</details>
+<p><br /></p>
+
+<h5 id="문제-풀이">문제 풀이</h5>
+<p><a href="#디스크-컨트롤러-javascript"><code class="highlighter-rouge">JavaScript</code></a></p>
+
+<h5 id="디스크-컨트롤러-javascript">JavaScript</h5>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">PriorityQueue</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+
+  <span class="nx">arrange</span><span class="p">(</span><span class="nx">fromBottom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">fromBottom</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span><span class="p">(</span><span class="nx">idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">parentIdx</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">idx</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">].</span><span class="nx">priority</span> <span class="o">&gt;=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">].</span><span class="nx">priority</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+        
+        <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]];</span>
+        <span class="nx">idx</span> <span class="o">=</span> <span class="nx">parentIdx</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">leftChildIdx</span> <span class="o">=</span> <span class="nx">idx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">rightChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span><span class="p">(</span><span class="nx">leftChildIdx</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 두 자식중 더 작은 자식의 인덱스</span>
+        <span class="kd">let</span> <span class="nx">minChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">rightChildIdx</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">leftChildIdx</span><span class="p">].</span><span class="nx">priority</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">rightChildIdx</span><span class="p">].</span><span class="nx">priority</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">minChildIdx</span> <span class="o">=</span> <span class="nx">rightChildIdx</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">].</span><span class="nx">priority</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">].</span><span class="nx">priority</span><span class="p">)</span> <span class="p">{</span>
+          <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]];</span>
+          <span class="nx">idx</span> <span class="o">=</span> <span class="nx">minChildIdx</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">leftChildIdx</span> <span class="o">=</span> <span class="nx">idx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="nx">rightChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">push</span><span class="p">({</span> <span class="nx">priority</span><span class="p">,</span> <span class="nx">data</span> <span class="p">})</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">priority</span><span class="p">,</span> <span class="nx">data</span> <span class="p">});</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">pop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">there is nothing to pop</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    
+    <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="mi">1</span><span class="p">]];</span>
+    <span class="kd">const</span> <span class="nx">top</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">top</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">isEmpty</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">idx</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">idx</span><span class="p">}</span><span class="s2">th elem: { priority: </span><span class="p">${</span><span class="nx">elem</span><span class="p">.</span><span class="nx">priority</span><span class="p">}</span><span class="s2">, data: </span><span class="p">${</span><span class="nx">elem</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span><span class="s2"> }`</span><span class="p">);</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">jobs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">fromReqToFinAcc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="nx">jobs</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="nx">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">return</span> <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="p">});</span>
+  <span class="kd">let</span> <span class="nx">currentTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">pq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PriorityQueue</span><span class="p">();</span> <span class="c1">// 우선순위: 소요시간. 작을 수록 높은 우선순위임</span>
+  <span class="kd">let</span> <span class="nx">nextJobIdx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="c1">// 시간에 따라 priority queue에 작업을 추가하며 수행</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">nextJobIdx</span> <span class="o">&lt;</span> <span class="nx">jobs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">currentTime</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// 시간이 지나면서 요청이 들어온 작업 priority queue에 추가</span>
+      <span class="nx">pq</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="na">priority</span><span class="p">:</span> <span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="na">data</span><span class="p">:</span> <span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">0</span><span class="p">]});</span>
+      <span class="nx">nextJobIdx</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">pq</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+      <span class="c1">// 현 시간에 요청이 들어온 작업이 없을 경우, 이후 제일 먼저 요청이 들어오는 작업 수행</span>
+      <span class="nx">pq</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="na">priority</span><span class="p">:</span> <span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="na">data</span><span class="p">:</span> <span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">0</span><span class="p">]});</span>
+      <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">jobs</span><span class="p">[</span><span class="nx">nextJobIdx</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+      <span class="nx">nextJobIdx</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// priority queue에서 가장 우선순위가 높은 작업 수행</span>
+    <span class="kd">const</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">pq</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="nx">fromReqToFinAcc</span> <span class="o">+=</span> <span class="nx">top</span><span class="p">.</span><span class="nx">priority</span> <span class="o">+</span> <span class="nx">currentTime</span> <span class="o">-</span> <span class="nx">top</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+    <span class="nx">currentTime</span> <span class="o">+=</span> <span class="nx">top</span><span class="p">.</span><span class="nx">priority</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">// priority queue에 남아있는 작업을 수행</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">pq</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">top</span> <span class="o">=</span> <span class="nx">pq</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="nx">fromReqToFinAcc</span> <span class="o">+=</span> <span class="nx">top</span><span class="p">.</span><span class="nx">priority</span> <span class="o">+</span> <span class="nx">currentTime</span> <span class="o">-</span> <span class="nx">top</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+    <span class="nx">currentTime</span> <span class="o">+=</span> <span class="nx">top</span><span class="p">.</span><span class="nx">priority</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">fromReqToFinAcc</span> <span class="o">/</span> <span class="nx">jobs</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="이중우선순위큐"><a href="https://programmers.co.kr/learn/courses/30/lessons/42628?language=javascript">이중우선순위큐</a></h3>
+<p><code class="highlighter-rouge">level 3</code></p>
+<h5 id="문제-설명-1">문제 설명</h5>
+<p>이중 우선순위 큐는 다음 연산을 할 수 있는 자료구조를 말합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>명령어</th>
+      <th>수신 탑(높이)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I 숫자</td>
+      <td>큐에 주어진 숫자를 삽입합니다.</td>
+    </tr>
+    <tr>
+      <td>D 1</td>
+      <td>큐에서 최댓값을 삭제합니다.</td>
+    </tr>
+    <tr>
+      <td>D -1</td>
+      <td>큐에서 최솟값을 삭제합니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이중 우선순위 큐가 할 연산 operations가 매개변수로 주어질 때, 모든 연산을 처리한 후 큐가 비어있으면 [0,0] 비어있지 않으면 [최댓값, 최솟값]을 return 하도록 solution 함수를 구현해주세요.</p>
+
+<h5 id="제한사항-1">제한사항</h5>
+<ul>
+  <li>operations는 길이가 1 이상 1,000,000 이하인 문자열 배열입니다.</li>
+  <li>operations의 원소는 큐가 수행할 연산을 나타냅니다.</li>
+  <li>원소는 “명령어 데이터” 형식으로 주어집니다.</li>
+  <li>최댓값/최솟값을 삭제하는 연산에서 최댓값/최솟값이 둘 이상인 경우, 하나만 삭제합니다.</li>
+  <li>빈 큐에 데이터를 삭제하라는 연산이 주어질 경우, 해당 연산은 무시합니다.</li>
+</ul>
+
+<details>
+<summary>입출력 예 보이기 / 숨기기</summary>
+<div>
+    <h5 id="section-2">입출력 예</h5>
+
+    <table>
+      <thead>
+        <tr>
+          <th>operations</th>
+          <th>return</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[“I 16”, “D 1”]</td>
+          <td>[0,0]</td>
+        </tr>
+        <tr>
+          <td>[“I 7”, “I 5”, “I -5”, “D -1”]</td>
+          <td>[7,5]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h6 id="section-3">입출력 예 설명</h6>
+    <p>16을 삽입 후 최댓값을 삭제합니다. 비어있으므로 [0,0]을 반환합니다.
+7,5,-5를 삽입 후 최솟값을 삭제합니다. 최대값 7, 최소값 5를 반환합니다.</p>
+  </div>
+</details>
+<p><br /></p>
+
+<h5 id="문제-풀이-1">문제 풀이</h5>
+<p>우선순위큐를 이용해 풀기는 했는데 그냥 쌩 max, min 찾는게 더 빠르네…?
+<a href="#이중우선순위큐-javascript"><code class="highlighter-rouge">JavaScript</code></a></p>
+
+<h5 id="이중우선순위큐-javascript">JavaScript</h5>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 그냥 쌩으로</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="nx">arg</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">t</span><span class="o">=&gt;</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">I</span><span class="dl">'</span><span class="p">){</span>
+            <span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="o">+</span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2"> </span><span class="dl">"</span><span class="p">)[</span><span class="mi">1</span><span class="p">]));</span>            
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+
+            <span class="kd">var</span> <span class="nx">val</span> <span class="o">=</span> <span class="p">(</span><span class="nx">t</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">-</span><span class="dl">'</span> <span class="p">?</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span> <span class="p">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">)(...</span><span class="nx">list</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">delIndex</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">t</span><span class="o">=&gt;</span> <span class="nx">t</span> <span class="o">===</span>  <span class="nx">val</span><span class="p">);</span>
+
+            <span class="nx">list</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">delIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+
+    <span class="k">return</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span> <span class="p">?</span> <span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">list</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(...</span><span class="nx">list</span><span class="p">)]</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="c1">// Priority Queue</span>
+<span class="kd">class</span> <span class="nx">PriorityQueue</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">order</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="p">[</span><span class="kc">NaN</span><span class="p">];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">order</span> <span class="o">=</span> <span class="nx">order</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">arrange</span><span class="p">(</span><span class="nx">fromBottom</span><span class="p">,</span> <span class="nx">removedIdx</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">fromBottom</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span><span class="p">(</span><span class="nx">idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">parentIdx</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">idx</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">order</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">asc</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">])</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">])</span> <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+                
+        <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">parentIdx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]];</span>
+        <span class="nx">idx</span> <span class="o">=</span> <span class="nx">parentIdx</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="nx">removedIdx</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">leftChildIdx</span> <span class="o">=</span> <span class="nx">idx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">rightChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">while</span><span class="p">(</span><span class="nx">leftChildIdx</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">minChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">order</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">asc</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 두 자식중 더 작은 자식의 인덱스</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">rightChildIdx</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">leftChildIdx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">rightChildIdx</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">minChildIdx</span> <span class="o">=</span> <span class="nx">rightChildIdx</span><span class="p">;</span>
+          <span class="p">}</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">])</span> <span class="k">break</span><span class="p">;</span> 
+          
+          <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]];</span>
+          <span class="nx">idx</span> <span class="o">=</span> <span class="nx">minChildIdx</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="c1">// 두 자식중 더 큰 자식의 인덱스</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">rightChildIdx</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">leftChildIdx</span><span class="p">]</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">rightChildIdx</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">minChildIdx</span> <span class="o">=</span> <span class="nx">rightChildIdx</span><span class="p">;</span>
+          <span class="p">}</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">])</span> <span class="k">break</span><span class="p">;</span>
+
+          <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">minChildIdx</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idx</span><span class="p">]];</span>
+          <span class="nx">idx</span> <span class="o">=</span> <span class="nx">minChildIdx</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">leftChildIdx</span> <span class="o">=</span> <span class="nx">idx</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="nx">rightChildIdx</span> <span class="o">=</span> <span class="nx">leftChildIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">push</span><span class="p">(</span><span class="nx">priority</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">priority</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">pop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">there is nothing to pop</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    
+    <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="mi">1</span><span class="p">]];</span>
+    <span class="kd">const</span> <span class="nx">top</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">top</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">isEmpty</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">idx</span><span class="p">}</span><span class="s2">th elem: </span><span class="p">${</span><span class="nx">elem</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">operations</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">minPQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PriorityQueue</span><span class="p">(</span><span class="dl">'</span><span class="s1">asc</span><span class="dl">'</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">maxPQ</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PriorityQueue</span><span class="p">(</span><span class="dl">'</span><span class="s1">desc</span><span class="dl">'</span><span class="p">);</span>
+  
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">operations</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">operations</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">I</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// insert</span>
+      <span class="kd">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">operations</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9-</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="dl">""</span><span class="p">),</span> <span class="mi">10</span><span class="p">);</span>
+      <span class="nx">minPQ</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+      <span class="nx">maxPQ</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// delete</span>
+      <span class="kd">const</span> <span class="p">[</span><span class="nx">targetPQ</span><span class="p">,</span> <span class="nx">otherPQ</span><span class="p">]</span> <span class="o">=</span> <span class="nx">operations</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">-</span><span class="dl">'</span> <span class="p">?</span> <span class="p">[</span><span class="nx">minPQ</span><span class="p">,</span> <span class="nx">maxPQ</span><span class="p">]</span> <span class="p">:</span> <span class="p">[</span><span class="nx">maxPQ</span><span class="p">,</span> <span class="nx">minPQ</span><span class="p">];</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">targetPQ</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="k">continue</span><span class="p">;</span>
+
+      <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">targetPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">targetPQ</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+        <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">targetPQ</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+        <span class="kd">const</span> <span class="nx">idxToDelete</span> <span class="o">=</span> <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
+        <span class="p">[</span><span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idxToDelete</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">idxToDelete</span><span class="p">],</span> <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">[</span><span class="nx">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]];</span>
+        <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+        <span class="nx">otherPQ</span><span class="p">.</span><span class="nx">arrange</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="nx">idxToDelete</span><span class="p">);</span>
+      <span class="p">}</span>
+      
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">minPQ</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">()</span> <span class="p">?</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="p">[</span><span class="nx">maxPQ</span><span class="p">.</span><span class="nx">pop</span><span class="p">(),</span> <span class="nx">minPQ</span><span class="p">.</span><span class="nx">pop</span><span class="p">()];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h5 id="문제-출처">문제 출처</h5>
+<p>프로그래머스 코딩 테스트 연습: <a href="https://programmers.co.kr/learn/challenges">https://programmers.co.kr/learn/challenges</a></p>
+
+<style>
+  table {
+    table-layout: auto;
+    width: fit-content;
+  }
+  table th, table td {
+    padding: 8px 12px;
+  }
+</style>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/coding-test">coding-test</a>,&nbsp;<a href="/tag/heap">heap</a>,&nbsp;<a href="/tag/priority-queue">priority-queue</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/11/06/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201106_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/2020/11/07/TIL.html">
+					<span class="page-number">20201107_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

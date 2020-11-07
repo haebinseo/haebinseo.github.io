@@ -42,11 +42,11 @@
   
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="문제 바로가기기능개발 다리를 지나는 트럭 프린터" />
-  <meta property="og:url" content="http://localhost:4000/codingtest/2020/11/06/stack-queue-problem-solving.html">
+  <meta property="og:url" content="http://haebinseo.github.io//coding-test/2020/11/06/stack-queue-problem-solving.html">
   <meta property="og:site_name" content="HaebinLog" />
   <meta property="og:title" content="스택/큐 문제 풀이" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="615" />
@@ -57,16 +57,16 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="스택/큐 문제 풀이">
   <meta name="twitter:description" content="문제 바로가기기능개발 다리를 지나는 트럭 프린터">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/codingtest/2020/11/06/stack-queue-problem-solving.html">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//coding-test/2020/11/06/stack-queue-problem-solving.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/codingtest/2020/11/06/stack-queue-problem-solving.html">
-	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://haebinseo.github.io//coding-test/2020/11/06/stack-queue-problem-solving.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
 	<script type="text/javascript">
@@ -202,6 +202,16 @@
 
 	
 
+	
+
+	
+
+	
+
+	
+
+	
+
 
       </ul>
     </nav>
@@ -234,7 +244,7 @@
   <div class="post-categories">
   in 
     
-    <a href="/category/codingtest">Codingtest</a>
+    <a href="/category/coding-test">Coding-test</a>
     
   
   </div>
@@ -546,9 +556,57 @@
 
 <h5 id="프린터-javascript">JavaScript</h5>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">priorities</span><span class="p">,</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// queue</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">priorities</span><span class="p">,</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span> <span class="nx">idx</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">isTarget</span><span class="p">:</span> <span class="nx">idx</span> <span class="o">===</span> <span class="nx">location</span><span class="p">,</span>
+      <span class="na">priority</span><span class="p">:</span> <span class="nx">p</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">list</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">elem</span> <span class="o">=&gt;</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">priority</span> <span class="o">&lt;</span> <span class="nx">elem</span><span class="p">.</span><span class="nx">priority</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">cur</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">cur</span><span class="p">.</span><span class="nx">isTarget</span><span class="p">)</span> <span class="k">return</span> <span class="nx">count</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// using hash</span>
+<span class="kd">function</span> <span class="nx">solution</span><span class="p">(</span><span class="nx">priorities</span><span class="p">,</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">printOrder</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">priorityHash</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span> <span class="c1">// key: priority, value: [ locations ]</span>
+  <span class="kd">const</span> <span class="nx">targetPriority</span> <span class="o">=</span> <span class="nx">priorities</span><span class="p">[</span><span class="nx">location</span><span class="p">];</span>
+  <span class="kd">let</span> <span class="nx">currentLoc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">priorityHash</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="p">[]);</span>
+  <span class="c1">// priority hash table 작성</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">idx</span> <span class="o">&lt;</span> <span class="nx">priorities</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">idx</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">priorityHash</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">priorities</span><span class="p">[</span><span class="nx">idx</span><span class="p">]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">idx</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// 타겟 문서의 우선순위보다 높은 문서들의 출력 순서 추적</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="nx">targetPriority</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nx">priorityHash</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="c1">// 현 우선순위에서 가장 마지막으로 출력되는 문서의 해당 배열에서의 위치, 대기목록에서의 위치가 x.</span>
+    <span class="kd">const</span> <span class="nx">idxInArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">loc</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">loc</span> <span class="o">&gt;=</span> <span class="nx">currentLoc</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="c1">// 현재 출력 위치를 업데이트</span>
+    <span class="nx">currentLoc</span> <span class="o">=</span> <span class="nx">idxInArr</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="p">?</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">idxInArr</span><span class="p">]</span> <span class="p">:</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+    <span class="nx">printOrder</span> <span class="o">+=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">// 최근 출력한 위치에서 타겟 문서까지 추가로 출력해야 될 문서 확인</span>
+  <span class="kd">const</span> <span class="nx">targetArr</span> <span class="o">=</span> <span class="nx">priorityHash</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">targetPriority</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">idxInArr</span> <span class="o">=</span> <span class="nx">targetArr</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">loc</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">loc</span> <span class="o">&gt;=</span> <span class="nx">currentLoc</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">idxOfTarget</span> <span class="o">=</span> <span class="nx">targetArr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">location</span><span class="p">);</span>
+  <span class="nx">printOrder</span> <span class="o">+=</span> <span class="nx">idxOfTarget</span> <span class="o">-</span> <span class="p">(</span><span class="nx">idxInArr</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="p">?</span> <span class="nx">idxInArr</span> <span class="p">:</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="nx">printOrder</span> <span class="o">+=</span> <span class="nx">idxInArr</span> <span class="o">&gt;</span> <span class="nx">idxOfTarget</span> <span class="p">?</span> <span class="nx">targetArr</span><span class="p">.</span><span class="nx">length</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  
+  <span class="k">return</span> <span class="nx">printOrder</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -573,7 +631,7 @@
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/codingtest">codingtest</a>,&nbsp;<a href="/tag/stack">stack</a>,&nbsp;<a href="/tag/queue">queue</a>
+  <strong>Tags:</strong> <a href="/tag/coding-test">coding-test</a>,&nbsp;<a href="/tag/stack">stack</a>,&nbsp;<a href="/tag/queue">queue</a>
 </section>
 
 
@@ -599,7 +657,7 @@
 	<section class="post-navigation">
 		<span class="prev-post">
 			
-				<a href="/codingtest/2020/11/06/hash-problem-solving.html">
+				<a href="/coding-test/2020/11/06/hash-problem-solving.html">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
@@ -609,6 +667,14 @@
 			
 		</span>
 		<span class="next-post">
+			
+				<a href="/til/2020/11/06/TIL.html">
+					<span class="page-number">20201106_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
 			
 		</span>
 	</section>
@@ -642,6 +708,16 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 
 	
