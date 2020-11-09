@@ -5,9 +5,41 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Nov 2020 23:22:03 +0900</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2020 23:22:03 +0900</lastBuildDate>
+    <pubDate>Tue, 10 Nov 2020 01:45:53 +0900</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2020 01:45:53 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201109_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;왜 인터페이스를 사용하는가?&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/java/why_interface.png&quot; alt=&quot;why_interface&quot; style=&quot;width: 520px;&quot; /&gt;&lt;/p&gt; &lt;p&gt;Dao 클래스들이 IUsetInfoDao에 정의된 메소드를 구현하면 UserInfoWeb은 IUsetInfoDao에 정의된 메소드 명세만 보고...</description>
+        <pubDate>Mon, 09 Nov 2020 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/09/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/09/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201108_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;상속은 언제 사용할까?&lt;br /&gt; 하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의...</description>
+        <pubDate>Sun, 08 Nov 2020 23:25:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/08/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/08/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201107_TIL</title>
@@ -131,34 +163,6 @@
         <pubDate>Wed, 04 Nov 2020 23:50:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/11/04/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/04/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201103_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;생각보다 우아한테크코스 지원서 항목이 많았다. 1000자 항목 3개에 500자 항목 하나인데, 각 항목이 평소 자소서 문항들과 조금씩 다르다 보니 처음부터 작성해야 했다. 그래서 그런지 하루종일...</description>
-        <pubDate>Tue, 03 Nov 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/03/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/03/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201102_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;간만에 정엽이 형과 주원이랑 점심을 함께 했다. 역시 같은 컴공생들이다 보니 대화 주제도 익숙하고 편해서 좋았다. 주원이가 곧 우아한 형제들에서 주관하는 우아한테크코스를 알려줬다. 우아한테크코스는 10개월간...</description>
-        <pubDate>Mon, 02 Nov 2020 23:25:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/02/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/02/TIL.html</guid>
         
         <category>til</category>
         

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201108_TIL</title>
+  <meta name="description" content="오늘 한 일  Java 공부          상속은 언제 사용할까?하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의 클래스에 공통적인 요소를 모으고 나머지 클래스는 이를 상속받은 다음 각각 필요한 특성과 메서드를 구현하도록...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  Java 공부          상속은 언제 사용할까?하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의 클래스에 공통적인 요소를 모으고 나머지 클래스는 이를 상속받은 다음 각각 필요한 특성과 메서드를 구현하도록..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/08/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201108_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201108_TIL">
+  <meta name="twitter:description" content="오늘 한 일  Java 공부          상속은 언제 사용할까?하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의 클래스에 공통적인 요소를 모으고 나머지 클래스는 이를 상속받은 다음 각각 필요한 특성과 메서드를 구현하도록...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/08/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/08/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201108_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 8, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>Java 공부
+    <ul>
+      <li>
+        <p>상속은 언제 사용할까?<br />
+하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의 클래스에 공통적인 요소를 모으고 나머지 클래스는 이를 상속받은 다음 각각 필요한 특성과 메서드를 구현하도록 하면 훨씬 깔끔하다.</p>
+
+        <ul>
+          <li>IS-A 관계 (is a relationship : inheritance):<br />
+일반적인(general) 개념과 구체적인(specific) 개념과의 관계<br />
+상위 클래스: 일반적인 개념 클래스<br />
+하위 클래스: 구체적인 개념 클래스<br />
+단순히 코드를 재사용하는 목적으로 사용하지 않음</li>
+          <li>HAS-A 관계 (composition):<br />
+한 클래스가 다른 클래스를 소유한 관계. 코드 재사용의 한 방법
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Student가 Subject를 포함한 관계</span>
+<span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+  <span class="nc">Subject</span> <span class="n">majorSubject</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>다운캐스팅 (down-casting)<br />
+하위 클래스가 상위 클래스로 형 변환되는 것(업캐스팅)은 묵시적으로 이루어진다. 하지만 업캐스팅 된 인스턴스를 다시 원래 하위 클래스로 형 변환하려면 명시적으로 다운캐스팅을 해줘야 한다.
+이때 인스턴스의 원래 타입을 체크하는 예약어가 instanceof이다.
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Animal</span> <span class="n">hAnimal</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Human</span><span class="o">();</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">hAnimal</span> <span class="k">instanceof</span> <span class="nc">Human</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Human</span> <span class="n">human</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Human</span><span class="o">)</span><span class="n">hAniman</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>        </div>
+
+        <p>사실 이미 업캐스팅을 했는데 다시 다운캐스팅으로 되돌리는 것은 그리 좋은 방법은 아니다. 되도록이면 메서드 오버라이딩으로 해결하는 것을 우선으로 하자.</p>
+      </li>
+      <li>추상 클래스 (abstact class)<br />
+추상 메서드를 포함하는 클래스. 추상 메서드는 구현코드 없이 메서드의 선언만이 존재한다.<br />
+추상 클래스와 추상 메서드는 abstract 예약어를 사용하며, 추상 클래스는 new (인스턴스 화) 할 수 없다.
+추상 클래스라고 추상 메서드만 포함해야하는 것은 아니며 일반적인 메서드도 가질 수 있다.
+가끔 다 구현되어 있지만 상속용으로만 사용하려고 추상 클래스로 선언하는 경우도 있다.
+cf) abstact class &lt;-&gt; concrete class
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">);</span> <span class="c1">// 선언만 았는 추상 메서드</span>
+<span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{}</span> <span class="c1">// 추상 메서드 x</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>템플릿 메서드<br />
+싱글톤 패턴과 같이 디자인 패턴 중의 하나. 추상 메서드나 구현된 메서드를 활용하여 전체 기능의 흐름(시나리오)를 정의하는 메서드이다. final로 선언하면 하의 클래스에서 재정의할 수 없다.</p>
+
+        <p>프레임 워크에서 많이 사용도되는 설계 패턴으로, 추상 클래스로 선언된 상위 클래스에 템플릿 메서드를 활용하여 전체적인 흐름을 정의하고 하위 클래스에서 다르게 구현되어야 하는 부분은 추상 메서드로 선언해서 하위 클래스가 구현하도록 한다.</p>
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">();</span>
+  <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">stop</span><span class="o">();</span>
+      
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">washCar</span><span class="o">()</span> <span class="o">{};</span> <span class="c1">// hook method. 본문 내용 x. 필요에 따라 override</span>
+      
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startCar</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시동을 겁니다."</span><span class="o">);</span>
+  <span class="o">}</span>
+      
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">turnOff</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시동을 끕니다."</span><span class="o">);</span>
+  <span class="o">}</span>
+      
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">startCar</span><span class="o">();</span>
+    <span class="n">drive</span><span class="o">();</span>
+    <span class="n">stop</span><span class="o">();</span>
+    <span class="n">washCar</span><span class="o">();</span>
+    <span class="n">turnOff</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>final 예약어<br />
+final 변수는 값이 변경될 수 없는 상수이다. final 변수는 오직 한번만 값을 할당할 수 있다.<br />
+final 메서드는 하위 클래스에서 재정의(overriding) 할 수 없다.<br />
+final 클래스는 더 이상 상속되지 않는다. ex) java의 String 클래스</p>
+      </li>
+      <li>여러 자바 파일에서 공유하는 상수 값 정의 하기
+프로젝트 구현 시 여러 파일에서 공유해야하는 상수 값은 하나의 파일에 선언하여 사용하면 편리하다.
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 다른 클래스에서 Define.GOOD_MORNING 등으로 사용</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Define</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="no">MIN</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="no">MAX</span> <span class="o">=</span> <span class="mi">99999</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="no">ENG</span> <span class="o">=</span> <span class="mi">1001</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="no">MATH</span> <span class="o">=</span> <span class="mi">2011</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="no">PI</span> <span class="o">=</span> <span class="mf">3.14</span><span class="o">;</span>
+  <span class="kd">final</span> <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="no">GOOD_MORNING</span> <span class="o">=</span> <span class="s">"Good Morning!"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>인터페이스 (interface)
+        <ul>
+          <li>
+            <p>인터페이스는 설계에 주로 사용된다. 인터페이스에는 상수와 추상 메서드만이 존재하고, 클래스는 이 인터페이스를 구현한다(implement).
+인터페이스 내부에서 추상 메서드를 선언할 때는 public abstract 예약어를 생략해도 된다. 이후 pre-compile 단계에서 자동으로 추가된다. 상수 또한 public static final 예약어를 생략해도 후에 자동으로 추가된다.</p>
+          </li>
+          <li>
+            <p>인터페이스를 상속 받는 것을 타입 상속, 추상 클래스를 상속 받는 것은 구현 상속이라는 표현을 사용한다.
+이 또한 상속이기 때문에 자손 클래스의 인스턴스를 인터페이스 자료형으로 업캐스팅하는 것도 가능하다.</p>
+          </li>
+          <li>
+            <p>인터페이스는 클래스 상속과는 달리 구현코드가 없기 때문에, 한 클래스에서 여러 인터페이스를 구현할 수 있다.(쉽게 말해 여러 인터페이스 상속 가능. implement 예약어 이후 쉼표로 구분)</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참조<br />
+Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></p>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2020/11/07/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201107_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/2020/11/09/TIL.html">
+					<span class="page-number">20201109_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
