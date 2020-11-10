@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>20201109_TIL</title>
-  <meta name="description" content="오늘 한 일  java 공부                  왜 인터페이스를 사용하는가?                    ">
+  <title>20201110_TIL</title>
+  <meta name="description" content="오늘 한 일  java 공부          인터페이스 활용                  인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를 삭제하거나 클래스에서 오버라이딩해...">
   
   <meta name="author" content="Haebin Seo">
   <meta name="copyright" content="&copy; Haebin Seo 2020">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="오늘 한 일  java 공부                  왜 인터페이스를 사용하는가?                    " />
-  <meta property="og:url" content="http://haebinseo.github.io//til/2020/11/09/TIL.html">
+  <meta property="og:description" content="오늘 한 일  java 공부          인터페이스 활용                  인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를 삭제하거나 클래스에서 오버라이딩해..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/10/TIL.html">
   <meta property="og:site_name" content="HaebinLog" />
-  <meta property="og:title" content="20201109_TIL" />
+  <meta property="og:title" content="20201110_TIL" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="20201109_TIL">
-  <meta name="twitter:description" content="오늘 한 일  java 공부                  왜 인터페이스를 사용하는가?                    ">
+  <meta name="twitter:title" content="20201110_TIL">
+  <meta name="twitter:description" content="오늘 한 일  java 공부          인터페이스 활용                  인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를 삭제하거나 클래스에서 오버라이딩해...">
   <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
-  <meta name="twitter:url" content="http://haebinseo.github.io//til/2020/11/09/TIL.html">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/10/TIL.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://haebinseo.github.io//til/2020/11/09/TIL.html">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/10/TIL.html">
 	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
 	
 	<!-- Tooltips -->
@@ -193,6 +193,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -206,7 +208,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">20201109_TIL</h1>
+      <h1 class="title">20201110_TIL</h1>
       <p class="info">by <strong>Haebin Seo</strong></p>
     </header>
   </div>
@@ -221,11 +223,15 @@
  
 
 <section class="post-meta">
-  <div class="post-date">November 9, 2020</div>
+  <div class="post-date">November 10, 2020</div>
   <div class="post-categories">
   in 
     
-    <a href="/category/til">Til</a>
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
     
   
   </div>
@@ -236,32 +242,18 @@
 <ul>
   <li>java 공부
     <ul>
-      <li>
-        <p>왜 인터페이스를 사용하는가?</p>
-
-        <p><img src="/assets/java/why_interface.png" alt="why_interface" style="width: 520px;" /></p>
-
-        <p>Dao 클래스들이 IUsetInfoDao에 정의된 메소드를 구현하면 UserInfoWeb은 IUsetInfoDao에 정의된 메소드 명세만 보고 Dao를 사용할 수 있기 때문.</p>
-
-        <p>JDBC (Java DataBase Connectivity): DB가 Java와 연결되려면 어떤 것들이 구현되어야 하는지에 대한 명세. connection, statement 등의 인터페이스로 이루어져있다. 사용자는 Oracle, MS Sql, Mysql에서 작성한 jar 파일을 명세에 맞게 사용하면 된다.</p>
-      </li>
-      <li>
-        <p>인터페이스의 요소</p>
+      <li>인터페이스 활용
         <ul>
           <li>
-            <p>상수: 모든 변수는 상수로 변환된다.</p>
+            <p>인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를 삭제하거나 클래스에서 오버라이딩해 사용하면 된다.</p>
           </li>
           <li>
-            <p>추상 메서드: 모든 메서드는 추상 메서드로 정의된다.</p>
-          </li>
-          <li>디폴트 메서드: 기본 구현을 가지는 메서드. Java 8에서 인터페이스의 정의가 몇가지 변경되면서 추가된 기능이다. 기존에는 인터페이스가 변경이 되면, 인터페이스를 구현하는 모든 클래스들이 해당 메소드를 구현해야 하는 문제가 있다. 이런 문제를 해결하기 위하여 인터페이스에 메소드를 구현해 놓을 수 있도록 하였다. 디폴트 메서드는 구현 클래스에서 재정의할 수 있다.
-            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">default</span> <span class="kt">int</span> <span class="nf">exec</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+            <p>인터페이스 간에도 상속이 가능하다. 구현코드의 상속이 아니므로 형 상속(type inheritance)라고 한다.</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">MyInterface</span> <span class="kd">extends</span> <span class="no">X</span><span class="o">,</span> <span class="no">Y</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">myMethod</span><span class="o">();</span>
+<span class="o">}</span>
 </code></pre></div>            </div>
           </li>
-          <li>
-            <p>정적 메서드: 인스턴스 생성과 상관없이 인터페이스 타입으로 사용할 수 있는 메서드</p>
-          </li>
-          <li>private 메서드: 인터페이스를 구현한 클래스에서 사용하거나 재정의 할 수 없음. 인터페이스 내부에서만 기능을 제공하기 위해 구현하는 메서드</li>
         </ul>
       </li>
     </ul>
@@ -276,7 +268,7 @@ Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%
 
 
 <section class="tags">
-  <strong>Tags:</strong> <a href="/tag/til">til</a>
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
 </section>
 
 
@@ -302,12 +294,12 @@ Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%
 	<section class="post-navigation">
 		<span class="prev-post">
 			
-				<a href="/til/java/2020/11/08/TIL.html">
+				<a href="/til/java/2020/11/09/TIL.html">
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 					</span>
-					<span class="page-number">20201108_TIL</span>
+					<span class="page-number">20201109_TIL</span>
 				</a>
 			
 		</span>
@@ -345,6 +337,8 @@ Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

@@ -5,21 +5,43 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2020 01:45:53 +0900</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2020 01:45:53 +0900</lastBuildDate>
+    <pubDate>Tue, 10 Nov 2020 23:34:56 +0900</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2020 23:34:56 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201110_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;인터페이스 활용 &lt;ul&gt; &lt;li&gt; &lt;p&gt;인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를...</description>
+        <pubDate>Tue, 10 Nov 2020 23:30:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/10/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/10/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201109_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;왜 인터페이스를 사용하는가?&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/java/why_interface.png&quot; alt=&quot;why_interface&quot; style=&quot;width: 520px;&quot; /&gt;&lt;/p&gt; &lt;p&gt;Dao 클래스들이 IUsetInfoDao에 정의된 메소드를 구현하면 UserInfoWeb은 IUsetInfoDao에 정의된 메소드 명세만 보고...</description>
         <pubDate>Mon, 09 Nov 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/09/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/09/TIL.html</guid>
+        <link>http://haebinseo.github.io//til/java/2020/11/09/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/09/TIL.html</guid>
         
         <category>til</category>
         
+        <category>java</category>
+        
         
         <category>til</category>
+        
+        <category>java</category>
         
       </item>
     
@@ -149,20 +171,6 @@
         <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/11/05/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/05/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201104_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;우아한테크코스 지원서를 밤새 어찌저찌 채워서 제출했다. 나름 제한된 시간 내에 최선을 다해 쓰긴 했지만 만족할만큼 퇴고를 거치지 못해 아쉬움이 남았다. 되면 좋겠지만 떨어지더라도 너무 크게...</description>
-        <pubDate>Wed, 04 Nov 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/04/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/04/TIL.html</guid>
         
         <category>til</category>
         

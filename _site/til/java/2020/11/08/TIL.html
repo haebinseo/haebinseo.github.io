@@ -193,6 +193,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -340,7 +342,12 @@ final 클래스는 더 이상 상속되지 않는다. ex) java의 String 클래�
 이 또한 상속이기 때문에 자손 클래스의 인스턴스를 인터페이스 자료형으로 업캐스팅하는 것도 가능하다.</p>
           </li>
           <li>
-            <p>인터페이스는 클래스 상속과는 달리 구현코드가 없기 때문에, 한 클래스에서 여러 인터페이스를 구현할 수 있다.(쉽게 말해 여러 인터페이스 상속 가능. implement 예약어 이후 쉼표로 구분)</p>
+            <p>인터페이스는 클래스 상속과는 달리 구현코드가 없기 때문에, 한 클래스에서 여러 인터페이스를 구현할 수 있다. (쉽게 말해 여러 인터페이스 상속 가능. implement 예약어 이후 쉼표로 구분)<br />
+복수의 클래스를 상속했을 때 모호함이 발생하는 것(Diamond Problem)을 방지하기 위해 java는 이를 하나의 클래스 상속만은 허용한다.</p>
+
+            <p><img src="/assets/java/diamond_problem.png" alt="diamond_problem" style="width: 460px;" /></p>
+
+            <p>위 그림의 Class B와 C에서 각각 A의 메서드를 오버라이딩 했다고 하자. Diamond Problem이란 Class B와 C를 다중 상속받은 class D에서 이 메서드를 호출할 때 어떤 부모의 메서드를 불러와야 할지 모호해지는 문제를 말한다.</p>
           </li>
         </ul>
       </li>
@@ -348,8 +355,11 @@ final 클래스는 더 이상 상속되지 않는다. ex) java의 String 클래�
   </li>
 </ul>
 
-<p>참조<br />
-Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></p>
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+  <li>Diamond problem: <a href="https://www.javainterviewpoint.com/multiple-inheritance-diamond-problem/">https://www.javainterviewpoint.com/multiple-inheritance-diamond-problem/</a></li>
+</ul>
 
 </article>
 
@@ -393,7 +403,7 @@ Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%
 		</span>
 		<span class="next-post">
 			
-				<a href="/til/2020/11/09/TIL.html">
+				<a href="/til/java/2020/11/09/TIL.html">
 					<span class="page-number">20201109_TIL</span>
 					<span class="fa-stack fa-lg">
 						<i class="fa fa-square fa-stack-2x"></i>
@@ -433,6 +443,8 @@ Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	
