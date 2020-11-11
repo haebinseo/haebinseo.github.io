@@ -5,9 +5,37 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Nov 2020 23:34:56 +0900</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2020 23:34:56 +0900</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2020 23:29:04 +0900</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2020 23:29:04 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201111_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다. &lt;ul&gt;...</description>
+        <pubDate>Wed, 11 Nov 2020 23:28:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        <category>css</category>
+        
+        <category>white-space</category>
+        
+        <category>text-overflow</category>
+        
+        <category>ellipsis</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        <category>css</category>
+        
+      </item>
     
       <item>
         <title>20201110_TIL</title>
@@ -162,20 +190,6 @@
         
         
         <category>codingtest</category>
-        
-      </item>
-    
-      <item>
-        <title>20201105_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;우아한테크코스 코테 준비를 위해 공부를 시작했다. 우아한테크코스는 완성된 개발자가 아니라 300줄 이상의 논리적인 코드 작성이 가능한 사람을 뽑기 때문에 너무 어려운 문제는 나오지 않을...</description>
-        <pubDate>Thu, 05 Nov 2020 23:53:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/05/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/05/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     

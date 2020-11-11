@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201111_TIL</title>
+  <meta name="description" content="오늘 한 일  이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다.                ...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2020">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다.                ..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201111_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201111_TIL">
+  <meta name="twitter:description" content="오늘 한 일  이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다.                ...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201111_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 11, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>, 
+    
+  
+    
+    <a href="/category/css">Css</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다.
+    <ul>
+      <li>
+        <p><a href="https://developer.mozilla.org/ko/docs/Web/CSS/white-space">white-space 속성 (css)</a></p>
+
+        <p>속성 값</p>
+        <ol>
+          <li>normal
+            <ul>
+              <li>연속 공백을 하나로 합침. 개행 문자도 다른 공백 문자와 동일하게 처리합니다.</li>
+              <li>한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.</li>
+            </ul>
+          </li>
+          <li>nowrap
+            <ul>
+              <li>연속 공백을 하나로 합침. 줄 바꿈은 &lt;br&gt; 요소에서만 일어납니다.</li>
+            </ul>
+          </li>
+          <li>pre
+            <ul>
+              <li>연속 공백 유지. 줄 바꿈은 개행 문자와 &lt;br&gt; 요소에서만 일어납니다.</li>
+            </ul>
+          </li>
+          <li>pre-wrap
+            <ul>
+              <li>연속 공백 유지. 줄 바꿈은 개행 문자와 &lt;br&gt; 요소에서 일어납니다.</li>
+              <li>한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.</li>
+            </ul>
+          </li>
+          <li>pre-line
+            <ul>
+              <li>연속 공백을 하나로 합침. 줄바꿈은 개행 문자와 &lt;br&gt; 요소에서 일어납니다.</li>
+              <li>한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꿉니다.</li>
+            </ul>
+          </li>
+          <li>break-spaces<br />
+  다음 차이점을 제외하면 pre-wrap과 동일합니다.
+            <ul>
+              <li>연속 공백이 줄의 끝에 위치하더라도 공간을 차지합니다.</li>
+              <li>연속 공백의 중간과 끝에서도 자동으로 줄을 바꿀 수 있습니다.</li>
+              <li>유지한 연속 공백은 pre-wrap과 달리 요소 바깥으로 넘치지 않으며, 공간도 차지하므로 박스의 본질 크기(min-content, max-content)에 영향을 줍니다.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th style="text-align: center">개행 문자</th>
+              <th style="text-align: center">스페이스, 탭</th>
+              <th style="text-align: center">자동 줄 바꿈</th>
+              <th style="text-align: center">줄 끝의 공백</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>normal</td>
+              <td style="text-align: center">병합</td>
+              <td style="text-align: center">병합</td>
+              <td style="text-align: center">예</td>
+              <td style="text-align: center">제거</td>
+            </tr>
+            <tr>
+              <td>nowrap</td>
+              <td style="text-align: center">병합</td>
+              <td style="text-align: center">병합</td>
+              <td style="text-align: center">아니오</td>
+              <td style="text-align: center">제거</td>
+            </tr>
+            <tr>
+              <td>pre</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">아니오</td>
+              <td style="text-align: center">유지</td>
+            </tr>
+            <tr>
+              <td>pre-wrap</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">예</td>
+              <td style="text-align: center">넘침</td>
+            </tr>
+            <tr>
+              <td>pre-line</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">병합</td>
+              <td style="text-align: center">예</td>
+              <td style="text-align: center">제거</td>
+            </tr>
+            <tr>
+              <td>break-spaces</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">유지</td>
+              <td style="text-align: center">예</td>
+              <td style="text-align: center">줄 바꿈</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+
+    <p><br /></p>
+
+    <ul>
+      <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/text-overflow">text-overflow 속성 (css)</a><br />
+text-overflow는 박스 안에 내용이 넘칠 때(overflow) 텍스트를 어떻게 처리할지 지정하는 속성이다. overflow의 발생과는 관련이 없는 속성이므로 text-overflow를 사용하기 위해서는 overflow와 white-space 속성을 통해 overflow가 발생할 수 있도록 환경을 만들어주어야 한다.
+        <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span> <span class="err">||</span> <span class="nb">scroll</span> <span class="err">||</span> <span class="nb">auto</span><span class="p">;</span> <span class="c">/* visible 제외 */</span>
+  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span> <span class="err">||</span> <span class="n">pre</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+
+        <p>속성 값</p>
+        <ol>
+          <li>clip
+            <ul>
+              <li>text-overflow 속성의 기본 값</li>
+              <li>콘텐츠 영역의 끝에서 텍스트를 자르고 영역을 벗어나는 부분은 생략한다.</li>
+            </ul>
+          </li>
+          <li>ellipsis
+            <ul>
+              <li>생략된 text 부분을 ellipsis(‘…’, U+2026 HORIZONTAL ELLIPSIS)로 대체한다. ellipsis는 콘텐츠 영역 내부에 출력되며, 해당 문자가 차지하는 만큼의 영역이 기존의 text의 영역에서 줄어든다.</li>
+              <li>만약 ellipsis를 출력할만큼의 충분한 영역도 없다면 그냥 clip된다.</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>java 공부
+    <ul>
+      <li>기본 클래스
+        <ul>
+          <li>java.lang 패키지<br />
+많이 사용하는 기본 클래스들이 속한 패키지로, pre-compile 단계에서 <code class="highlighter-rouge">import java.lang.*;</code> 문장이 자동으로 추가되기 때문에 명시적인 import 없이도 사용할 수 있다. String, Integer, System 등이 여기에 속한다.</li>
+          <li>Object 클래스<br />
+모든 클래스의 최상위 클래스로 java.lang.Object 경로에 존재한다. 모든 클래스는 Object 클래스를 상속받음으로 Object 클래스의 메서드를 사용하거나 final이 아닌 메서드를 재정의할 수 있다. 이 또한 java.lang 패키지처럼 컴파일러가 <code class="highlighter-rouge">extends Object</code> 문구를 자동으로 추가한다.
+            <div id="targetTable"></div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>메서드</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>String toString()</td>
+                  <td>객체를 문자열로 표현하여 반환합니다. 재정의하여 객체에 대한 설명이나 특정 멤버 변수 값을 반환합니다.</td>
+                </tr>
+                <tr>
+                  <td>boolean equals(Object obj)</td>
+                  <td>두 인스턴스가 동일한지 여부를 반환합니다. 재정의하여 논리적으로 동일한 인스턴스임을 정의할 수 있습니다.</td>
+                </tr>
+                <tr>
+                  <td>int hashCode()</td>
+                  <td>객체의 해시 코드 값을 반환합니다.</td>
+                </tr>
+                <tr>
+                  <td>Object clone()</td>
+                  <td>객체를 복제하여 동일한 멤버 변수 값을 가진 새로운 인스턴스를 생성합니다.</td>
+                </tr>
+                <tr>
+                  <td>Class getClass()</td>
+                  <td>객체의 Class 클래스를 반환합니다.</td>
+                </tr>
+                <tr>
+                  <td>void finalize()</td>
+                  <td>인스턴스가 힙 메모리에서 제거될 때 가비지 컬렉터(GC)에 의해 호출되는 메서드입니다. 네트워크 연결 해제, 열려있는 파일 스트림 해제 등을 구현합니다.</td>
+                </tr>
+                <tr>
+                  <td>void wait()</td>
+                  <td>멀티스레드 프로그램에서 사용하는 메서드입니다. 스레드를 ‘기다리는 상태’(non runable)로 만듭니다.</td>
+                </tr>
+                <tr>
+                  <td>void notify()</td>
+                  <td>wait() 메서드에 의해 기다리고 있는 스레드(non runable 상태)를 실행가능한 상태(runable)로 가져옵니다.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <ul>
+              <li>toString() 메서드<br />
+Object 클래스의 메서드
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="sc">'@'</span> <span class="o">+</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toHexString</span><span class="o">(</span><span class="n">hashCode</span><span class="o">())</span>
+<span class="c1">// 클래스_이름@해시_코드_값</span>
+<span class="c1">// ex) object.Book@16f65612</span>
+</code></pre></div>                </div>
+                <p>객체의 정보를 String으로 바꾸어서 사용할 때 많이 쓰인다.<br />
+String 클래스는 문자열을, Integer 클래스는 정수 값을 반환하도록 이미 재정의되어 있다.</p>
+              </li>
+              <li>
+                <p>equals() 메서드<br />
+Object 클래스의 메서드는 두 인스턴스의 주소 값을 비교하여 true/false를 반환한다.<br />
+이를 재정의하여 두 인스턴스가 논리적으로 동일함의 여부를 반환하도록 작성할 수 있다.
+예를 들어 같은 학번의 학생의 경우, 여러 인스턴스의 주소 값은 다르겠지만 같은 학생으로 처리해야 학점이나 정보 산출에 문제가 생기지 않으므로 equals() 메서드를 재정의한다.</p>
+              </li>
+              <li>
+                <p>hashCode() 메서드<br />
+hash는 정보를 저장, 검색하기 위해 사용하는 자료구조이다. JVM은 데이터를 관리할 때 데이터의 특정 값(key)에 대해 저장 위치를 반환해주는 해시 함수를 사용한다. 해시 함수는 어떤 정보인가에 따라 다르게 구현된다.<br />
+hashCode() 메서드는 인스턴스의 저장 주소를 10진수로 반환한다. heap 메모리에 인스턴스가 저장되는 방식이 hash이다.</p>
+
+                <p>논리적으로 동일한 인스턴스는 동일한 hashCode() 반환 값을 가져야한다. 따라서 equals() 메서드를 재정의했다면 hashCode() 메서드도 재정의하여 동일한 값이 반환되도록 해야한다. hashCode()가 재정의되어 있더라도 <em>System.identityHashCode()</em> 정적 메서드를 통해 원래의 저장 주소를 얻을 수 있다.</p>
+              </li>
+              <li>
+                <p>clone() 메서드<br />
+원본 객체를 복제하는데 사용하는 메서드이다.<br />
+clone() 메서드를 사용하면 객체의 정보(멤버 변수 값)가 동일한 인스턴스가 또 생성되는 것이므로 객체 지향 프로그램의 정보 은닉, 객체 보호의 관점에서 위배될 수 있다.</p>
+
+                <p>객체의 clone() 메서드 사용을 허용한다는 의미로 Cloneable 인터페이스를 명시해준다.</p>
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Circle</span> <span class="kd">implements</span> <span class="nc">Cloneable</span> <span class="o">{</span>
+  <span class="nc">Point</span> <span class="n">point</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">radius</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="nc">Object</span> <span class="nf">clone</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">CloneNotSupportedException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">clone</span><span class="o">();&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+
+<span class="o">}</span>
+</code></pre></div>                </div>
+                <p>Cloneable를 실제 구현해야 하는 코드가 없고 그저 clone 메서드의 허용 여부 체크 용도로만 사용된다. 이러한 것을 <code class="highlighter-rouge">마크 인터페이스</code>라 한다.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+  <li>white-space: <a href="https://developer.mozilla.org/ko/docs/Web/CSS/white-space">https://developer.mozilla.org/ko/docs/Web/CSS/white-space</a></li>
+  <li>text-overflow:
+    <ul>
+      <li><a href="https://aboooks.tistory.com/382">https://aboooks.tistory.com/382</a></li>
+      <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/text-overflow">https://developer.mozilla.org/ko/docs/Web/CSS/text-overflow</a></li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+  table {
+    table-layout: auto;
+    /* width: fit-content; */
+  }
+  table th, table td {
+    padding: 8px 12px;
+  }
+  #targetTable+table th:first-of-type, #targetTable+table td:first-of-type {
+    white-space: nowrap;
+  }
+</style>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>,&nbsp;<a href="/tag/css">css</a>,&nbsp;<a href="/tag/white-space">white-space</a>,&nbsp;<a href="/tag/text-overflow">text-overflow</a>,&nbsp;<a href="/tag/ellipsis">ellipsis</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/11/10/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201110_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
