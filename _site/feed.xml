@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Nov 2020 02:52:28 +0900</pubDate>
-    <lastBuildDate>Fri, 13 Nov 2020 02:52:28 +0900</lastBuildDate>
+    <pubDate>Sat, 14 Nov 2020 01:04:54 +0900</pubDate>
+    <lastBuildDate>Sat, 14 Nov 2020 01:04:54 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201113_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;자료구조 &lt;ul&gt; &lt;li&gt;Array (배열) &lt;ol&gt; &lt;li&gt;fixed length&lt;/li&gt; &lt;li&gt;물리적인 위치와 논리적인 위치가 동일하다.&lt;/li&gt; &lt;li&gt;[장점] 인덱스 연산. 연산을 통해 원하는 위치에 접근하기 용이하다.&lt;/li&gt; &lt;li&gt;[단점]...</description>
+        <pubDate>Fri, 13 Nov 2020 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/13/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/13/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201112_TIL</title>
@@ -171,22 +189,6 @@
         <category>stack</category>
         
         <category>queue</category>
-        
-        
-        <category>coding-test</category>
-        
-      </item>
-    
-      <item>
-        <title>hash 문제 풀이</title>
-        <description>&lt;p&gt;문제 바로가기&lt;br /&gt; &lt;a href=&quot;#완주하지-못한-선수&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;완주하지 못한 선수&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#위장&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;위장&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#베스트앨범&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;베스트앨범&lt;/code&gt;&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;완주하지-못한-선수&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42576?language=javascript&quot;&gt;완주하지 못한 선수&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;level 1&lt;/code&gt;&lt;/p&gt; &lt;h5 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h5&gt; &lt;p&gt;수많은 마라톤 선수들이 마라톤에 참여하였습니다....</description>
-        <pubDate>Fri, 06 Nov 2020 15:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//coding-test/2020/11/06/hash-problem-solving.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//coding-test/2020/11/06/hash-problem-solving.html</guid>
-        
-        <category>coding-test</category>
-        
-        <category>hash</category>
         
         
         <category>coding-test</category>
