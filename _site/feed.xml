@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Nov 2020 01:04:54 +0900</pubDate>
-    <lastBuildDate>Sat, 14 Nov 2020 01:04:54 +0900</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2020 01:11:33 +0900</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2020 01:11:33 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201114_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부&lt;br /&gt; 13일 java 공부에 이어서… &lt;ul&gt; &lt;li&gt; &lt;p&gt;Set 인터페이스&lt;br /&gt; Collection 하위 인터페이스로, 중복을 허용하지 않아서 아이디, 주민번호, 사번 등 유일한 값이나 객체를...</description>
+        <pubDate>Sat, 14 Nov 2020 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/14/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/14/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201113_TIL</title>
@@ -174,24 +192,6 @@
         
         
         <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>스택/큐 문제 풀이</title>
-        <description>&lt;p&gt;문제 바로가기&lt;br /&gt; &lt;a href=&quot;#기능개발&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;기능개발&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#다리를-지나는-트럭&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;다리를 지나는 트럭&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#프린터&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;프린터&lt;/code&gt;&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;기능개발&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42586?language=javascript&quot;&gt;기능개발&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;level 2&lt;/code&gt;&lt;/p&gt; &lt;h5 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h5&gt; &lt;p&gt;프로그래머스 팀에서는 기능 개선 작업을 수행 중입니다....</description>
-        <pubDate>Fri, 06 Nov 2020 23:10:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//coding-test/2020/11/06/stack-queue-problem-solving.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//coding-test/2020/11/06/stack-queue-problem-solving.html</guid>
-        
-        <category>coding-test</category>
-        
-        <category>stack</category>
-        
-        <category>queue</category>
-        
-        
-        <category>coding-test</category>
         
       </item>
     
