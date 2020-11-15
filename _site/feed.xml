@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Nov 2020 01:11:33 +0900</pubDate>
-    <lastBuildDate>Sun, 15 Nov 2020 01:11:33 +0900</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2020 23:55:19 +0900</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2020 23:55:19 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201115_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;내부 클래스 &lt;div class=&quot;targetTable&quot;&gt;&lt;/div&gt; &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;종류&lt;/th&gt; &lt;th&gt;구현 위치&lt;/th&gt; &lt;th&gt;사용할 수 있는&lt;br /&gt;외부 클래스 변수&lt;/th&gt; &lt;th&gt;생성 방법&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;...</description>
+        <pubDate>Sun, 15 Nov 2020 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/15/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/15/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201114_TIL</title>
@@ -174,24 +192,6 @@
         
         
         <category>coding-test</category>
-        
-      </item>
-    
-      <item>
-        <title>20201106_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;내일 코테 대비 stack, queue, heap 문제 풀이를 했다. 공부한 내용은 coding-test 카테고리 게시글로 작성했다.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 06 Nov 2020 23:53:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/06/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/06/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     
