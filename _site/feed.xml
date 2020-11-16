@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Nov 2020 23:55:19 +0900</pubDate>
-    <lastBuildDate>Sun, 15 Nov 2020 23:55:19 +0900</lastBuildDate>
+    <pubDate>Tue, 17 Nov 2020 03:32:22 +0900</pubDate>
+    <lastBuildDate>Tue, 17 Nov 2020 03:32:22 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201116_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;람다식 (lambda expression)&lt;br /&gt; 자바에서 함수형 프로그래밍(functional programming)을 구현하는 방식으로 Java 8부터 지원한다. 클래스를 생성하지 않고 함수의 호출만으로 기능을 수행한다.&lt;/p&gt; &lt;ul&gt;...</description>
+        <pubDate>Mon, 16 Nov 2020 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/16/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/16/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201115_TIL</title>
@@ -174,24 +192,6 @@
         
         
         <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>힙 문제 풀이</title>
-        <description>&lt;p&gt;문제 바로가기&lt;br /&gt; &lt;a href=&quot;#디스크-컨트롤러&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;디스크 컨트롤러&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#이중우선순위큐&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;이중우선순위큐&lt;/code&gt;&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;디스크-컨트롤러&quot;&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42627?language=javascript&quot;&gt;디스크 컨트롤러&lt;/a&gt;&lt;/h3&gt; &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;level 3&lt;/code&gt;&lt;/p&gt; &lt;h5 id=&quot;문제-설명&quot;&gt;문제 설명&lt;/h5&gt; &lt;p&gt;하드디스크는 한 번에 하나의 작업만 수행할 수 있습니다. 디스크 컨트롤러를...</description>
-        <pubDate>Fri, 06 Nov 2020 23:58:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//coding-test/2020/11/06/heap-problem-solving.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//coding-test/2020/11/06/heap-problem-solving.html</guid>
-        
-        <category>coding-test</category>
-        
-        <category>heap</category>
-        
-        <category>priority-queue</category>
-        
-        
-        <category>coding-test</category>
         
       </item>
     
