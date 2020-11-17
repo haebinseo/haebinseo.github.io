@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Nov 2020 03:32:22 +0900</pubDate>
-    <lastBuildDate>Tue, 17 Nov 2020 03:32:22 +0900</lastBuildDate>
+    <pubDate>Wed, 18 Nov 2020 07:45:58 +0900</pubDate>
+    <lastBuildDate>Wed, 18 Nov 2020 07:45:58 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201117_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;예외 처리 &lt;ul&gt; &lt;li&gt; &lt;p&gt;오류&lt;br /&gt; 컴파일 오류(compile error): 프로그램 코드 작성 중 발생하는 문법적 오류&lt;br /&gt; 실행 오류(runtime error): 실행 중인...</description>
+        <pubDate>Tue, 17 Nov 2020 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/17/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/17/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201116_TIL</title>
@@ -178,20 +196,6 @@
         <category>til</category>
         
         <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201107_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;오늘 우아한테크코스 코딩테스트를 봤다. 4시간에 7문제가 주어졌는데 5번까지는 쉬웠고 6번은 중상 7번은 중 정도의 난이도였다. 며칠 코딩 테스트 연습덕에 앞의 문제들을 빨리 넘길 수 있어서...</description>
-        <pubDate>Sat, 07 Nov 2020 23:45:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/07/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/07/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     
