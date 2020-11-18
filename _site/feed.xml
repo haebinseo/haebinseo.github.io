@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2020 07:45:58 +0900</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2020 07:45:58 +0900</lastBuildDate>
+    <pubDate>Wed, 18 Nov 2020 23:56:59 +0900</pubDate>
+    <lastBuildDate>Wed, 18 Nov 2020 23:56:59 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201118_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;자바 입출력 &lt;ul&gt; &lt;li&gt; &lt;h4 id=&quot;스트림이란&quot;&gt;스트림이란&lt;/h4&gt; &lt;p&gt;네트워크에서 자료의 흐름이 물과 같다는 의미에서 유래&lt;br /&gt; 다양한 입출력 장치에 독립적으로 일관성 있는 입출력을 제공하는...</description>
+        <pubDate>Wed, 18 Nov 2020 23:56:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/java/2020/11/18/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/18/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+        
+        <category>til</category>
+        
+        <category>java</category>
+        
+      </item>
     
       <item>
         <title>20201117_TIL</title>
@@ -169,24 +187,6 @@
         <pubDate>Mon, 09 Nov 2020 23:50:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/11/09/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/09/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201108_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;상속은 언제 사용할까?&lt;br /&gt; 하나의 클래스에 여러 특성을 한꺼번에 구현하는 경우 많은 코드에 많은 if문이 생길 수 있다. 이 때 하나의...</description>
-        <pubDate>Sun, 08 Nov 2020 23:25:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/08/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/08/TIL.html</guid>
         
         <category>til</category>
         
