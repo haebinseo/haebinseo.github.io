@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2020 23:56:59 +0900</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2020 23:56:59 +0900</lastBuildDate>
+    <pubDate>Fri, 20 Nov 2020 00:18:56 +0900</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2020 00:18:56 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201119_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;refactoring 작성. 수정된 내용에 맞게 테스트 코드 수정 필요&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2020 23:58:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/19/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/19/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201118_TIL</title>
@@ -169,24 +187,6 @@
         <pubDate>Tue, 10 Nov 2020 23:30:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/11/10/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/10/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201109_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;왜 인터페이스를 사용하는가?&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/java/why_interface.png&quot; alt=&quot;why_interface&quot; style=&quot;width: 520px;&quot; /&gt;&lt;/p&gt; &lt;p&gt;Dao 클래스들이 IUsetInfoDao에 정의된 메소드를 구현하면 UserInfoWeb은 IUsetInfoDao에 정의된 메소드 명세만 보고...</description>
-        <pubDate>Mon, 09 Nov 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/09/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/09/TIL.html</guid>
         
         <category>til</category>
         
