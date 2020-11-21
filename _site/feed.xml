@@ -5,9 +5,46 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2020 00:18:56 +0900</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2020 00:18:56 +0900</lastBuildDate>
+    <pubDate>Sat, 21 Nov 2020 23:57:34 +0900</pubDate>
+    <lastBuildDate>Sat, 21 Nov 2020 23:57:34 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201121_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;refactoring 후 수정된 내용에 맞게 테스트 코드를 수정 중이다. 현재 user router test code 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 21 Nov 2020 23:57:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/21/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/21/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201120_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;우아한테크코스 1차에서 떨어졌다.. 하고 있는 공부에 더 집중할 수 있는 계기로 만들어야 겠다.&lt;/li&gt;
+  &lt;li&gt;수정된 내용에 맞게 테스트 코드 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2020 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/20/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/20/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201119_TIL</title>
@@ -141,52 +178,6 @@
         <pubDate>Thu, 12 Nov 2020 23:26:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/11/12/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/12/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201111_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;이전에 facebookClone 프로젝트의 pug 파일을 작성하다가 ellipsis(‘…’) 추가하는 부분을 찾아보기만 하고 정리하는 것을 잊어버렸었다. 마침 html table에서 줄바꿈을 방지하는 방법을 찾다가 생각나 정리하기로 했다. &lt;ul&gt;...</description>
-        <pubDate>Wed, 11 Nov 2020 23:28:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/css/2020/11/11/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        <category>css</category>
-        
-        <category>white-space</category>
-        
-        <category>text-overflow</category>
-        
-        <category>ellipsis</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        <category>css</category>
-        
-      </item>
-    
-      <item>
-        <title>20201110_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;인터페이스 활용 &lt;ul&gt; &lt;li&gt; &lt;p&gt;인터페이스의 디폴트 메서드를 사용하다보면 다중 구현으로 인해 에러(Diamond Problem)가 발생할 수 있다. 이때는 한 쪽의 중복되는 디폴트 메서드를...</description>
-        <pubDate>Tue, 10 Nov 2020 23:30:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/10/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/10/TIL.html</guid>
         
         <category>til</category>
         
