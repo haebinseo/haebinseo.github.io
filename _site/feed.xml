@@ -5,9 +5,63 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Nov 2020 23:57:34 +0900</pubDate>
-    <lastBuildDate>Sat, 21 Nov 2020 23:57:34 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Nov 2020 03:11:01 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Nov 2020 03:11:01 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201124_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;should.js를 사용해 검증 코드를 작성하던 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;foo.should.be.null()&lt;/code&gt; 코드에서 에러가 발생했었다. 문서상에는 null이 존재하는 거 같아서 왜 그런지 구글링 해보니 should가 object를 extends하다 보니...</description>
+        <pubDate>Tue, 24 Nov 2020 23:58:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/should.js/2020/11/24/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/should.js/2020/11/24/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>should.js</category>
+        
+        
+        <category>til</category>
+        
+        <category>should.js</category>
+        
+      </item>
+    
+      <item>
+        <title>20201123_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;post router test code 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 23 Nov 2020 23:52:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/23/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/23/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201122_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;user router test code 수정 완료 post router test code 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 22 Nov 2020 23:52:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/22/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/22/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201121_TIL</title>
@@ -124,60 +178,6 @@
         <pubDate>Sun, 15 Nov 2020 23:55:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/11/15/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/15/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201114_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부&lt;br /&gt; 13일 java 공부에 이어서… &lt;ul&gt; &lt;li&gt; &lt;p&gt;Set 인터페이스&lt;br /&gt; Collection 하위 인터페이스로, 중복을 허용하지 않아서 아이디, 주민번호, 사번 등 유일한 값이나 객체를...</description>
-        <pubDate>Sat, 14 Nov 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/14/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/14/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201113_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;자료구조 &lt;ul&gt; &lt;li&gt;Array (배열) &lt;ol&gt; &lt;li&gt;fixed length&lt;/li&gt; &lt;li&gt;물리적인 위치와 논리적인 위치가 동일하다.&lt;/li&gt; &lt;li&gt;[장점] 인덱스 연산. 연산을 통해 원하는 위치에 접근하기 용이하다.&lt;/li&gt; &lt;li&gt;[단점]...</description>
-        <pubDate>Fri, 13 Nov 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/13/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/13/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201112_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부&lt;br /&gt; 11일 java 공부에 이어서… &lt;ul&gt; &lt;li&gt;기본 클래스 &lt;ul&gt; &lt;li&gt;String 클래스 &lt;ul&gt; &lt;li&gt;String을 선언하는 두 가지 방법 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;...</description>
-        <pubDate>Thu, 12 Nov 2020 23:26:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/12/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/12/TIL.html</guid>
         
         <category>til</category>
         
