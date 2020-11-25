@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Nov 2020 03:11:01 +0900</pubDate>
-    <lastBuildDate>Wed, 25 Nov 2020 03:11:01 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Nov 2020 23:50:07 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Nov 2020 23:50:07 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201125_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;photo router test code 수정 완료. post router test code 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 25 Nov 2020 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/11/25/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/25/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201124_TIL</title>
@@ -31,7 +49,7 @@
         <title>20201123_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;post router test code 수정 중&lt;/li&gt;
+  &lt;li&gt;user router test code 수정완료. photo router test code 수정 중&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 23 Nov 2020 23:52:00 +0900</pubDate>
@@ -49,7 +67,7 @@
         <title>20201122_TIL</title>
         <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;user router test code 수정 완료 post router test code 수정 중&lt;/li&gt;
+  &lt;li&gt;user router test code 수정 중&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 22 Nov 2020 23:52:00 +0900</pubDate>
@@ -160,24 +178,6 @@
         <pubDate>Mon, 16 Nov 2020 23:50:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/java/2020/11/16/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/16/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-        
-        <category>til</category>
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>20201115_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;java 공부 &lt;ul&gt; &lt;li&gt;내부 클래스 &lt;div class=&quot;targetTable&quot;&gt;&lt;/div&gt; &lt;table&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;종류&lt;/th&gt; &lt;th&gt;구현 위치&lt;/th&gt; &lt;th&gt;사용할 수 있는&lt;br /&gt;외부 클래스 변수&lt;/th&gt; &lt;th&gt;생성 방법&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;...</description>
-        <pubDate>Sun, 15 Nov 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/java/2020/11/15/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/java/2020/11/15/TIL.html</guid>
         
         <category>til</category>
         
