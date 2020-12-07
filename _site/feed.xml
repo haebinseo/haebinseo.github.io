@@ -5,9 +5,59 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Nov 2020 23:53:29 +0900</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2020 23:53:29 +0900</lastBuildDate>
+    <pubDate>Mon, 07 Dec 2020 23:58:07 +0900</pubDate>
+    <lastBuildDate>Mon, 07 Dec 2020 23:58:07 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201207_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;timeline.pug 및 timeline.js 수정 완료. messenger.js 및 messenger.pug 수정 중&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;npm update, npm outdated&lt;br /&gt; 프로젝트의 패키지들은 서로 dependency 관계가 얽혀있는 경우가...</description>
+        <pubDate>Mon, 07 Dec 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/node/2020/12/07/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/node/2020/12/07/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>npm</category>
+        
+        
+        <category>til</category>
+        
+        <category>node</category>
+        
+      </item>
+    
+      <item>
+        <title>20201205_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;fbHeader.pug 및 fbHeader.js 수정 완료. timeline.js 및 timeline.pug 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/05/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/05/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201204_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;수정된 controller부에 맞게 view 파트 수정중 (fbHeader.pug)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Content-Type vs enctype&lt;br /&gt; 평소 form에서 명시하는 enctype과 xhr로 ajax 통신을 하며 헤더에 설정하는 Content-Type이...</description>
+        <pubDate>Fri, 04 Dec 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/04/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/04/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201129_TIL</title>
@@ -123,61 +173,6 @@
         <pubDate>Mon, 23 Nov 2020 23:52:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/11/23/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/23/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201122_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;user router test code 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 22 Nov 2020 23:52:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/22/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/22/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201121_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;refactoring 후 수정된 내용에 맞게 테스트 코드를 수정 중이다. 현재 user router test code 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 21 Nov 2020 23:57:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/21/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/21/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201120_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;우아한테크코스 1차에서 떨어졌다.. 하고 있는 공부에 더 집중할 수 있는 계기로 만들어야 겠다.&lt;/li&gt;
-  &lt;li&gt;수정된 내용에 맞게 테스트 코드 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 20 Nov 2020 23:50:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/20/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/20/TIL.html</guid>
         
         <category>til</category>
         
