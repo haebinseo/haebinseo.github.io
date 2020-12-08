@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Dec 2020 23:58:07 +0900</pubDate>
-    <lastBuildDate>Mon, 07 Dec 2020 23:58:07 +0900</lastBuildDate>
+    <pubDate>Tue, 08 Dec 2020 23:55:57 +0900</pubDate>
+    <lastBuildDate>Tue, 08 Dec 2020 23:55:57 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201208_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;messenger.js, messenger.pug, profile.pug, profile.js 수정 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2020 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/08/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/08/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201207_TIL</title>
@@ -160,24 +178,6 @@
         <category>til</category>
         
         <category>should.js</category>
-        
-      </item>
-    
-      <item>
-        <title>20201123_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;user router test code 수정완료. photo router test code 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 23 Nov 2020 23:52:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/11/23/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/11/23/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
         
       </item>
     
