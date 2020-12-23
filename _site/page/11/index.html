@@ -221,6 +221,14 @@
 
 	
 
+	
+
+	
+
+	
+
+	
+
 
       </ul>
     </nav>
@@ -245,13 +253,88 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/til/web-api/2020/10/18/TIL.html">20201018_TIL</a>
+      <a class="post-link" href="/til/2020/10/27/TIL.html">20201027_TIL</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일 facebookClone_node 프로젝트를 하면서 이벤트 핸들러에서 e.target와 this가 일치하지 않는 경우가 많아(event bubbling) this를 자주 사용했었다. 그러다 보니 익명 함수를 자주 선언하게 되고, 그러다 보면 PROBLEMS 창에 ESLINT의 주의 창이 한가득… 그러다가 Event.currentTarget을 알게되었다. Event.currentTarget Event Interface의 read-only property인 Event.currentTarget은 DOM 객체를 순회하는 이벤트의 현재 타겟을 가리킨다(식별). 이벤트가...</p>
+      <p>오늘 한 일 facebookClone 작성 중 event.currentTarget.parentNode.~~~로 진행되는 코드에서 null 값의 parentNode를 참조할 수 없다는 에러가 발생하는 문제가 있었다. 확인을 위해 event를 console.log()로 찍어봐도 event.currentTarget의 값은 null이었는데, event.target은 정상적으로 값을 가지고 있어서 뭐가 문제인지 몰라 벙쪘었었다. 구글링 끝에 생각한 문제의 원인은 다음과 같다. 현재 click event listener가 두개가 걸려있다. 하나는...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">October 18, 2020</div>
+      <div class="post-date">October 27, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/26/TIL.html">20201026_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일
+
+  어제에 이어 facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중
+friend 라우터 부분에서 friend delete과 friend request delete 부분을 수정할 필요가 있음
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 26, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/25/TIL.html">20201025_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일
+
+  facebookClone socket 통신 user 채널을 이용한 알림 파트 작성 중
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 25, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/java/2020/10/24/TIL.html">20201024_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일 Java 공부 배열 fixed length 선언 // 둘 다 가능 int[] arr = new int[10]; int arr[] = new int[10]; 초기화 초기화 없이 선언만 한 경우 정수는 0, 실수는 0.0, 객체 배열은 null로 초기화 된다. int[] arr = new int[] { 0, 1, 2 }; // 선언과...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 24, 2020</div>
       <div class="post-categories">
       in 
         
@@ -259,7 +342,7 @@
         
       
         
-        <a href="/category/web-api">Web-api</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -271,87 +354,21 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/til/2020/10/17/TIL.html">20201017_TIL</a>
+      <a class="post-link" href="/til/java/2020/10/23/TIL.html">20201023_TIL</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일 facebookClone_node 프로필 사진 탭의 css 및 js 작성 중. 옵션 탭 translate 관련 작성 후에는 main 창의 연락처 탭 translate도 확인할 것! 스프링 부트 책을 구입했으나 이 책을 이해하기 위해서는 배경지식이 생각보다 많이 필요했다.. 결국 더 간단한 스프링 부트 강의부터 시작하기로 결정했다. 이왕 이렇게 된거 기초부터 하자는...</p>
+      <p>오늘 한 일 Java 공부 this 자신의 메모리(생성된 인스턴스 스스로)를 가리킴 public class Person { String name; int age; public Person(String name, int age) { this.name = name; /*자신의 메모리를 가리킴*/ this.age = age; /*자신의 메모리를 가리킴*/ } } 생성자에서 다른 생성자를 호출 public class Person { String name; int...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">October 17, 2020</div>
+      <div class="post-date">October 23, 2020</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/til">Til</a>
+        <a href="/category/til">Til</a>, 
         
       
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/16/TIL.html">20201016_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일
-
-  facebookClone_node 타임라인의 포스트 이미지 관련 css 및 js 작성. 클릭시 전체화면 크기로 보여주는 화면 UI와 css 및 js 작성 필요
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 16, 2020</div>
-      <div class="post-categories">
-      in 
         
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/15/TIL.html">20201015_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일 object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에서 dataValues의 값을 참조하기 때문에 dataValues가 아닌 부모 객체에 직접 할당된 값이 결과물에 없었던 것이었다. 이 문제는 해당 부모 객체와 dataValues 키의 객체 모두에...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 15, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/14/TIL.html">20201014_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일 facebookClone_Node 프로젝트 작성 중 재활용을 위해 pug 파일 내에서 다른 pug 파일을 include했는데 변수 중복 선언 에러가 발생했었다. Uncaught SyntaxError: Identifier 'profileBtns' has already been declared 원인은 호출되는 pug 파일 내부에서 block append로 css, js 파일을 추가 했던 것이었다. 때문에 각 css, js파일이 이중으로 선언되어 문제가 생겼던...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 14, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -373,7 +390,7 @@
 			</a>
 			
 		
-		<span class="page-number">Page 11 of 14</span>
+		<span class="page-number">Page 11 of 16</span>
 		
 		<a class="newer-posts" href="/page/12/">
       <span class="fa-stack fa-lg">
@@ -411,6 +428,14 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
 	
 
 	
