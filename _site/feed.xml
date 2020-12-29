@@ -5,9 +5,97 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Dec 2020 23:53:16 +0900</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2020 23:53:16 +0900</lastBuildDate>
+    <pubDate>Tue, 29 Dec 2020 23:57:39 +0900</pubDate>
+    <lastBuildDate>Tue, 29 Dec 2020 23:57:39 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20201229_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;facebookClone 수정 완료.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 29 Dec 2020 23:56:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/29/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/29/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201228_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;facebookClone 각 페이지 기능 점검 및 수정 중.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 28 Dec 2020 23:37:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/28/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/28/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201226_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;photoDetail.pug 작성 완료.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 26 Dec 2020 22:35:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/26/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/26/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201224_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;photoDetail.pug 및 관련 css, js 작성 중&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 24 Dec 2020 23:45:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/24/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/24/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20201223_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;photoDetail.pug 및 관련 css, js 작성 중&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Array.prototype.indexOf()와 Array.prototype.findIndex()&lt;br /&gt; 보통 배열 요소의 인덱스를 얻기위해서는 indexOf() 메서드를 많이 사용한다. 하지만 객체 배열에서...</description>
+        <pubDate>Wed, 23 Dec 2020 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2020/12/23/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/23/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>array</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20201222_TIL</title>
@@ -91,106 +179,6 @@
         <pubDate>Wed, 16 Dec 2020 23:44:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/12/16/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/16/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201215_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;fbHeader.pug alarm count 작성 완료&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;messenger.pug 및 해당 css, js 수정 중. user socket 이벤트 핸들러 작성 필요&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 15 Dec 2020 23:38:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/15/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/15/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201213_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;pTimeline.pug 및 해당 css, js 파일 수정 완료&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;messenger.pug 및 해당 css, js 수정 중. fbHeader.pug alarm count 작성 필요.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;...</description>
-        <pubDate>Sun, 13 Dec 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/css/2020/12/13/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/css/2020/12/13/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>css</category>
-        
-        
-        <category>til</category>
-        
-        <category>css</category>
-        
-      </item>
-    
-      <item>
-        <title>20201212_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;profile.pug, timeline.pug, pFriend.pug 및 해당 css, js 파일 수정 완료&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;messenger.pug, pTimeline.pug 및 해당 css, js 수정 중&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;스크롤 이벤트를...</description>
-        <pubDate>Sat, 12 Dec 2020 23:53:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/css/2020/12/12/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/css/2020/12/12/TIL.html</guid>
-        
-        <category>til</category>
-        
-        <category>css</category>
-        
-        <category>web-api</category>
-        
-        <category>scrollTop</category>
-        
-        
-        <category>til</category>
-        
-        <category>css</category>
-        
-      </item>
-    
-      <item>
-        <title>20201209_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;pPhoto.pug 및 해당 css, js 파일 수정 완료&lt;/li&gt;
-  &lt;li&gt;messenger.pug, profile.pug, timeline.pug 및 해당 css, js 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 09 Dec 2020 23:51:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/09/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/09/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201208_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;messenger.js, messenger.pug, profile.pug, profile.js 수정 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 08 Dec 2020 23:55:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/08/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/08/TIL.html</guid>
         
         <category>til</category>
         
