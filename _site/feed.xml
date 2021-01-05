@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Jan 2021 23:12:17 +0900</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2021 23:12:17 +0900</lastBuildDate>
+    <pubDate>Tue, 05 Jan 2021 23:23:11 +0900</pubDate>
+    <lastBuildDate>Tue, 05 Jan 2021 23:23:11 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20210105_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;취업 준비 계획 세우기 &lt;ul&gt; &lt;li&gt;적성 공부 계획&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;자소서 &lt;ul&gt; &lt;li&gt;경험 정리 중&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;전공 공부 &lt;ul&gt; &lt;li&gt;코딩 인터뷰 완전분석 &lt;ol&gt; &lt;li&gt;&lt;strong&gt;big-O&lt;/strong&gt;...</description>
+        <pubDate>Tue, 05 Jan 2021 23:18:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/05/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/05/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20210104_TIL</title>
@@ -157,24 +171,6 @@
         <pubDate>Sun, 20 Dec 2020 23:35:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/12/20/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/20/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201218_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;messenger.pug 및 user socket 이벤트 핸들러(message) 작성 완료. post update 등의 구현되었으나 아직 frontend에 반영되지않은 기능 작성 필요.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 18 Dec 2020 23:17:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/18/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/18/TIL.html</guid>
         
         <category>til</category>
         
