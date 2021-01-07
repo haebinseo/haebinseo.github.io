@@ -5,9 +5,41 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Jan 2021 23:23:11 +0900</pubDate>
-    <lastBuildDate>Tue, 05 Jan 2021 23:23:11 +0900</lastBuildDate>
+    <pubDate>Fri, 08 Jan 2021 00:16:10 +0900</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2021 00:16:10 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Python 기초 복습 - print function</title>
+        <description>&lt;h1 id=&quot;print-function&quot;&gt;print function&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Separator Option &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# default sep: ' ' &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'010'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'1234'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'5678'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span...</description>
+        <pubDate>Thu, 07 Jan 2021 23:26:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//python/2021/01/07/python-print.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//python/2021/01/07/python-print.html</guid>
+        
+        <category>python</category>
+        
+        <category>print</category>
+        
+        
+        <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>20210107_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;코멘토 직무부트캠프 준비 &lt;ul&gt; &lt;li&gt; &lt;p&gt;python 공부&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;a href=&quot;https://namu.wiki/w/%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C&quot;&gt;바이트 코드&lt;/a&gt;&lt;br /&gt; 고급 언어로 작성된 소스 코드를 가상머신이 이해할 수 있는 중간 코드로 컴파일한...</description>
+        <pubDate>Thu, 07 Jan 2021 23:26:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/07/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/07/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>bytecode</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20210105_TIL</title>
@@ -135,42 +167,6 @@
         <pubDate>Tue, 22 Dec 2020 23:52:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/12/22/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/22/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201221_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;photoDetail.pug과 timeline.pug의 postMoreTab, editPostTab 및 관련 css, js 작성 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 21 Dec 2020 23:44:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/21/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/21/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201220_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;photoDetail.pug과 timeline.pug의 postMoreTab 및 관련 css, js 작성 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 20 Dec 2020 23:35:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/20/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/20/TIL.html</guid>
         
         <category>til</category>
         

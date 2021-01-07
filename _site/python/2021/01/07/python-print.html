@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python 기초 복습 - print function</title>
+  <meta name="description" content="print function  Separator Option    # default sep: ' 'print('010', '1234', '5678', sep='-')# result: 010-1234-5678      ">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="print function  Separator Option    # default sep: ' 'print('010', '1234', '5678', sep='-')# result: 010-1234-5678      " />
+  <meta property="og:url" content="http://haebinseo.github.io//python/2021/01/07/python-print.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="Python 기초 복습 - print function" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python 기초 복습 - print function">
+  <meta name="twitter:description" content="print function  Separator Option    # default sep: ' 'print('010', '1234', '5678', sep='-')# result: 010-1234-5678      ">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//python/2021/01/07/python-print.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//python/2021/01/07/python-print.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Python 기초 복습 - print function</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">January 7, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/python">Python</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="print-function">print function</h1>
+<ul>
+  <li>Separator Option
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># default sep: ' '
+</span><span class="k">print</span><span class="p">(</span><span class="s">'010'</span><span class="p">,</span> <span class="s">'1234'</span><span class="p">,</span> <span class="s">'5678'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'-'</span><span class="p">)</span>
+<span class="c1"># result: 010-1234-5678
+</span></code></pre></div>    </div>
+  </li>
+  <li>End Option
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># default end: '\n'
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Welcome to'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">'  '</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'IT News'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">'  '</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Web Site'</span><span class="p">)</span>
+<span class="c1"># result: Welcome to  IT News  Web Site
+</span></code></pre></div>    </div>
+  </li>
+  <li>File Option
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># default end: 'sys.stdout'
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Learn Python'</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="s">'~~~'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Python Format
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># string modulo operator (%). Old way
+# The general syntax for a format placeholder is %[flags][width][.precision]type
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Art: </span><span class="si">%5</span><span class="s">d, Price per Unit: </span><span class="si">%8.2</span><span class="s">f'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">453</span><span class="p">,</span> <span class="mf">59.058</span><span class="p">))</span>
+
+<span class="c1"># str.format() method
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Art: {0:5d}, Price per Unit: {1:8.2f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">453</span><span class="p">,</span> <span class="mf">59.058</span><span class="p">))</span> <span class="c1"># 이 경우 index 생략도 가능
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Art: {a:5d}, Price per Unit: {p:8.2f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">453</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">59.058</span><span class="p">))</span>
+
+<span class="c1"># Formatted String Literals
+</span><span class="n">price</span> <span class="o">=</span> <span class="mf">11.23</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Price in Euro: {price}'</span><span class="p">)</span> <span class="c1"># Price in Euro: 11.23
+</span><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Price in Swiss Franks: {price * 1.086:5.2f}'</span><span class="p">)</span> <span class="c1"># Price in Swiss Franks: 12.20
+</span><span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="p">[</span><span class="s">"bread"</span><span class="p">,</span> <span class="s">"butter"</span><span class="p">,</span> <span class="s">"tea"</span><span class="p">]:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"{article:&gt;10}:"</span><span class="p">)</span>
+<span class="c1">#      bread:
+#     butter:
+#        tea:
+</span></code></pre></div>    </div>
+
+    <p>str.format() method 활용</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 문자열일 때 Conversion 's'는 생략가능
+# &gt;10 =&gt; 문자열을 지정된 길이로 만든 뒤 오른쪽 정렬, 남은 공간 공백. 왼쪽 정렬은 반대 부등호
+</span><span class="s">'{:&gt;10}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'nice'</span><span class="p">)</span> <span class="c1"># '      nice'
+</span>
+<span class="c1"># 남은 공간 문자열 채우기
+</span><span class="s">'{:_&gt;10}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'nice'</span><span class="p">)</span> <span class="c1"># '______nice'
+</span>
+<span class="c1"># 가운데 정렬
+</span><span class="s">'{:^10}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'nice'</span><span class="p">)</span> <span class="c1"># '   nice   '
+</span>
+<span class="c1"># type 별 .n 의미 차이: string -&gt; n자만, float -&gt; 소숫점 이하를 n자리 까지. width는 min-width에 가까움
+</span><span class="s">'{:.2}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'nice'</span><span class="p">)</span> <span class="c1"># 'ni'
+</span><span class="s">'{:10.2}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">'nice'</span><span class="p">)</span> <span class="c1"># 'ni        '
+</span><span class="s">'{:1.18f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mf">3.141592653589793</span><span class="p">)</span> <span class="c1"># '3.141592653589793116'
+</span><span class="s">'{:06.2f}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mf">3.141592653589793</span><span class="p">)</span> <span class="c1"># '003.14'
+</span></code></pre></div>    </div>
+
+    <p>cf) formatting을 위한 string methods</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># S.center(width[, fillchar]) -&gt; str
+</span><span class="n">s</span> <span class="o">=</span> <span class="s">'Python'</span>
+<span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># '  Python  '
+</span><span class="n">s</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s">"*"</span><span class="p">)</span> <span class="c1"># '**Python**'
+</span>
+<span class="c1"># S.ljust(width[, fillchar]) -&gt; str
+</span><span class="n">s</span> <span class="o">=</span> <span class="s">'Training'</span>
+<span class="n">s</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1"># 'Training    '
+</span>
+<span class="c1"># S.rjust(width[, fillchar]) -&gt; str
+</span><span class="n">s</span> <span class="o">=</span> <span class="s">'Programming'</span>
+<span class="n">s</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="c1"># '    Programming'
+</span>
+<span class="c1"># S.zfill(width) -&gt; str
+# The string S is never truncated
+</span><span class="n">account_number</span> <span class="o">=</span> <span class="s">'43447879'</span>
+<span class="n">account_number</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1"># '000043447879'
+</span></code></pre></div>    </div>
+  </li>
+  <li>참조
+    <ul>
+      <li>바이트 코드: <a href="https://namu.wiki/w/%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C">https://namu.wiki/w/%EB%B0%94%EC%9D%B4%ED%8A%B8%EC%BD%94%EB%93%9C</a></li>
+    </ul>
+  </li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/python">python</a>,&nbsp;<a href="/tag/print">print</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2021/01/07/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20210107_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
