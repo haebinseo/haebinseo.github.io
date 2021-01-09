@@ -5,9 +5,27 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Jan 2021 00:16:10 +0900</pubDate>
-    <lastBuildDate>Fri, 08 Jan 2021 00:16:10 +0900</lastBuildDate>
+    <pubDate>Sat, 09 Jan 2021 23:56:19 +0900</pubDate>
+    <lastBuildDate>Sat, 09 Jan 2021 23:56:19 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20210109_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;코멘토 직무부트캠프 zoom 회의&lt;br /&gt; 오후 1시에 직무부트캠프 첫 수업을 진행했다. 멘토님은 개발자에 대해 여러 이야기를 하셨는데, 그 중 가장 기억에 남는 것은 개발자에게 공백은...</description>
+        <pubDate>Sat, 09 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/comento/2021/01/09/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/comento/2021/01/09/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>comento</category>
+        
+        
+        <category>til</category>
+        
+        <category>comento</category>
+        
+      </item>
     
       <item>
         <title>Python 기초 복습 - print function</title>
@@ -151,24 +169,6 @@
         <category>til</category>
         
         <category>array</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201222_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;timeline.pug의 postMoreTab, editPostTab 작성 완료. photoDetail.pug 및 관련 css, js 작성 중&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 22 Dec 2020 23:52:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/22/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/22/TIL.html</guid>
-        
-        <category>til</category>
         
         
         <category>til</category>
