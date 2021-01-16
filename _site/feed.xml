@@ -5,9 +5,23 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Jan 2021 00:02:25 +0900</pubDate>
-    <lastBuildDate>Sat, 16 Jan 2021 00:02:25 +0900</lastBuildDate>
+    <pubDate>Sat, 16 Jan 2021 23:56:14 +0900</pubDate>
+    <lastBuildDate>Sat, 16 Jan 2021 23:56:14 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20210116_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Django 구조 및 사용법 정리&lt;br /&gt; 장고걸스 튜토리얼을 진행하며 익힌 내용와 Mozilla web docs에서 읽은 Django 구조 정리&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;경험 정리&lt;/p&gt; &lt;/li&gt; &lt;li&gt;...</description>
+        <pubDate>Sat, 16 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/16/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/16/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>20210115_TIL</title>
@@ -152,24 +166,6 @@
         <pubDate>Mon, 28 Dec 2020 23:37:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2020/12/28/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/28/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201226_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;photoDetail.pug 작성 완료.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 26 Dec 2020 22:35:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/26/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/26/TIL.html</guid>
         
         <category>til</category>
         

@@ -247,6 +247,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -268,6 +270,28 @@
 
 <div class="wrapper">
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/til/2020/10/15/TIL.html">20201015_TIL</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>오늘 한 일 object를 JSON.stringify로 변환하는 과정에서 할당했다고 생각했던 데이터가 생략되어 문제가 되었었다. 원인은 sequelize에서 받은 객체의 데이터는 dataValues 키에 대응하는 객체에 저장되어있고 string으로 변환시 toString 메서드에서 dataValues의 값을 참조하기 때문에 dataValues가 아닌 부모 객체에 직접 할당된 값이 결과물에 없었던 것이었다. 이 문제는 해당 부모 객체와 dataValues 키의 객체 모두에...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">October 15, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/til">Til</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -366,32 +390,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/til/2020/10/10/TIL.html">20201010_TIL</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>오늘 한 일
-
-  facebookClone_Node 프로젝트의 profile 페이지 친구 탭 UI를 작성했다. 이제 사진 탭 UI만 작성하면 profile 페이지의 대략적인 UI는 완성된다.
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">October 10, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/til">Til</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -407,7 +405,7 @@
 			</a>
 			
 		
-		<span class="page-number">Page 16 of 18</span>
+		<span class="page-number">Page 16 of 19</span>
 		
 		<a class="newer-posts" href="/page/17/">
       <span class="fa-stack fa-lg">
@@ -445,6 +443,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	
