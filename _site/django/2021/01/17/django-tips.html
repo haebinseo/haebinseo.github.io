@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Django 개념 및 구조 정리</title>
+  <meta name="description" content="Django 개념 및 구조 정리">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Django 개념 및 구조 정리" />
+  <meta property="og:url" content="http://haebinseo.github.io//django/2021/01/17/django-tips.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="Django 개념 및 구조 정리" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Django 개념 및 구조 정리">
+  <meta name="twitter:description" content="Django 개념 및 구조 정리">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//django/2021/01/17/django-tips.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//django/2021/01/17/django-tips.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Django 개념 및 구조 정리</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">January 17, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/django">Django</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="django-개념-및-구조-정리">Django 개념 및 구조 정리</h1>
+
+<p><a href="#django-명령어"><code class="highlighter-rouge">Django 명령어</code></a> <a href="#django-구조"><code class="highlighter-rouge">Django 구조</code></a> <a href="#model"><code class="highlighter-rouge">Model</code></a> <a href="#admin"><code class="highlighter-rouge">Admin</code></a> <a href="#url-dispatcher"><code class="highlighter-rouge">URL dispatcher</code></a> <a href="#view"><code class="highlighter-rouge">View</code></a> <a href="#template"><code class="highlighter-rouge">Template</code></a> <a href="#form"><code class="highlighter-rouge">Form</code></a></p>
+
+<h4 id="django-명령어">Django 명령어</h4>
+<ul>
+  <li>django project 생성
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>django-admin startpoint <span class="o">{</span>project_name<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>django app 설정<br />
+settings.py에서 TIMEZONE, static path, ALLOWED_PATH, DB등을 수정</p>
+  </li>
+  <li>django project 생성
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python managy.py runserver 0:8000
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="django-구조">Django 구조 - MVT Architecture<sup><a href="#footnote-1">[1]</a></sup></h4>
+
+<p><img src="/assets/django/django_architecture.png" alt="django_architecture" /></p>
+<ul>
+  <li>URL mapper는 요청 URL을 기준으로 HTTP 요청을 적절한 view로 보낸다.</li>
+  <li>view는 HTTP 요청을 수신하고 HTTP 응답을 반환하는 요청처리 함수이다. view는 model을 통해 요청을 충족시키는데 필요한 데이터에 접근한다.</li>
+  <li>model은 응용 프로그램의 데이터 구조를 정의하고 데이터베이스의 기록을 관리하고 쿼리하는 방법을 제공하는 Python 객체이다.</li>
+  <li>template은 파일의 구조나 레이아웃을 정의하고(예: HTML 페이지), 실제 내용을 보여주는 데 사용되는 플레이스홀더를 가진 텍스트 파일이다. view는 HTML template을 이용하여 동적으로 HTML 페이지를 만들고 model에서 가져온 데이터로 채운다. template이 꼭 HTML 타입일 필요는 없다.</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="model">Model</h4>
+<p>Django의 ORM을 통해 DB의 Relation에 mapping되는 객체이다. models.py에서 class로 선언하고, relation의 각 column들은 class의 property로 mapping된다.<br />
+property들을 django.db.models 경로에서 <code class="highlighter-rouge">CharField</code>, <code class="highlighter-rouge">DateTimeField</code> 등의 인스턴스로 초기화한다. <code class="highlighter-rouge">ForeignKey</code>(1:N), <code class="highlighter-rouge">OneToOneField</code>(1:1), <code class="highlighter-rouge">ManyToManyField</code>(M:N) 클래스를 사용해 relation간의 관계(relationship)도 표현해준다. 이는 한쪽의 model에서만 정의해도 작동한다.</p>
+
+<p>models.py를 수정한 이후에는 DB 반영을 위한 migration code를 생성한 뒤 migrate 해줘야 한다.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python manage.py makemigrations <span class="o">{</span>app_name<span class="o">}</span>
+<span class="nv">$ </span>python manage.py migrate <span class="o">{</span>app_name<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="admin">Admin</h4>
+<p>관리자 페이지에서 CRUD 작업을 수행하려면 해당 model을 admin에 추가해줘야 한다. admin.py에 <code class="highlighter-rouge">admin.site.register()</code> 함수를 사용하면 된다.</p>
+
+<ul>
+  <li>관리자 페이지를 위한 superuser 생성
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python manage.py createsuperuser
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="url-dispatcher">URL dispatcher<sup><a href="#footnote-2">[2]</a></sup></h4>
+
+<p>Django는 URL를 view에 mapping하기 위해 URLconf(URL configuration) 모듈을 사용한다.
+urls.py의 urlpatterns에 <code class="highlighter-rouge">django.urls.path()</code> 혹은 <code class="highlighter-rouge">django.urls.re_path()</code> 인스턴스를 추가해 해당 url을 처리해줄 수 있다. (url()은 re_path()의 동의어이다)<br />
+path()와 re_path() 함수의 name parameter로 해당 URL에 이름을 mapping할 수 있다.</p>
+
+<p><code class="highlighter-rouge">django.urls.include()</code> 함수로 다른 app의 urls.py에 연결할 수 있다.</p>
+
+<p><br /></p>
+
+<h4 id="view">View</h4>
+<p>view는 어플리케이션의 비지니스 로직을 작성하는 부분이다.</p>
+
+<p><br /></p>
+
+<h4 id="template">Template</h4>
+<ul>
+  <li>변수 출력
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ variable }}
+</code></pre></div>    </div>
+  </li>
+  <li>for
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% for elem in arr %}
+  {{ elem }}
+{% endfor %}
+</code></pre></div>    </div>
+  </li>
+  <li>if
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if condition1 %}
+  …
+{% elif condition2 %}
+  …
+{% else %}
+  …
+{% endif %}
+</code></pre></div>    </div>
+  </li>
+  <li>filter
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% filter force_escape|lower %}
+  …
+{% endfilter %}
+</code></pre></div>    </div>
+
+    <p>cf) if와 filter를 조합해 사용할 수 있다.</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if message|length &gt;= 100 %}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="form">Form</h4>
+<p>Model class의 field들이 데이터베이스의 field에 mapping되듯, Form class의 field들은 HTML form의 input element에 mapping된다.
+Model의 form class를 통해 Model을 HTML form에 mapping할 수 있다.
+또한 Form은 HTML form이 submit되었을 때 그 값을 검증한다.</p>
+
+<p>Form은 submit시 같은 view를 가져온다. 따라서 GET, POST 각 method에 맞는 기능을 제공하도록 view를 작성해야 한다.</p>
+
+<ul>
+  <li>ModelForm 예시
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># forms.py
+</span><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Post</span>
+
+<span class="k">class</span> <span class="nc">PostForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+  <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Post</span>
+    <span class="n">field</span> <span class="o">=</span> <span class="p">(</span><span class="s">'title'</span><span class="p">,</span> <span class="s">'text'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Template에 적용
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- as_p 혹은 as_table 사용 --&gt;</span>
+{{ form.as_p }}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="참조">참조</h4>
+<p><a id="footnote-1" href="#django-구조">[1]</a> MVT Architecture - <a href="https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/Introduction" title="https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/Introduction">참고</a></p>
+
+<p><a id="footnote-2" href="#url-dispatcher">[2]</a> URL dispatcher - <a href="https://docs.djangoproject.com/ko/3.1/topics/http/urls" title="https://docs.djangoproject.com/ko/3.1/topics/http/urls">document</a></p>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/python">python</a>,&nbsp;<a href="/tag/django">django</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/2021/01/16/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20210116_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/django/django-imagekit/2021/01/17/django-imagekit.html">
+					<span class="page-number">django-imageKit 정리</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

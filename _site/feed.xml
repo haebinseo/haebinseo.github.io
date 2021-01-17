@@ -5,9 +5,45 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Jan 2021 23:56:14 +0900</pubDate>
-    <lastBuildDate>Sat, 16 Jan 2021 23:56:14 +0900</lastBuildDate>
+    <pubDate>Sun, 17 Jan 2021 23:51:46 +0900</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2021 23:51:46 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>django-imageKit 정리</title>
+        <description>&lt;h1 id=&quot;django-imagekit-정리&quot;&gt;django-imageKit 정리&lt;/h1&gt; &lt;h4 id=&quot;imagekit&quot;&gt;Imagekit&lt;sup&gt;&lt;a href=&quot;#footnote-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt; &lt;p&gt;Imagekit은 이미지 처리를 위한 Django app이다. resizing이나 cropping같은 작업을 처리하는데 사용된다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;ImageSpecField class&lt;br /&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;django.db.models.ImageField&lt;/code&gt;와 매우 유사하게 작동한다. 다만 주어진 옵션대로 자동으로...</description>
+        <pubDate>Sun, 17 Jan 2021 23:51:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//django/django-imagekit/2021/01/17/django-imagekit.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//django/django-imagekit/2021/01/17/django-imagekit.html</guid>
+        
+        <category>python</category>
+        
+        <category>django</category>
+        
+        <category>django-imagekit</category>
+        
+        
+        <category>django</category>
+        
+        <category>django-imagekit</category>
+        
+      </item>
+    
+      <item>
+        <title>Django 개념 및 구조 정리</title>
+        <description>&lt;h1 id=&quot;django-개념-및-구조-정리&quot;&gt;Django 개념 및 구조 정리&lt;/h1&gt; &lt;p&gt;&lt;a href=&quot;#django-명령어&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Django 명령어&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#django-구조&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Django 구조&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#model&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#admin&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Admin&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#url-dispatcher&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;URL dispatcher&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#view&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#template&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Template&lt;/code&gt;&lt;/a&gt;...</description>
+        <pubDate>Sun, 17 Jan 2021 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//django/2021/01/17/django-tips.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//django/2021/01/17/django-tips.html</guid>
+        
+        <category>python</category>
+        
+        <category>django</category>
+        
+        
+        <category>django</category>
+        
+      </item>
     
       <item>
         <title>20210116_TIL</title>
@@ -130,42 +166,6 @@
         <pubDate>Mon, 04 Jan 2021 23:03:00 +0900</pubDate>
         <link>http://haebinseo.github.io//til/2021/01/04/TIL.html</link>
         <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/04/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201229_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;facebookClone 수정 완료.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 29 Dec 2020 23:56:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/29/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/29/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20201228_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;facebookClone 각 페이지 기능 점검 및 수정 중.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 28 Dec 2020 23:37:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2020/12/28/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2020/12/28/TIL.html</guid>
         
         <category>til</category>
         
