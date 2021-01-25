@@ -5,9 +5,52 @@
     <description>Haebin's Blog posting whatever studied and learned</description>
     <link>http://haebinseo.github.io//</link>
     <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jan 2021 23:51:46 +0900</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2021 23:51:46 +0900</lastBuildDate>
+    <pubDate>Mon, 25 Jan 2021 23:12:06 +0900</pubDate>
+    <lastBuildDate>Mon, 25 Jan 2021 23:12:06 +0900</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>20210125_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Comento Week 3 ELK stack 사전 조사 및 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;span id=&quot;elk-stack&quot;&gt;ELK Stack&lt;sup&gt;&lt;a href=&quot;#footnote-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;br /&gt; ELK는 Elasticsearch, Logstash 및 Kibana, 이 오픈 소스 프로젝트...</description>
+        <pubDate>Mon, 25 Jan 2021 23:11:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/elk/2021/01/25/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/elk/2021/01/25/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>elk</category>
+        
+        <category>elk-stack</category>
+        
+        
+        <category>til</category>
+        
+        <category>elk</category>
+        
+      </item>
+    
+      <item>
+        <title>20210117_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Django 정리 내용 포스팅
+    &lt;ul&gt;
+      &lt;li&gt;django 개념 및 구조 정리&lt;/li&gt;
+      &lt;li&gt;django-imageKit 정리&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 17 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/17/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/17/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
     
       <item>
         <title>django-imageKit 정리</title>
@@ -140,34 +183,6 @@
         <category>til</category>
         
         <category>bytecode</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20210105_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;취업 준비 계획 세우기 &lt;ul&gt; &lt;li&gt;적성 공부 계획&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;자소서 &lt;ul&gt; &lt;li&gt;경험 정리 중&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;전공 공부 &lt;ul&gt; &lt;li&gt;코딩 인터뷰 완전분석 &lt;ol&gt; &lt;li&gt;&lt;strong&gt;big-O&lt;/strong&gt;...</description>
-        <pubDate>Tue, 05 Jan 2021 23:18:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2021/01/05/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/05/TIL.html</guid>
-        
-        <category>til</category>
-        
-        
-        <category>til</category>
-        
-      </item>
-    
-      <item>
-        <title>20210104_TIL</title>
-        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;취업 준비 계획 세우기 &lt;ul&gt; &lt;li&gt;폴라리스 커리어 블로그를 참고&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;전공 공부 &lt;ul&gt; &lt;li&gt;코딩 인터뷰 완전분석 &lt;ol&gt; &lt;li&gt;면접 과정&lt;/li&gt; &lt;li&gt;장막 너머 (중요 x) -...</description>
-        <pubDate>Mon, 04 Jan 2021 23:03:00 +0900</pubDate>
-        <link>http://haebinseo.github.io//til/2021/01/04/TIL.html</link>
-        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/04/TIL.html</guid>
-        
-        <category>til</category>
         
         
         <category>til</category>
