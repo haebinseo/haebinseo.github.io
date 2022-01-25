@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201116_TIL</title>
+  <meta name="description" content="오늘 한 일  java 공부          람다식 (lambda expression)자바에서 함수형 프로그래밍(functional programming)을 구현하는 방식으로 Java 8부터 지원한다.클래스를 생성하지 않고 함수의 호출만으로 기능을 수행한다.      ">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2022">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  java 공부          람다식 (lambda expression)자바에서 함수형 프로그래밍(functional programming)을 구현하는 방식으로 Java 8부터 지원한다.클래스를 생성하지 않고 함수의 호출만으로 기능을 수행한다.      " />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/16/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201116_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201116_TIL">
+  <meta name="twitter:description" content="오늘 한 일  java 공부          람다식 (lambda expression)자바에서 함수형 프로그래밍(functional programming)을 구현하는 방식으로 Java 8부터 지원한다.클래스를 생성하지 않고 함수의 호출만으로 기능을 수행한다.      ">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/16/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/16/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+
+	<!-- AdSense -->
+  <script data-ad-client="ca-pub-8860430251846215" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201116_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 16, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>java 공부
+    <ul>
+      <li>
+        <p>람다식 (lambda expression)<br />
+자바에서 함수형 프로그래밍(functional programming)을 구현하는 방식으로 Java 8부터 지원한다.
+클래스를 생성하지 않고 함수의 호출만으로 기능을 수행한다.</p>
+
+        <ul>
+          <li>
+            <p>함수형 프로그래밍:<br />
+순수 함수(pure function)을 구현하고 호출함으로써 외부 자료에 부수적인 영향을 주지 않고 <u>매개변수만을 사용하도록</u> 만든 함수이다. 함수를 기반으로 구현하며, 입력 받은 자료를 기반으로 수행되고 외부에 영향을 미치지 않으므로 병렬처리 등이 가능하다. 안정적인 확장성이 있는 프로그래밍 방식이다.</p>
+          </li>
+          <li>람다식 구현하기<br />
+매개 변수와 매개 변수를 활용한 실행문으로 구현된 익명 함수를 만든다. 함수 이름과 반환형을 생략하고 <code class="highlighter-rouge">-&gt;</code> 를 사용한다.
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span> <span class="o">}</span>
+</code></pre></div>            </div>
+            <p>javascript의 arrow function과 유사 (<code class="highlighter-rouge">=&gt;</code>)</p>
+          </li>
+          <li>람다식 문법
+            <ul>
+              <li>매개 변수가 하나인 경우 자료형과 괄호 생략가능
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span> <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>매개 변수가 두 개인 경우 괄호를 생략할 수 없음
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">);</span> <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>중괄호 안의 구현부가 한 문장인 경우 중괄호 생략가능
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+</code></pre></div>                </div>
+              </li>
+              <li>중괄호 안의 구현부가 한 문장이여도 return 문은 중괄호 생략할 수 없음
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="k">return</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>중괄호 안의 구현부가 반환문 하나라면 return과 중괄호 모두 생략 가능
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+<span class="n">str</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+</code></pre></div>                </div>
+                <p><br /></p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>함수형 인터페이스<br />
+함수형 인터페이스란 람다식을 선언하기 위한 인터페이스이다. 익명 함수와 매개 변수만으로 구현되므로 <strong>단 하나의 메서드</strong>만을 가져야한다. 만약 두 개이 이상의 메서드가 선언되는 경우 어떤 메서드의 호출인지 모호해지는 문제가 발생하기 때문이다.</p>
+
+            <p>함수형 인터페이스라는 의미에서 <code class="highlighter-rouge">@FunctionalInterface</code> annotation을 붙여 작성하며, 이 경우 여러개의 메서드를 선언하면 에러가 발생한다.</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@FunctionalInterface</span>
+<span class="kd">interface</span> <span class="nc">MyNumber</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">getMaxNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestMyNumber</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">MyNumber</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">maxNum</span><span class="o">.</span><span class="na">getMaxNumber</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span>  <span class="mi">20</span><span class="o">);</span>  <span class="c1">// 20</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+            <p><br /></p>
+          </li>
+          <li>익명 객체를 생성하는 람다식
+자바는 객체 지향 언어로, 객체를 생성해야 메서드가 호출된다. 따라서 람다식으로 메서드를 구현하고 호출하면 내부에서 익명 클래스가 생성된다.
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 람다식 구현</span>
+<span class="nc">MyNumber</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="o">;</span>
+
+<span class="c1">// 실제 구현</span>
+<span class="nc">MyNumber</span> <span class="n">maxNum</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyNumber</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMaxNumber</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div>            </div>
+
+            <p>람다식에서 외부 메서드의 지역변수는 상수로 처리된다. 이는 <strong>지역 내부 클래스</strong>와 동일한 원리이다.</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+  <span class="c1">// MyNumber maxNum = (x, y) -&gt; num += 100;  // Error</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+            <p><br /></p>
+          </li>
+          <li>함수를 변수처럼 사용하는 람다식
+            <ol>
+              <li>인터페이스형 변수에 람다식 대입</li>
+              <li>매개 변수로 전달하는 람다식</li>
+              <li>반환 값으로 쓰이는 람다식</li>
+            </ol>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">PrintString</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">showString</span><span class="o">(</span><span class="nc">String</span> <span class="n">str</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestLambda</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">PrintString</span> <span class="n">lambdaStr</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>  <span class="c1">// 1. 인터페이스형 변수에 람다식 대입</span>
+    <span class="n">lambdaStr</span><span class="o">.</span><span class="na">showString</span><span class="o">(</span><span class="s">"hello lambda_1"</span><span class="o">);</span>
+    <span class="nc">ShowMyString</span><span class="o">(</span><span class="n">lambdaStr</span><span class="o">);</span>  <span class="c1">// 2. 메서드의 매개 변수로 람다식을 대입한 변수 전달</span>
+
+    <span class="nc">PrintString</span> <span class="n">reStr</span> <span class="o">=</span> <span class="n">returnString</span><span class="o">();</span>  <span class="c1">// 변수로 반환받기</span>
+    <span class="n">reStr</span><span class="o">.</span><span class="na">showString</span><span class="o">(</span><span class="s">"hello "</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ShowMyString</span> <span class="o">(</span><span class="nc">PrintString</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">// 매개 변수를 인터페이스 형으로 받음</span>
+    <span class="n">p</span><span class="o">.</span><span class="na">showString</span><span class="o">(</span><span class="s">"hello lambda_2"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 3. 람다식을 반환하는 메서드</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">PrintString</span> <span class="nf">returnString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span> <span class="o">+</span> <span class="s">"world"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+            <p><br /></p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>스트림 (stream)</p>
+        <ol>
+          <li>
+            <p>자료의 대상과 관계없이 동일한 연산을 수행한다.<br />
+  배열, 컬렉션 등을 대상으로도 동일한 연산을 수행하기 때문에 일관성 있는 연산으로 자료의 처리를 쉽고 간단하게 한다.</p>
+          </li>
+          <li>
+            <p>한 번 생성하고 사용한 스트림은 재사용할 수 없다.<br />
+  연산을 수행한 스트림은 소모되기 때문에 다른 연산을 위해서는 새로운 스트림을 생성해야 한다.</p>
+          </li>
+          <li>
+            <p>스트림 연산은 기존 자료를 변경하지 않는다.<br />
+  스트림을 생성하며 별도의 메모리 공간을 사용하므로 기존의 자료를 변경하지 않는다.</p>
+          </li>
+          <li>
+            <p>스트림 연산은 중간 연산과 최종 연산으로 구분된다.<br />
+  스트림에 대해 중간 연산은 여러 개 적용될 수 있지만 최종 연산은 마지막에 한 번만 적용된다. 최종 연산이 호출되어야 중간 연산의 결과가 모두 적용되며, 이를 ‘지연 연산’이라 한다.</p>
+          </li>
+        </ol>
+
+        <ul>
+          <li>
+            <p>중간 연산<br />
+중간 연산은 자료를 거르거나 변경하여 또 다른 자료를 내부적으로 생성한다.<br />
+filter(), map(), sorted() 등 다양한 중간 연산이 존재한다.</p>
+
+            <p>filter(): 조건에 맞는 요소를 추출</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * 문자열의 길이가 5 초과인 요소만 출력
+ * 
+ * sList.stream(): 스트림 생성
+ * filter(s -&gt; s.length() &gt;= 5): 중간 연산
+ * forEach(s -&gt; System.out.println(s)): 최종 연산
+ */</span>
+<span class="n">sList</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">filter</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">));</span>
+</code></pre></div>            </div>
+
+            <p>map(): 요소를 변환</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 고객 클래스에서 고객 이름만 가져오기</span>
+<span class="n">customerList</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">map</span><span class="o">(</span><span class="n">c</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">forEach</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">));</span>
+</code></pre></div>            </div>
+
+            <p>sorted(): 정렬</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * 문자열 정렬
+ * 
+ * sorted() 메서드를 사용하려면 정렬 방식에 대한 정의가 필요하다.
+ * 따라서 사용하는 자료 클래스가 Comparable 인터페이스를 구현해야 한다.
+ * sorted() 메서드의 매개 변수로 Comparator 인터페이스를 구현한 객체를 넘길 수도 있다.
+ */</span>
+<span class="n">sList</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">sorted</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">s</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">));</span>
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p>최종 연산<br />
+최종 연산은 스트림의 자료를 소모하며 연산을 수행하기 때문에 최종 연산이 수행되고 나면 해당 스트림은 더 이상 사용할 수 없다.<br />
+최종 연산으로는 forEach(), count(), sum(), reduce() 등이 있다.</p>
+
+            <p>reduce(): 지정한 연산을 거치며 누적된 연산의 결과를 반환</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ * 가장 긴 문자열 찾기
+ * 
+ * T reduce(T identify, BinaryOperator&lt;T&gt; accumulator)
+ * identify: 초깃값
+ * accumulator: 수행해야할 기능
+ * 
+ * BinaryOperator 인터페이스를 구현한 람다식을 직접 써도 되고,
+ * 인터페이스를 구현한 클래스의 인스턴스를 생성하여 대입해도 된다.
+ * 후자의 경우에는 초깃값을 넘기지 않는다.
+ */</span>
+<span class="kd">class</span> <span class="nc">CompareString</span> <span class="kd">implements</span> <span class="nc">BinaryOperator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">String</span> <span class="n">s1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">s2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">getBytes</span><span class="o">().</span><span class="na">length</span> <span class="o">&gt;=</span> <span class="n">s2</span><span class="o">.</span><span class="na">getBytes</span><span class="o">().</span><span class="na">length</span> <span class="o">?</span> <span class="n">s1</span> <span class="o">:</span> <span class="n">s2</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReduceTest</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span><span class="o">[]</span> <span class="n">greetings</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"안녕하세요~~~~~~"</span><span class="o">,</span> <span class="s">"hello"</span><span class="o">,</span> <span class="s">"Good morning"</span> <span class="o">};</span>
+
+    <span class="c1">// 람다식</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">greetings</span><span class="o">).</span><span class="na">reduce</span><span class="o">(</span><span class="s">""</span><span class="o">,</span> <span class="o">(</span><span class="n">s1</span><span class="o">,</span> <span class="n">s2</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">getBytes</span><span class="o">().</span><span class="na">length</span> <span class="o">&gt;=</span> <span class="n">s2</span><span class="o">.</span><span class="na">getBytes</span><span class="o">().</span><span class="na">length</span> <span class="o">?</span> <span class="n">s1</span> <span class="o">:</span> <span class="n">s2</span><span class="o">;</span>
+    <span class="o">}));</span>
+          
+    <span class="c1">// BinaryOperator 인터페이스 구현</span>
+    <span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">greetings</span><span class="o">).</span><span class="na">reduce</span><span class="o">(</span><span class="k">new</span> <span class="nc">CompareString</span><span class="o">()).</span><span class="na">get</span><span class="o">();</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/11/15/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201115_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/java/2020/11/17/TIL.html">
+					<span class="page-number">20201117_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201118_TIL</title>
+  <meta name="description" content="오늘 한 일  java 공부          자바 입출력                              스트림이란            네트워크에서 자료의 흐름이 물과 같다는 의미에서 유래다양한 입출력 장치에 독립적으로 일관성 있는 입출력을 제공하는 방식입출력이 구현되는 곳: ...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2022">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  java 공부          자바 입출력                              스트림이란            네트워크에서 자료의 흐름이 물과 같다는 의미에서 유래다양한 입출력 장치에 독립적으로 일관성 있는 입출력을 제공하는 방식입출력이 구현되는 곳: ..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/18/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201118_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201118_TIL">
+  <meta name="twitter:description" content="오늘 한 일  java 공부          자바 입출력                              스트림이란            네트워크에서 자료의 흐름이 물과 같다는 의미에서 유래다양한 입출력 장치에 독립적으로 일관성 있는 입출력을 제공하는 방식입출력이 구현되는 곳: ...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/18/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/18/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+
+	<!-- AdSense -->
+  <script data-ad-client="ca-pub-8860430251846215" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201118_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 18, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>java 공부
+    <ul>
+      <li>자바 입출력
+        <ul>
+          <li>
+            <h4 id="스트림이란">스트림이란</h4>
+            <p>네트워크에서 자료의 흐름이 물과 같다는 의미에서 유래<br />
+다양한 입출력 장치에 독립적으로 일관성 있는 입출력을 제공하는 방식<br />
+입출력이 구현되는 곳: 파일 디스크, 키보드, 마우스, 메모리 네트워크 등</p>
+          </li>
+          <li>
+            <h4 id="스트림의-구분">스트림의 구분</h4>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>구분 기준</th>
+                  <th>종류</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>대상</td>
+                  <td>입력 스트림 / 출력 스트림</td>
+                </tr>
+                <tr>
+                  <td>자료의 종류</td>
+                  <td>바이트 스트림 / 문자 스트림</td>
+                </tr>
+                <tr>
+                  <td>기능</td>
+                  <td>기반 스트림 / 보조 스트림</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <h4 id="입력-스트림과-출력-스트림">입력 스트림과 출력 스트림</h4>
+            <p>입력 스트림: 대상으로부터 자료를 읽어 들이는 스트림<br />
+ex) FileInputStream, FileReader, BufferedInputStream, BufferedReader 등</p>
+
+            <p>출력 스트림: 대상으로 자료를 출력하는 스트림<br />
+ex) FileOutputStream, FileWriter, BufferedOutputStream, BufferedWriter 등</p>
+          </li>
+          <li>
+            <h4 id="바이트-단위-스트림과-문자-단위-스트림">바이트 단위 스트림과 문자 단위 스트림</h4>
+            <p><a href="#바이트-단위-스트림-inputstream-outputstream">바이트 단위 스트림</a>: 동영상, 음악 파일 등을 읽고 쓸 때 사용<br />
+ex) FileInputStream, FileOutputStream, BufferedInputStream, BufferedOutputStream 등</p>
+
+            <p><a href="#문자-단위-스트림-Reader-Writer">문자 단위 스트림</a>: 바이트 단위로 자료를 처리하면 문자는 깨지기 때문에 2 바이트 단위로 처리하도록 구현된 스트림<br />
+ex) FileReader, FileWriter, BufferedReader, BufferedWriter 등</p>
+          </li>
+          <li>
+            <h4 id="기반-스트림과-보조-스트림">기반 스트림과 보조 스트림</h4>
+            <p>기반 스트림: 대상에 직접 자료를 읽고 쓰는 기능의 스트림  <br />
+ex) FileInputStream, FileOutputStream, FileReader, FileWriter 등</p>
+
+            <p>보조 스트림: 직접 읽고 쓰는 기능은 없이 추가적인 기능을 더해주는 스트림. 보조 스트림은 직접 읽고 쓰는 기능은 없으므로, 항상 기반 스트림이나 또 다른 보조 스트림을 생성자 매개변수로 포함한다.<br />
+ex) InputStreamReader, OutputStreamWriter, BufferedInputStream, BufferedOutputStream 등</p>
+          </li>
+          <li>
+            <h4 id="표준-입출력">표준 입출력</h4>
+            <p>System 클래스의 표준 입출력 멤버</p>
+            <ul>
+              <li>System.out<br />
+표준 출력(모니터) 스트림
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"에러 메시지"</span><span class="o">);</span>
+</code></pre></div>                </div>
+              </li>
+              <li>System.in
+표준 입력(키보드) 스트림
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>  <span class="c1">// 한 바이트 읽어내기</span>
+</code></pre></div>                </div>
+              </li>
+              <li>System.err<br />
+표준 에러 출력(모니터) 스트림
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"데이터"</span><span class="o">);</span>
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4 id="scanner-클래스">Scanner 클래스</h4>
+            <p>java.util 패키지에 있는 입력 클래스로, 문자뿐 아니라 정수, 실수 등 다른 자료형도 읽을 수 있다.
+콘솔, 파일 등의 여러 대상에서 자료를 읽을 수 있다.</p>
+
+            <p>System.in 클래스보다 Scanner 클래스를 더 많이 사용한다. System.in은 바이트 단위로 읽기 때문에 한글처럼 한 바이트씩 읽으면 안되는 경우 보조 스트림을 사용해야 한다.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>생성자</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Scanner(File source)</td>
+                  <td>파일을 매개변수로 받아 Scanner를 생성합니다.</td>
+                </tr>
+                <tr>
+                  <td>Scanner(InputStream source)</td>
+                  <td>바이트 스트림을 매개변수로 받아 Scanner를 생성합니다.</td>
+                </tr>
+                <tr>
+                  <td>Scanner(String source)</td>
+                  <td>String을 매개변수로 받아 Scanner를 생성합니다.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>메서드</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>boolean nextBoolean()</td>
+                  <td>boolean 자료를 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>byte nextByte()</td>
+                  <td>한 바이트 자료를 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>short nextShort()</td>
+                  <td>short 자료형을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>int nextInt()</td>
+                  <td>int 자료형을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>long nextLong()</td>
+                  <td>long 자료형을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>float nextFloat()</td>
+                  <td>float 자료형을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>double nextDouble()</td>
+                  <td>double 자료형을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>String nextLine()</td>
+                  <td>문자열 String을 읽습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <h4 id="console-클래스">Console 클래스</h4>
+            <p>System.in을 사용하지 않고 콘솔에서 표준 입력을 할 수 있다. 이클립스와는 연동되지 않으며 command 창에서 입력한다.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>메서드</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>String readLine()</td>
+                  <td>문자열을 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>char[] readPassword()</td>
+                  <td>사용자에게 문자열을 보여주지 않고 읽습니다.</td>
+                </tr>
+                <tr>
+                  <td>Reader reader()</td>
+                  <td>Reader 클래스를 반환합니다.</td>
+                </tr>
+                <tr>
+                  <td>PrintWriter writer()</td>
+                  <td>PrintWriter 클래스를 반환합니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>
+            <h4 id="바이트-단위-스트림-inputstream-outputstream">바이트 단위 스트림 - InputStream / OutputStream</h4>
+            <p>바이트 단위 입력용/출력용 최상위 스트림<br />
+추상 메서드를 포함한 추상 클래스로 하위 클래스가 구현하여 사용한다.</p>
+
+            <ul>
+              <li>
+                <p>InputStream의 주요 하위 클래스</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>스트림 클래스</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>FileInputStream</td>
+                      <td>파일에서 바이트 단위로 자료를 읽습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>ByteArrayInputStream</td>
+                      <td>Byte 배열 메모리에서 바이트 단위로 자료를 읽습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>FilterInputStream</td>
+                      <td>기반 스트림에서 자료를 읽을 때 추가 기능을 제공하는 보조 스트림의 상위클래스입니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="targetTable"></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>메서드</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>int read()</td>
+                      <td>입력 스트림으로부터 한 바이트의 자료를 읽습니다. 읽은 값을 반환합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>int read(byte b[])</td>
+                      <td>입력 스트림으로부터 b[] 크기의 자료를 b[]에 읽습니다. 읽은 자료의 바이트 수를 반환합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>int read(byte b[], int off, int len)</td>
+                      <td>입력 스트림으로부터 b[] 크기의 자료를 b[]의 off 변수 위치부터 저장하며 len만큼 읽습니다. 읽은 자료의 바이트 수를 반환합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void close()</td>
+                      <td>입력 스트림과 연결된 대상 리소스를 닫습니다. (예: FileInputStream인 경우 파일 닫음)</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p><br /></p>
+              </li>
+              <li>
+                <p>OutputStream의 주요 하위 클래스</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>스트림 클래스</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>FileOutputStream</td>
+                      <td>바이트 단위로 파일에 자료를 씁니다.</td>
+                    </tr>
+                    <tr>
+                      <td>ByteArrayOutputStream</td>
+                      <td>Byte 배열에 바이트 단위로 자료를 씁니다.</td>
+                    </tr>
+                    <tr>
+                      <td>FilterOutputStream</td>
+                      <td>기반 스트림에서 자료를 쓸 때 추가 기능을 제공하는 보조 스트림의 상위클래스입니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>FileOutputStream은 전달된 숫자의 ASCII 값에 해당하는 문자를 file에 작성한다. 만약 자료형을 보전하고 싶다면 DataOutputStream을 사용해야 한다.<br />
+FileOutputStream은 기본적으로 같은 이름의 파일이 존재하면 덮어쓰므로, 이어서 작성하기를 원하면 두 번째 인자로 true를 넣어서 생성하면 된다.</p>
+
+                <div class="targetTable"></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>메서드</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>void write(int b)</td>
+                      <td>한 바이트를 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(byte b[])</td>
+                      <td>b[] 배열에 있는 자료를 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(byte b[], int off, int len)</td>
+                      <td>b[] 배열에 있는 자료의 off 위치부터 len만큼 자료를 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void flush()</td>
+                      <td>출력을 위해 잠시 자료가 머무르는 출력 버퍼를 강제로 비워 자료를 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void close()</td>
+                      <td>출력 스트림과 연결된 대상 리소스를 닫습니다. 출력 버퍼가 비워집니다. (예: FileOutputStream인 경우 파일 닫음)</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>write() 메서드로 값을 썼다해도 바로 파일이나 네트워크로 전송되지 않고 출력 버퍼에 어느 정도 자료가 모여야 출력이 된다. 따라서 자료의 양이 출력할 만큼 많지 않으면 write() 메서드로 출력했어도 파일에 쓰이지 않거나 전송되지 않았을 수 있다. 이 때 flush() 메서드를 호출하면 출력 버퍼가 강제로 비워지면서 남아 있는 자료가 모두 출력된다.</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4 id="문자-단위-스트림-Reader-Writer">문자 단위 스트림 - Reader / Writer</h4>
+            <p>문자 단위로 읽는/쓰는 최상위 스트림<br />
+하위 클래스에서 상속 받아 구현한다.</p>
+
+            <ul>
+              <li>
+                <p>Reader의 주요 하위 클래스 및 메서드</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>스트림 클래스</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>FileReader</td>
+                      <td>파일에서 문자 단위로 읽는 스트림 클래스입니다.</td>
+                    </tr>
+                    <tr>
+                      <td>InputStreamReader</td>
+                      <td>바이트 단위로 읽은 자료를 문자로 변환해주는 보조 스트림 클래스입니다.</td>
+                    </tr>
+                    <tr>
+                      <td>BufferedReader</td>
+                      <td>문자로 읽을 때 배열을 제공하여 한꺼번에 읽을 수 있는 기능을 제공해주는 보조 스트림입니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="targetTable"></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>메서드</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>int read()</td>
+                      <td>파일으로부터 한 문자를 읽습니다. 읽은 값을 반환합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>int read(char buf[])</td>
+                      <td>파일로부터 buf[] 배열에 문자를 읽습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>int read(char buf[], int off, int len)</td>
+                      <td>파일로부터 buf[] 배열의 off 위치부터 len 개수만큼 문자를 읽습니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void close()</td>
+                      <td>스트림과 연결된 파일 리소스를 닫습니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </ul>
+
+            <p><br /></p>
+
+            <ul>
+              <li>
+                <p>Writer의 주요 하위 클래스 및 메서드</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>스트림 클래스</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>FileWriter</td>
+                      <td>파일에서 문자 단위로 출력하는 스트림 클래스입니다.</td>
+                    </tr>
+                    <tr>
+                      <td>OutputStreamWriter</td>
+                      <td>파일에 바이트 단위로 출력한 자료를 문자로 변환해주는 보조 스트림 클래스입니다.</td>
+                    </tr>
+                    <tr>
+                      <td>BufferedWriter</td>
+                      <td>문자로 쓸 때 배열을 제공하여 한꺼번에 쓸 수 있는 기능을 제공해주는 보조 스트림입니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="targetTable"></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>메서드</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>void write(int c)</td>
+                      <td>한 문자를 파일에 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(char buf[])</td>
+                      <td>문자 배열 buf[]의 내용을 파일에 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(char buf[], int off, int len)</td>
+                      <td>문자 배열 buf[]의 off 위치부터 len 개수만큼의 문자를 파일에 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(String str)</td>
+                      <td>문자열 str을 파일에 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void write(String str, int off, int len)</td>
+                      <td>문자열 str의 off 위치부터 len 개수만큼의 파일에 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void flush()</td>
+                      <td>파일에 출력하기 전에 자료가 있는 공간(출력 버퍼)을 비워 출력합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>void close()</td>
+                      <td>파일과 연결된 스트림을 닫습니다. 출력 버퍼도 비워집니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4 id="보조-스트림">보조 스트림</h4>
+            <p>실제 읽고 쓰는 스트림이 아닌 보조적인 기능을 추가하는 스트림으로 wrapper stream으로 소개되기도 한다. 데코레이터 패턴이 적용되었다.
+FilterInputStream과 FilterOutputStream이 보조 스트림의 상위 클래스이고, 생성자의 매개 변수로 또 다른 스트림을 가진다.</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>생성자</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>protected FilterInputStream(InputStream in)</td>
+                  <td>생성자의 매개변수로 inputStream을 받습니다.</td>
+                </tr>
+                <tr>
+                  <td>public FilterOutputStream(OutputStream out)</td>
+                  <td>생성자의 매개변수로 OutputStream을 받습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p><img src="/assets/java/filter-stream.png" alt="filter-stream" style="width: 420px;" /></p>
+
+            <ul>
+              <li>
+                <p>InputStreamReader와 OutputStreamWriter<br />
+바이트 단위로 읽거나 쓰는 자료를 문자로 변환해주는 보조 스트림으로, FileInputStream(바이트 스트림)으로 읽은 자료를 문자로 변환하는 것을 예로 들 수 있다.</p>
+
+                <p>만약 자료의 크기가 매우 크다면 Buffered stream을 사용해 속도를 빠르게 할 수 있다.</p>
+              </li>
+              <li>
+                <p>Buffered Stream<br />
+내부적으로 8192 바이트 배열을 가지고 읽거나 쓰기 기능을 제공하여 속도가 빠르다.</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>스트림 클래스</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>BufferedInputStream</td>
+                      <td>바이트 단위로 읽는 스트림에 버퍼링 기능을 제공합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>BufferedOutputStream</td>
+                      <td>바이트 단위로 출력하는 스트림에 버퍼링 기능을 제공합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>BufferedReader</td>
+                      <td>문자 단위로 읽는 스트림에 버퍼링 기능을 제공합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>BufferedWriter</td>
+                      <td>문자 단위로 출력하는 스트림에 버퍼링 기능을 제공합니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>또한 BufferedReader는 한번에 한 줄씩 읽는 readLine() 메서드를 제공하므로 편리하다.</p>
+              </li>
+              <li>
+                <p>DataInputStream과 DataOutputStream<br />
+자료가 메모리에 저장된 0, 1 상태 그대로 읽거나 쓰는 스트림</p>
+
+                <ul>
+                  <li>
+                    <p>읽는 메서드</p>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>메서드</th>
+                          <th>설명</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>byte readByte()</td>
+                          <td>1바이트를 읽어 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>boolean readBoolean()</td>
+                          <td>읽은 자료가 0이 아니면 true를, 0이면 false를 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>char readChar()</td>
+                          <td>한 문자를 읽어 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>short readShort()</td>
+                          <td>2바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>int readInt()</td>
+                          <td>4바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>long readLong()</td>
+                          <td>8바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>float readFloat()</td>
+                          <td>4바이트를 읽어 실수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>double readDouble()</td>
+                          <td>8바이트를 읽어 실수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>String readUTF()</td>
+                          <td>수정된 UTF-8 인코딩 기반으로 문자열을 읽어 반환합니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+
+                <p><br /></p>
+
+                <ul>
+                  <li>
+                    <p>쓰는 메서드</p>
+
+                    <div class="targetTable"></div>
+
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>메서드</th>
+                          <th>설명</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>void writeByte(int v)</td>
+                          <td>1바이트를 읽어 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeBoolean(boolean v)</td>
+                          <td>읽은 자료가 0이 아니면 true를, 0이면 false를 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeChar(int v)</td>
+                          <td>한 문자를 읽어 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeShort(int v)</td>
+                          <td>2바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeInt(int v)</td>
+                          <td>4바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeLong(long v)</td>
+                          <td>8바이트를 읽어 정수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeFloat(float v)</td>
+                          <td>4바이트를 읽어 실수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeDouble(double v)</td>
+                          <td>8바이트를 읽어 실수 값을 반환합니다.</td>
+                        </tr>
+                        <tr>
+                          <td>void writeUTF(String str)</td>
+                          <td>수정된 UTF-8 인코딩 기반으로 문자열을 읽어 반환합니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>직렬화 (serialization)<br />
+<strong>인스턴스</strong>의 상태를 그대로 저장하거나(serialization) 다시 복원하는(deserialization) 방식으로, 파일에 쓰거나 네트워크로 전송하는데 쓰인다. 직렬화를 하고자 하는 클래스는 Serializable 표시 인터페이스(marker interface)를 상속받아야 한다.<br />
+ObjectInputStream과 ObjectOutputStream을 사용한다.</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>생성자</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ObjectInputStream(InputStream in)</td>
+                      <td>InputStream을 생성자의 매개변수로 받아 ObjectInputStream을 생성합니다.</td>
+                    </tr>
+                    <tr>
+                      <td>ObjectOutputStream(OutputStream out)</td>
+                      <td>OutputStream을 생성자의 매개변수로 받아 ObjectOutputStream 생성합니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>transient 예약어를 사용하면 해당 변수는 직렬화되지 않는다. 따라서 직렬화를 원치 않는 정보나 직렬화가 불가능한(ex. Socket) 경우에 transient를 사용한다.</p>
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">transient</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+</code></pre></div>                </div>
+
+                <p>만약 직렬화 되는 방식을 직접 정하고 싶다면 Externalizable 인터페이스를 구현하면 된다.<br />
+Serializable과는 달리 writeExternal(ObjectOutput out)과 readExternal(ObjectInput in) 메서드를 구현해야 하며, 직렬화와 복원시 해당 메서드가 호출된다. 저장하는 순서와 읽는 순서는 동일해야 한다.</p>
+              </li>
+              <li>
+                <p>그 외 입출력 클래스</p>
+                <ul>
+                  <li>
+                    <p>File 클래스<br />
+파일 개념을 추상화한 클래스로, 입출력 기능은 없고 파일의 속성, 경로, 이름 등을 알 수 있다.</p>
+                  </li>
+                  <li>
+                    <p>RandomAccessFile 클래스<br />
+입출력 클래스 중 유일하게 파일 입출력을 동시에 할 수 있는 클래스이다. 파일 포인터가 있어서 읽고 쓰는 위치의 이동이 가능하다. 다양한 자료형에 대한 메서드가 제공된다.</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Java의 length, length(), size() 사용법
+    <ol>
+      <li>length: <strong>배열</strong>(arrays)의 길이를 알고자 할때 사용된다. ex) int[], double[], String[], etc.</li>
+      <li>length(): <strong>문자열</strong>(String related Object)의 길이를 알고자 할때 사용된다. ex) String, StringBuilder, etc.</li>
+      <li>size(): 컬렉션 프레임워크 타입의 길이를 알고자 할때 사용된다. ex) ArrayList, Set, etc.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+  <li>Java의 length, length(), size() 사용법: <a href="https://mine-it-record.tistory.com/126">https://mine-it-record.tistory.com/126</a></li>
+</ul>
+
+<style>
+  table {
+    table-layout: auto;
+    width: fit-content;
+  }
+  
+  table th, table td {
+    padding: 8px 8px;
+  }
+  
+  .targetTable+table th:not(:last-of-type), .targetTable+table td:not(:last-of-type) {
+    white-space: nowrap;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+</style>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/11/17/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201117_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/2020/11/19/TIL.html">
+					<span class="page-number">20201119_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

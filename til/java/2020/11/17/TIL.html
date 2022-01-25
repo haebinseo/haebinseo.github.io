@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201117_TIL</title>
+  <meta name="description" content="오늘 한 일  java 공부          예외 처리                  오류컴파일 오류(compile error): 프로그램 코드 작성 중 발생하는 문법적 오류실행 오류(runtime error): 실행 중인 프로그램이 의도하지 않은 동작을 하거나(bug) 프로그램이...">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2022">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  java 공부          예외 처리                  오류컴파일 오류(compile error): 프로그램 코드 작성 중 발생하는 문법적 오류실행 오류(runtime error): 실행 중인 프로그램이 의도하지 않은 동작을 하거나(bug) 프로그램이..." />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/17/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201117_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201117_TIL">
+  <meta name="twitter:description" content="오늘 한 일  java 공부          예외 처리                  오류컴파일 오류(compile error): 프로그램 코드 작성 중 발생하는 문법적 오류실행 오류(runtime error): 실행 중인 프로그램이 의도하지 않은 동작을 하거나(bug) 프로그램이...">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/17/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/17/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+
+	<!-- AdSense -->
+  <script data-ad-client="ca-pub-8860430251846215" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201117_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 17, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>java 공부
+    <ul>
+      <li>예외 처리
+        <ul>
+          <li>
+            <p>오류<br />
+컴파일 오류(compile error): 프로그램 코드 작성 중 발생하는 문법적 오류<br />
+실행 오류(runtime error): 실행 중인 프로그램이 의도하지 않은 동작을 하거나(bug) 프로그램이 중지되는 오류</p>
+
+            <p>실행 오류 시 비정상 종료는 서비스 운영에 치명적이다. 오류가 발생할 수 있는 경우에 로그(log)를 남겨 추후 이를 분석하여 원인을 찾아야 한다. 자바는 예외 처리를 통해 프로그램의 비정상 종료를 막고 log를 남길 수 있다.</p>
+          </li>
+          <li>
+            <p>오류와 예외 클래스<br />
+시스템 오류(error): 자바 가상 머신에서 발생. 프로그래머가 처리할 수 없음.<br />
+ex) 동적 메모리 없는 경우, 스택 오버 플로우 등</p>
+
+            <p>예외(exception): 프로그램에서 제어할 수 있는 오류.<br />
+ex) 읽어들이려는 파일이 존재하지 않는 경우, 네트워크 연결이 끊어진 경우</p>
+
+            <p><img src="/assets/java/error_exception_class.png" alt="error_exception_class" style="width: 380px;" /></p>
+
+            <ul>
+              <li>
+                <p>예외 클래스의 종류<br />
+모든 예외 클랫스의 최상위 클래스는 Exception이다.<br />
+다양한 예외 클래스가 제공된다.</p>
+
+                <p><img src="/assets/java/exception_classes.png" alt="exception_classes" /></p>
+              </li>
+              <li>try-catch-finally 문<br />
+finally는 try가 수행되면 catch 내의 코드와 관계없이 무조건 실행된다. 따라서 catch 내에서 return; 코드가 작성되어 있더라도 finally 내부의 코드가 실행된다.
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span> <span class="o">};</span>
+
+<span class="k">try</span> <span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+  <span class="o">}</span>			
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ArrayIndexOutOfBoundsException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+  <span class="k">return</span><span class="o">;</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"finally"</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="c1">// 1</span>
+<span class="c1">// 2</span>
+<span class="c1">// 3</span>
+<span class="c1">// 4</span>
+<span class="c1">// 5</span>
+<span class="c1">// java.lang.ArrayIndexOutOfBoundsException: 5</span>
+<span class="c1">// finally</span>
+</code></pre></div>                </div>
+              </li>
+              <li>try-with-resources 문<br />
+리소스를 자동 해제하도록 제공해주는 구문으로 Java 7부터 제공된다.<br />
+close()를 명시적으로 호출하지 않아도 try {} 블록에서 열린 리소스는 정상적인 경우와 예외 발생한 경우 모두 자동으로 해제된다. 해당 리소스가 AutoCloseable 인터페이스를 구현해야 한다.<br />
+FileInputStream의 경우 AutoCloseable을 구현하고 있다.
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// try-catch-finally</span>
+<span class="nc">FileInputStream</span> <span class="n">fis</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">fis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"a.txt"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">fis</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// try-with-resources</span>
+<span class="k">try</span> <span class="o">(</span><span class="nc">FileInputStream</span> <span class="n">fis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"a.txt"</span><span class="o">))</span> <span class="o">{</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>                </div>
+
+                <p>Java 9 부터는 try 안에서 사용하고자 하는 리소스를 선언 및 할당하지 않고 외부의 참조 변수를 가져오는 것이 가능하다.</p>
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// from Java 9</span>
+<span class="nc">AutoCloseObj</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AutoCloseObj</span><span class="o">();</span>
+<span class="k">try</span> <span class="o">(</span><span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"exception"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>
+                <p>예외 처리 미루기<br />
+throws를 사용하여 예외 처리를 미룰 수 있다. 메서드 선언부에 throws를 추가하면 예외가 발생한 메서드에서 예외 처리를 하지 않고, 이 메서드를 호출한 곳에서 예외 처리를 해야한다.<br />
+main()에서 throws를 사용하면 가상머신에서 처리된다.</p>
+
+                <p>여러 예외를 한 블록에서 처리 하기</p>
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">FileNotFoundException</span> <span class="o">|</span> <span class="nc">ClassNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+<span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>다중 예외 처리 시 주의사항<br />
+예외가 다양한 경우 가장 최상위 클래스인 Exception 클래스에서 예외를 처리할 수 있다. 이 때 Exception 클래스는 다른 모든 예외 클래스의 최상위 클래스이므로 가장 마지막 블록에 위치해야 한다.
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ClassNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+<span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>사용자 정의 예외 클래스 예제
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IDFormatException</span> <span class="kd">extends</span> <span class="nc">Exception</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">IDFormatException</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+</ul>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/11/16/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201116_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/java/2020/11/18/TIL.html">
+					<span class="page-number">20201118_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>

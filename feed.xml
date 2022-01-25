@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HaebinLog</title>
+    <description>Haebin's Blog posting whatever studied and learned</description>
+    <link>http://haebinseo.github.io//</link>
+    <atom:link href="http://haebinseo.github.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Jan 2022 14:15:20 +0900</pubDate>
+    <lastBuildDate>Tue, 25 Jan 2022 14:15:20 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>코딩테스트 항목별 공부</title>
+        <description>&lt;h1 id=&quot;코딩테스트-항목별-공부&quot;&gt;코딩테스트 항목별 공부&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;해시&lt;/li&gt;
+  &lt;li&gt;스택/큐&lt;/li&gt;
+  &lt;li&gt;힙&lt;/li&gt;
+  &lt;li&gt;정렬&lt;/li&gt;
+  &lt;li&gt;완전탐색 (Brute Force)&lt;/li&gt;
+  &lt;li&gt;탐욕법 (Greedy Search)&lt;/li&gt;
+  &lt;li&gt;동적계획법 (Dynamic Programming)&lt;/li&gt;
+  &lt;li&gt;깊이/너비 우선 탐색 (DFS/BFS)&lt;/li&gt;
+  &lt;li&gt;이분탐색 (Binary Search)&lt;/li&gt;
+  &lt;li&gt;그래프 (Graph)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 05 Nov 2021 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//codingtest/2021/11/05/coding-test.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//codingtest/2021/11/05/coding-test.html</guid>
+        
+        <category>codingtest</category>
+        
+        
+        <category>codingtest</category>
+        
+      </item>
+    
+      <item>
+        <title>주로 사용하는 git command 정리 2</title>
+        <description>&lt;h1 id=&quot;주로-사용하는-git-command-정리-2&quot;&gt;주로 사용하는 Git command 정리 2&lt;/h1&gt; &lt;h4 id=&quot;1-git-rebase&quot;&gt;1. git rebase&lt;/h4&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; HEAD~3 &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rebase &lt;span class=&quot;nt&quot;&gt;--continue&lt;/span&gt;...</description>
+        <pubDate>Tue, 12 Oct 2021 05:07:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//git/2021/10/12/git-command-2.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//git/2021/10/12/git-command-2.html</guid>
+        
+        <category>git-command</category>
+        
+        
+        <category>git</category>
+        
+      </item>
+    
+      <item>
+        <title>20210125_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Comento Week 3 ELK stack 사전 조사 및 공부 &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;span id=&quot;elk-stack&quot;&gt;ELK Stack&lt;sup&gt;&lt;a href=&quot;#footnote-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/span&gt;&lt;br /&gt; ELK는 Elasticsearch, Logstash 및 Kibana, 이 오픈 소스 프로젝트...</description>
+        <pubDate>Mon, 25 Jan 2021 23:11:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/elk/2021/01/25/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/elk/2021/01/25/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>elk</category>
+        
+        <category>elk-stack</category>
+        
+        
+        <category>til</category>
+        
+        <category>elk</category>
+        
+      </item>
+    
+      <item>
+        <title>20210117_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Django 정리 내용 포스팅
+    &lt;ul&gt;
+      &lt;li&gt;django 개념 및 구조 정리&lt;/li&gt;
+      &lt;li&gt;django-imageKit 정리&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 17 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/17/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/17/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>django-imageKit 정리</title>
+        <description>&lt;h1 id=&quot;django-imagekit-정리&quot;&gt;django-imageKit 정리&lt;/h1&gt; &lt;h4 id=&quot;imagekit&quot;&gt;Imagekit&lt;sup&gt;&lt;a href=&quot;#footnote-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h4&gt; &lt;p&gt;Imagekit은 이미지 처리를 위한 Django app이다. resizing이나 cropping같은 작업을 처리하는데 사용된다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;ImageSpecField class&lt;br /&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;django.db.models.ImageField&lt;/code&gt;와 매우 유사하게 작동한다. 다만 주어진 옵션대로 자동으로...</description>
+        <pubDate>Sun, 17 Jan 2021 23:51:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//django/django-imagekit/2021/01/17/django-imagekit.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//django/django-imagekit/2021/01/17/django-imagekit.html</guid>
+        
+        <category>python</category>
+        
+        <category>django</category>
+        
+        <category>django-imagekit</category>
+        
+        
+        <category>django</category>
+        
+        <category>django-imagekit</category>
+        
+      </item>
+    
+      <item>
+        <title>Django 개념 및 구조 정리</title>
+        <description>&lt;h1 id=&quot;django-개념-및-구조-정리&quot;&gt;Django 개념 및 구조 정리&lt;/h1&gt; &lt;p&gt;&lt;a href=&quot;#django-명령어&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Django 명령어&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#django-구조&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Django 구조&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#model&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Model&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#admin&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Admin&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#url-dispatcher&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;URL dispatcher&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#view&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt;&lt;/a&gt; &lt;a href=&quot;#template&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Template&lt;/code&gt;&lt;/a&gt;...</description>
+        <pubDate>Sun, 17 Jan 2021 23:50:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//django/2021/01/17/django-tips.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//django/2021/01/17/django-tips.html</guid>
+        
+        <category>python</category>
+        
+        <category>django</category>
+        
+        
+        <category>django</category>
+        
+      </item>
+    
+      <item>
+        <title>20210116_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Django 구조 및 사용법 정리&lt;br /&gt; 장고걸스 튜토리얼을 진행하며 익힌 내용와 Mozilla web docs에서 읽은 Django 구조 정리&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;경험 정리&lt;/p&gt; &lt;/li&gt; &lt;li&gt;...</description>
+        <pubDate>Sat, 16 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/16/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/16/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20210115_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;코멘토 직무부트캠프 1주 feedback 요약 &lt;ul&gt; &lt;li&gt;진짜 백엔드를 운영한다는 마인드 구체적 접근 필요&lt;/li&gt; &lt;li&gt;큰 덩어리로 주석 작성 필요&lt;/li&gt; &lt;li&gt;서버 백엔드 코드를 어떻게 고민하고 녹여내는지, 이후에...</description>
+        <pubDate>Fri, 15 Jan 2021 23:53:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/15/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/15/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20210112_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;코멘토 직무부트캠프 1주 과제
+    &lt;ul&gt;
+      &lt;li&gt;django girls tutorial 완료(블로그 포스팅)&lt;/li&gt;
+      &lt;li&gt;Option 과제인 User 생성/삭제/조회/로그인 기능 추가 중&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 12 Jan 2021 23:48:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/2021/01/12/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/2021/01/12/TIL.html</guid>
+        
+        <category>til</category>
+        
+        
+        <category>til</category>
+        
+      </item>
+    
+      <item>
+        <title>20210109_TIL</title>
+        <description>&lt;h1 id=&quot;오늘-한-일&quot;&gt;오늘 한 일&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;코멘토 직무부트캠프 zoom 회의&lt;br /&gt; 오후 1시에 직무부트캠프 첫 수업을 진행했다. 멘토님은 개발자에 대해 여러 이야기를 하셨는데, 그 중 가장 기억에 남는 것은 개발자에게 공백은...</description>
+        <pubDate>Sat, 09 Jan 2021 23:55:00 +0900</pubDate>
+        <link>http://haebinseo.github.io//til/comento/2021/01/09/TIL.html</link>
+        <guid isPermaLink="true">http://haebinseo.github.io//til/comento/2021/01/09/TIL.html</guid>
+        
+        <category>til</category>
+        
+        <category>comento</category>
+        
+        
+        <category>til</category>
+        
+        <category>comento</category>
+        
+      </item>
+    
+  </channel>
+</rss>

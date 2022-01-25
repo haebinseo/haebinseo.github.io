@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>20201115_TIL</title>
+  <meta name="description" content="오늘 한 일  java 공부          내부 클래스                    ">
+  
+  <meta name="author" content="Haebin Seo">
+  <meta name="copyright" content="&copy; Haebin Seo 2022">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="오늘 한 일  java 공부          내부 클래스                    " />
+  <meta property="og:url" content="http://haebinseo.github.io//til/java/2020/11/15/TIL.html">
+  <meta property="og:site_name" content="HaebinLog" />
+  <meta property="og:title" content="20201115_TIL" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://haebinseo.github.io//assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="615" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="20201115_TIL">
+  <meta name="twitter:description" content="오늘 한 일  java 공부          내부 클래스                    ">
+  <meta name="twitter:image" content="http://haebinseo.github.io//assets/logo.png">
+  <meta name="twitter:url" content="http://haebinseo.github.io//til/java/2020/11/15/TIL.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://haebinseo.github.io//til/java/2020/11/15/TIL.html">
+	<link rel="alternate" type="application/rss+xml" title="HaebinLog" href="http://haebinseo.github.io//feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+  </script>
+
+	<!-- AdSense -->
+  <script data-ad-client="ca-pub-8860430251846215" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  
+
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="HaebinLog">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">20201115_TIL</h1>
+      <p class="info">by <strong>Haebin Seo</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 15, 2020</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/til">Til</a>, 
+    
+  
+    
+    <a href="/category/java">Java</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="오늘-한-일">오늘 한 일</h1>
+<ul>
+  <li>java 공부
+    <ul>
+      <li>내부 클래스
+        <div class="targetTable"></div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>종류</th>
+              <th>구현 위치</th>
+              <th>사용할 수 있는<br />외부 클래스 변수</th>
+              <th>생성 방법</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>인스턴스 내부 클래스</td>
+              <td>외부 클래스 멤버 변수와 동일</td>
+              <td>외부 인스턴스 변수<br />외부 전역 변수</td>
+              <td>외부 클래스를 먼저 만든 후 내부 클래스 생성</td>
+            </tr>
+            <tr>
+              <td>정적 내부 클래스</td>
+              <td>외부 클래스 멤버 변수와 동일</td>
+              <td>외부 전역 변수</td>
+              <td>외부 클래스와 무관하게 생성</td>
+            </tr>
+            <tr>
+              <td>지역 내부 클래스</td>
+              <td>메서드 내부에 구현</td>
+              <td>외부 인스턴스 변수<br />외부 전역 변수</td>
+              <td>메서드를 호출할 때 생성</td>
+            </tr>
+            <tr>
+              <td>익명 내부 클래스</td>
+              <td>메서드 내부에 구현<br />변수에 대입하여 직접 구현</td>
+              <td>외부 인스턴스 변수<br />외부 전역 변수</td>
+              <td>메서드를 호출할 때 생성되거나, 인터페이스 타입 변수에 대입할 때 new 예약어를 사용하여 생성</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>내부 클래스의 인스턴스나 생성자를 밖에서 접근하거나 사용할 수 는 있으니 일반적으로 내부 클래스는 내부에서만 사용하는 용도이므로 private으로 선언되는 경우가 대다수이다.</p>
+
+        <ul>
+          <li>
+            <p>인스턴스 내부 클래스<br />
+인스턴스 내부 클래스에서는 static 예약어를 사용할 수 없다. 이는 외부 클래스의 인스턴스가 생성되어야 내부 클래스에 접근가능해지기 때문이다.</p>
+          </li>
+          <li>
+            <p>정적 내부 클래스<br />
+정적 내부 클래스는 외부 클래스의 객체 생성 없이도 내부 클래스의 객체를 생성할 수 있다. 또한 인스턴스 내부 클래스에서는 불가능 했던 static 변수나 메서드 선언이 가능하다. 대신 외부 인스턴스의 변수에는 접근이 불가능하다.</p>
+          </li>
+          <li>지역 내부 클래스<br />
+지역 내부 클래스는 메서드 내부에 구현되는 클래스이다.
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Outer</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">outNum</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="kt">int</span> <span class="n">sNum</span> <span class="o">=</span> <span class="mi">200</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">Runnable</span> <span class="nf">getRunnable</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">localNum</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+    <span class="kd">class</span> <span class="nc">MyRunnable</span> <span class="kd">implements</span> <span class="nc">Runnable</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// localNum += 100; // error</span>
+        <span class="c1">// i += 200;        // error</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outNum</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sNum</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">localNum</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MyRunnable</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+
+            <p>지역 내부 클래스에서 <u>메서드의 변수</u>를 사용할 때는 주의가 필요한데, 이는 지역변수의 유효범위 때문이다. 위의 예제처럼 메서드의 반환 값으로 지역 내부 클래스의 인스턴스를 받았을 때, i와 localNum은 지역변수이므로 stack에 저장되었다가 메서드가 종료됨과 동시에 삭제된다.</p>
+
+            <p>때문에 필요하다면 final로 선언해 stack이 아닌 <u>상수 풀</u>에 저장해야 한다. 단 final은 수정이 불가능하므로 참조는 가능하지만 할당은 불가능함에 유의해야 한다.</p>
+
+            <p>cf) Java 8부터 지역 클래스에서 접근하는 지역 변수 앞에 final을 생략할 수 있다. 컴파일러가 후에 자동으로 붙여줄 뿐만 아니라 값을 수정하고자 하면 컴파일 에러도 띄워준다.</p>
+
+            <p>외부 클래스의 인스턴스 멤버 변수나 정적 변수에는 해당 사항이 없다.</p>
+          </li>
+          <li>익명 내부 클래스<br />
+익명 내부 클래스는 단 하나의 추상 클래스나 인터페이스만을 구현할 수 있다.
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OuterClass</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">outNum</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="kt">int</span> <span class="n">sNum</span> <span class="o">=</span> <span class="mi">200</span><span class="o">;</span>
+
+  <span class="c1">// 변수에 대입하여 직접 구현</span>
+  <span class="nc">Runnable</span> <span class="n">runnable</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outNum</span><span class="o">);</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sNum</span><span class="o">);</span>
+    <span class="o">}</span>  
+  <span class="o">};</span>
+
+  <span class="c1">// 메서드 내부에 구현</span>
+  <span class="kd">public</span> <span class="nc">Runnable</span> <span class="nf">getRunnable</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">outNum</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sNum</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">};</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>참조</p>
+<ul>
+  <li>Do it! 자바 프로그래밍 입문: <a href="https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%9E%85%EB%AC%B8/dashboard">https://www.inflearn.com/course/자바-프로그래밍-입문/dashboard</a></li>
+  <li>지역 내부 클래스의 final 생략: <a href="https://pridiot.tistory.com/52?category=869931">https://pridiot.tistory.com/52?category=869931</a></li>
+</ul>
+
+<style>
+  table {
+    table-layout: auto;
+    width: fit-content;
+  }
+  table th, table td {
+    padding: 8px 6px;
+  }
+  .targetTable+table th:not(:last-of-type), .targetTable+table td:not(:last-of-type) {
+    white-space: nowrap;
+  }
+</style>
+
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tag/til">til</a>,&nbsp;<a href="/tag/java">java</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+	<section class="post-navigation">
+		<span class="prev-post">
+			
+				<a href="/til/java/2020/11/14/TIL.html">
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+					</span>
+					<span class="page-number">20201114_TIL</span>
+				</a>
+			
+		</span>
+		<span class="next-post">
+			
+				<a href="/til/java/2020/11/16/TIL.html">
+					<span class="page-number">20201116_TIL</span>
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-square fa-stack-2x"></i>
+						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+					</span>
+				</a>
+			
+		</span>
+	</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">HaebinLog</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:haebin.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">haebin.dev@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/haebinseo" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">haebinseo</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Haebin's Blog posting whatever studied and learned</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
